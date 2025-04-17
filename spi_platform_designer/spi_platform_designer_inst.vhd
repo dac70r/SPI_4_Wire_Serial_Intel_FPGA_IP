@@ -1,0 +1,23 @@
+	component spi_platform_designer is
+		port (
+			clk_clk              : in  std_logic := 'X'; -- clk
+			reset_reset_n        : in  std_logic := 'X'; -- reset_n
+			spi_pin_MISO         : in  std_logic := 'X'; -- MISO
+			spi_pin_MOSI         : out std_logic;        -- MOSI
+			spi_pin_SCLK         : out std_logic;        -- SCLK
+			spi_pin_SS_n         : out std_logic;        -- SS_n
+			spi_ss_manual_export : out std_logic         -- export
+		);
+	end component spi_platform_designer;
+
+	u0 : component spi_platform_designer
+		port map (
+			clk_clk              => CONNECTED_TO_clk_clk,              --           clk.clk
+			reset_reset_n        => CONNECTED_TO_reset_reset_n,        --         reset.reset_n
+			spi_pin_MISO         => CONNECTED_TO_spi_pin_MISO,         --       spi_pin.MISO
+			spi_pin_MOSI         => CONNECTED_TO_spi_pin_MOSI,         --              .MOSI
+			spi_pin_SCLK         => CONNECTED_TO_spi_pin_SCLK,         --              .SCLK
+			spi_pin_SS_n         => CONNECTED_TO_spi_pin_SS_n,         --              .SS_n
+			spi_ss_manual_export => CONNECTED_TO_spi_ss_manual_export  -- spi_ss_manual.export
+		);
+
