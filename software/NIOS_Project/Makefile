@@ -90,7 +90,8 @@ ACDS_VERSION := 23.1
 ELF := NIOS_Project.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := hello_world.c
+C_SRCS += hello_world.c
+C_SRCS += peripheral/peripheral_linker.c
 CXX_SRCS :=
 ASM_SRCS :=
 

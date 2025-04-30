@@ -27,15 +27,6 @@ module spi_platform_designer (
 	wire         nios_instruction_master_waitrequest;                   // mm_interconnect_0:NIOS_instruction_master_waitrequest -> NIOS:i_waitrequest
 	wire  [17:0] nios_instruction_master_address;                       // NIOS:i_address -> mm_interconnect_0:NIOS_instruction_master_address
 	wire         nios_instruction_master_read;                          // NIOS:i_read -> mm_interconnect_0:NIOS_instruction_master_read
-	wire         mm_interconnect_0_debug_avalon_jtag_slave_chipselect;  // mm_interconnect_0:DEBUG_avalon_jtag_slave_chipselect -> DEBUG:av_chipselect
-	wire  [31:0] mm_interconnect_0_debug_avalon_jtag_slave_readdata;    // DEBUG:av_readdata -> mm_interconnect_0:DEBUG_avalon_jtag_slave_readdata
-	wire         mm_interconnect_0_debug_avalon_jtag_slave_waitrequest; // DEBUG:av_waitrequest -> mm_interconnect_0:DEBUG_avalon_jtag_slave_waitrequest
-	wire   [0:0] mm_interconnect_0_debug_avalon_jtag_slave_address;     // mm_interconnect_0:DEBUG_avalon_jtag_slave_address -> DEBUG:av_address
-	wire         mm_interconnect_0_debug_avalon_jtag_slave_read;        // mm_interconnect_0:DEBUG_avalon_jtag_slave_read -> DEBUG:av_read_n
-	wire         mm_interconnect_0_debug_avalon_jtag_slave_write;       // mm_interconnect_0:DEBUG_avalon_jtag_slave_write -> DEBUG:av_write_n
-	wire  [31:0] mm_interconnect_0_debug_avalon_jtag_slave_writedata;   // mm_interconnect_0:DEBUG_avalon_jtag_slave_writedata -> DEBUG:av_writedata
-	wire  [31:0] mm_interconnect_0_sysid_control_slave_readdata;        // SYSID:readdata -> mm_interconnect_0:SYSID_control_slave_readdata
-	wire   [0:0] mm_interconnect_0_sysid_control_slave_address;         // mm_interconnect_0:SYSID_control_slave_address -> SYSID:address
 	wire  [31:0] mm_interconnect_0_nios_debug_mem_slave_readdata;       // NIOS:debug_mem_slave_readdata -> mm_interconnect_0:NIOS_debug_mem_slave_readdata
 	wire         mm_interconnect_0_nios_debug_mem_slave_waitrequest;    // NIOS:debug_mem_slave_waitrequest -> mm_interconnect_0:NIOS_debug_mem_slave_waitrequest
 	wire         mm_interconnect_0_nios_debug_mem_slave_debugaccess;    // mm_interconnect_0:NIOS_debug_mem_slave_debugaccess -> NIOS:debug_mem_slave_debugaccess
@@ -70,23 +61,9 @@ module spi_platform_designer (
 	wire         mm_interconnect_0_esc_spi_spi_control_port_write;      // mm_interconnect_0:ESC_SPI_spi_control_port_write -> ESC_SPI:write_n
 	wire  [15:0] mm_interconnect_0_esc_spi_spi_control_port_writedata;  // mm_interconnect_0:ESC_SPI_spi_control_port_writedata -> ESC_SPI:data_from_cpu
 	wire         irq_mapper_receiver0_irq;                              // ESC_SPI:irq -> irq_mapper:receiver0_irq
-	wire         irq_mapper_receiver1_irq;                              // DEBUG:av_irq -> irq_mapper:receiver1_irq
 	wire  [31:0] nios_irq_irq;                                          // irq_mapper:sender_irq -> NIOS:irq
-	wire         rst_controller_reset_out_reset;                        // rst_controller:reset_out -> [DEBUG:rst_n, ESC_EEPDONE_INPUT:reset_n, ESC_SPI:reset_n, ESC_SPI_CS:reset_n, LED:reset_n, NIOS:reset_n, RAM:reset, SYSID:reset_n, irq_mapper:reset, mm_interconnect_0:NIOS_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                        // rst_controller:reset_out -> [ESC_EEPDONE_INPUT:reset_n, ESC_SPI:reset_n, ESC_SPI_CS:reset_n, LED:reset_n, NIOS:reset_n, RAM:reset, irq_mapper:reset, mm_interconnect_0:NIOS_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                    // rst_controller:reset_req -> [NIOS:reset_req, RAM:reset_req, rst_translator:reset_req_in]
-
-	spi_platform_designer_DEBUG debug (
-		.clk            (clk_clk),                                               //               clk.clk
-		.rst_n          (~rst_controller_reset_out_reset),                       //             reset.reset_n
-		.av_chipselect  (mm_interconnect_0_debug_avalon_jtag_slave_chipselect),  // avalon_jtag_slave.chipselect
-		.av_address     (mm_interconnect_0_debug_avalon_jtag_slave_address),     //                  .address
-		.av_read_n      (~mm_interconnect_0_debug_avalon_jtag_slave_read),       //                  .read_n
-		.av_readdata    (mm_interconnect_0_debug_avalon_jtag_slave_readdata),    //                  .readdata
-		.av_write_n     (~mm_interconnect_0_debug_avalon_jtag_slave_write),      //                  .write_n
-		.av_writedata   (mm_interconnect_0_debug_avalon_jtag_slave_writedata),   //                  .writedata
-		.av_waitrequest (mm_interconnect_0_debug_avalon_jtag_slave_waitrequest), //                  .waitrequest
-		.av_irq         (irq_mapper_receiver1_irq)                               //               irq.irq
-	);
 
 	spi_platform_designer_ESC_EEPDONE_INPUT esc_eepdone_input (
 		.clk      (clk_clk),                                         //                 clk.clk
@@ -177,13 +154,6 @@ module spi_platform_designer (
 		.freeze     (1'b0)                                 // (terminated)
 	);
 
-	spi_platform_designer_SYSID sysid (
-		.clock    (clk_clk),                                        //           clk.clk
-		.reset_n  (~rst_controller_reset_out_reset),                //         reset.reset_n
-		.readdata (mm_interconnect_0_sysid_control_slave_readdata), // control_slave.readdata
-		.address  (mm_interconnect_0_sysid_control_slave_address)   //              .address
-	);
-
 	spi_platform_designer_mm_interconnect_0 mm_interconnect_0 (
 		.clk_0_clk_clk                          (clk_clk),                                               //                        clk_0_clk.clk
 		.NIOS_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                        // NIOS_reset_reset_bridge_in_reset.reset
@@ -199,13 +169,6 @@ module spi_platform_designer (
 		.NIOS_instruction_master_waitrequest    (nios_instruction_master_waitrequest),                   //                                 .waitrequest
 		.NIOS_instruction_master_read           (nios_instruction_master_read),                          //                                 .read
 		.NIOS_instruction_master_readdata       (nios_instruction_master_readdata),                      //                                 .readdata
-		.DEBUG_avalon_jtag_slave_address        (mm_interconnect_0_debug_avalon_jtag_slave_address),     //          DEBUG_avalon_jtag_slave.address
-		.DEBUG_avalon_jtag_slave_write          (mm_interconnect_0_debug_avalon_jtag_slave_write),       //                                 .write
-		.DEBUG_avalon_jtag_slave_read           (mm_interconnect_0_debug_avalon_jtag_slave_read),        //                                 .read
-		.DEBUG_avalon_jtag_slave_readdata       (mm_interconnect_0_debug_avalon_jtag_slave_readdata),    //                                 .readdata
-		.DEBUG_avalon_jtag_slave_writedata      (mm_interconnect_0_debug_avalon_jtag_slave_writedata),   //                                 .writedata
-		.DEBUG_avalon_jtag_slave_waitrequest    (mm_interconnect_0_debug_avalon_jtag_slave_waitrequest), //                                 .waitrequest
-		.DEBUG_avalon_jtag_slave_chipselect     (mm_interconnect_0_debug_avalon_jtag_slave_chipselect),  //                                 .chipselect
 		.ESC_EEPDONE_INPUT_s1_address           (mm_interconnect_0_esc_eepdone_input_s1_address),        //             ESC_EEPDONE_INPUT_s1.address
 		.ESC_EEPDONE_INPUT_s1_readdata          (mm_interconnect_0_esc_eepdone_input_s1_readdata),       //                                 .readdata
 		.ESC_SPI_spi_control_port_address       (mm_interconnect_0_esc_spi_spi_control_port_address),    //         ESC_SPI_spi_control_port.address
@@ -238,16 +201,13 @@ module spi_platform_designer (
 		.RAM_s1_writedata                       (mm_interconnect_0_ram_s1_writedata),                    //                                 .writedata
 		.RAM_s1_byteenable                      (mm_interconnect_0_ram_s1_byteenable),                   //                                 .byteenable
 		.RAM_s1_chipselect                      (mm_interconnect_0_ram_s1_chipselect),                   //                                 .chipselect
-		.RAM_s1_clken                           (mm_interconnect_0_ram_s1_clken),                        //                                 .clken
-		.SYSID_control_slave_address            (mm_interconnect_0_sysid_control_slave_address),         //              SYSID_control_slave.address
-		.SYSID_control_slave_readdata           (mm_interconnect_0_sysid_control_slave_readdata)         //                                 .readdata
+		.RAM_s1_clken                           (mm_interconnect_0_ram_s1_clken)                         //                                 .clken
 	);
 
 	spi_platform_designer_irq_mapper irq_mapper (
 		.clk           (clk_clk),                        //       clk.clk
 		.reset         (rst_controller_reset_out_reset), // clk_reset.reset
 		.receiver0_irq (irq_mapper_receiver0_irq),       // receiver0.irq
-		.receiver1_irq (irq_mapper_receiver1_irq),       // receiver1.irq
 		.sender_irq    (nios_irq_irq)                    //    sender.irq
 	);
 

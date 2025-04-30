@@ -188,7 +188,7 @@
    name="DEBUG"
    kind="altera_avalon_jtag_uart"
    version="23.1"
-   enabled="1">
+   enabled="0">
   <parameter name="allowMultipleConnections" value="false" />
   <parameter name="avalonSpec" value="2.0" />
   <parameter name="clkFreq" value="50000000" />
@@ -285,7 +285,7 @@
   <parameter name="dataAddrWidth" value="18" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='RAM.s1' start='0x10000' end='0x1A000' type='altera_avalon_onchip_memory2.s1' /><slave name='NIOS.debug_mem_slave' start='0x20800' end='0x21000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='ESC_SPI.spi_control_port' start='0x21000' end='0x21020' type='altera_avalon_spi.spi_control_port' /><slave name='LED.s1' start='0x21020' end='0x21030' type='altera_avalon_pio.s1' /><slave name='ESC_EEPDONE_INPUT.s1' start='0x21030' end='0x21040' type='altera_avalon_pio.s1' /><slave name='ESC_SPI_CS.s1' start='0x21040' end='0x21050' type='altera_avalon_pio.s1' /><slave name='SYSID.control_slave' start='0x21050' end='0x21058' type='altera_avalon_sysid_qsys.control_slave' /><slave name='DEBUG.avalon_jtag_slave' start='0x21058' end='0x21060' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='RAM.s1' start='0x10000' end='0x1A000' type='altera_avalon_onchip_memory2.s1' /><slave name='NIOS.debug_mem_slave' start='0x20800' end='0x21000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='ESC_SPI.spi_control_port' start='0x21000' end='0x21020' type='altera_avalon_spi.spi_control_port' /><slave name='LED.s1' start='0x21020' end='0x21030' type='altera_avalon_pio.s1' /><slave name='ESC_EEPDONE_INPUT.s1' start='0x21030' end='0x21040' type='altera_avalon_pio.s1' /><slave name='ESC_SPI_CS.s1' start='0x21040' end='0x21050' type='altera_avalon_pio.s1' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -331,7 +331,7 @@
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="3" />
+  <parameter name="internalIrqMaskSystemInfo" value="1" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -461,7 +461,7 @@
   <parameter name="enPRInitMode" value="false" />
   <parameter name="enableDiffWidth" value="false" />
   <parameter name="initMemContent" value="true" />
-  <parameter name="initializationFileName" value="onchip_mem.hex" />
+  <parameter name="initializationFileName">C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project/mem_init/spi_platform_designer_RAM.hex</parameter>
   <parameter name="instanceID" value="NONE" />
   <parameter name="memorySize" value="40960" />
   <parameter name="readDuringWriteMode" value="DONT_CARE" />
@@ -471,7 +471,7 @@
   <parameter name="singleClockOperation" value="false" />
   <parameter name="slave1Latency" value="1" />
   <parameter name="slave2Latency" value="1" />
-  <parameter name="useNonDefaultInitFile" value="false" />
+  <parameter name="useNonDefaultInitFile" value="true" />
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>
@@ -479,7 +479,7 @@
    name="SYSID"
    kind="altera_avalon_sysid_qsys"
    version="23.1"
-   enabled="1">
+   enabled="0">
   <parameter name="id" value="39011" />
  </module>
  <module name="clk_0" kind="clock_source" version="23.1" enabled="1">
