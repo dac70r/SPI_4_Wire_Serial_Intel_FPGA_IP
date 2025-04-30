@@ -1,5 +1,5 @@
 Analysis & Synthesis report for spi
-Wed Apr 30 10:36:48 2025
+Wed Apr 30 10:47:08 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -193,10 +193,9 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 185. Port Connectivity Checks: "spi_platform_designer:u1|spi_platform_designer_DEBUG:debug|alt_jtag_atlantic:spi_platform_designer_DEBUG_alt_jtag_atlantic"
 186. Port Connectivity Checks: "spi_platform_designer:u1|spi_platform_designer_DEBUG:debug"
 187. Post-Synthesis Netlist Statistics for Top Partition
-188. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
-189. Elapsed Time Per Partition
-190. Analysis & Synthesis Messages
-191. Analysis & Synthesis Suppressed Messages
+188. Elapsed Time Per Partition
+189. Analysis & Synthesis Messages
+190. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -223,7 +222,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 30 10:36:48 2025          ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 30 10:47:08 2025          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; spi                                            ;
 ; Top-level Entity Name              ; spi                                            ;
@@ -340,8 +339,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.4%      ;
-;     Processor 3            ;   0.4%      ;
-;     Processor 4            ;   0.4%      ;
+;     Processor 3            ;   0.3%      ;
+;     Processor 4            ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -1469,14 +1468,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |spi|spi_platform_designer:u1|spi_platform_designer_NIOS:nios|spi_platform_designer_NIOS_cpu:cpu|W_rf_wr_data[3]                                                                                                                                                                                                                                                                                          ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |spi|spi_platform_designer:u1|spi_platform_designer_NIOS:nios|spi_platform_designer_NIOS_cpu:cpu|D_dst_regnum[2]                                                                                                                                                                                                                                                                                          ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; No         ; |spi|spi_platform_designer:u1|spi_platform_designer_mm_interconnect_0:mm_interconnect_0|spi_platform_designer_mm_interconnect_0_router:router|src_channel[3]                                                                                                                                                                                                                                              ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spi|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[3]                                                                         ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |spi|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][0]                                                                ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |spi|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[0]                                                                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |spi|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]                                                                       ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |spi|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[2]                                                          ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |spi|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[0]                                             ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |spi|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]                                                                  ;
-; 28:1               ; 4 bits    ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |spi|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[0]                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -5398,12 +5389,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 32                          ;
 ;     SLD               ; 11                          ;
 ;     plain             ; 135                         ;
-; cycloneiii_lcell_comb ; 1655                        ;
+; cycloneiii_lcell_comb ; 1656                        ;
 ;     arith             ; 137                         ;
 ;         2 data inputs ; 94                          ;
 ;         3 data inputs ; 43                          ;
-;     normal            ; 1518                        ;
-;         0 data inputs ; 14                          ;
+;     normal            ; 1519                        ;
+;         0 data inputs ; 15                          ;
 ;         1 data inputs ; 30                          ;
 ;         2 data inputs ; 193                         ;
 ;         3 data inputs ; 395                         ;
@@ -5415,44 +5406,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 
 
-+------------------------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
-+-----------------------+------------------------------------------+
-; Type                  ; Count                                    ;
-+-----------------------+------------------------------------------+
-; boundary_port         ; 141                                      ;
-; cycloneiii_ff         ; 83                                       ;
-;     CLR               ; 7                                        ;
-;     ENA               ; 16                                       ;
-;     ENA CLR           ; 21                                       ;
-;     ENA CLR SLD       ; 2                                        ;
-;     ENA SCLR          ; 5                                        ;
-;     ENA SLD           ; 9                                        ;
-;     SCLR              ; 7                                        ;
-;     plain             ; 16                                       ;
-; cycloneiii_lcell_comb ; 149                                      ;
-;     arith             ; 8                                        ;
-;         2 data inputs ; 8                                        ;
-;     normal            ; 141                                      ;
-;         0 data inputs ; 1                                        ;
-;         1 data inputs ; 6                                        ;
-;         2 data inputs ; 28                                       ;
-;         3 data inputs ; 36                                       ;
-;         4 data inputs ; 70                                       ;
-;                       ;                                          ;
-; Max LUT depth         ; 4.00                                     ;
-; Average LUT depth     ; 2.12                                     ;
-+-----------------------+------------------------------------------+
-
-
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; Top              ; 00:00:03     ;
-; sld_hub:auto_hub ; 00:00:00     ;
-+------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -5461,7 +5421,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Apr 30 10:36:19 2025
+    Info: Processing started: Wed Apr 30 10:46:32 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spi -c spi
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -5576,9 +5536,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file spi.v
     Info (12023): Found entity 1: spi File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 3
 Info (12127): Elaborating entity "spi" for the top level hierarchy
 Warning (10034): Output port "unused_pin_l6" at spi.v(7) has no driver File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 7
-Warning (10034): Output port "unused_pin_p2" at spi.v(18) has no driver File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 18
-Warning (10034): Output port "unused_pin_p1" at spi.v(19) has no driver File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 19
-Warning (10034): Output port "unused_pin_r2" at spi.v(21) has no driver File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 21
 Info (12128): Elaborating entity "heartbeat_ip" for hierarchy "heartbeat_ip:u0" File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 28
 Info (12128): Elaborating entity "spi_platform_designer" for hierarchy "spi_platform_designer:u1" File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 41
 Info (12128): Elaborating entity "spi_platform_designer_DEBUG" for hierarchy "spi_platform_designer:u1|spi_platform_designer_DEBUG:debug" File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer/synthesis/spi_platform_designer.v Line: 89
@@ -5776,7 +5733,7 @@ Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "spi_pl
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "spi_platform_designer:u1|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "spi_platform_designer:u1|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer/synthesis/submodules/altera_reset_controller.v Line: 220
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.04.30.10:36:33 Progress: Loading sldb1edb0b4/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.04.30.10:46:50 Progress: Loading sldb1edb0b4/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -5804,14 +5761,11 @@ Info (13000): Registers with preset signals will power-up high File: C:/Users/gu
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "unused_pin_l6" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 7
-    Warning (13410): Pin "unused_pin_p2" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 18
-    Warning (13410): Pin "unused_pin_p1" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 19
-    Warning (13410): Pin "unused_pin_r2" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 21
+    Warning (13410): Pin "unused_pin_p2" is stuck at VCC File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 18
+    Warning (13410): Pin "unused_pin_p1" is stuck at VCC File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 19
+    Warning (13410): Pin "unused_pin_r2" is stuck at VCC File: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi.v Line: 21
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 45 registers lost all their fanouts during netlist optimizations.
-Info (13000): Registers with preset signals will power-up high File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd Line: 386
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (144001): Generated suppressed messages file C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/output_files/spi.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -5822,11 +5776,11 @@ Info (21057): Implemented 2292 device resources after synthesis - the final reso
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 2096 logic cells
     Info (21064): Implemented 176 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4913 megabytes
-    Info: Processing ended: Wed Apr 30 10:36:48 2025
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:27
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4912 megabytes
+    Info: Processing ended: Wed Apr 30 10:47:08 2025
+    Info: Elapsed time: 00:00:36
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+

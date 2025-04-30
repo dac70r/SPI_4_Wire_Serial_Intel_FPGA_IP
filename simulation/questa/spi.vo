@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
-// DATE "04/30/2025 10:37:04"
+// DATE "04/30/2025 10:47:29"
 
 // 
 // Device: Altera 10CL040YF484C8G Package FBGA484
@@ -2416,6 +2416,7 @@ wire [31:0] \u1|nios|cpu|E_shift_rot_result ;
 wire [31:0] \u1|nios|cpu|spi_platform_designer_NIOS_cpu_register_bank_a|the_altsyncram|auto_generated|q_b ;
 wire [7:0] \u1|nios|cpu|av_ld_byte1_data ;
 wire [31:0] \u1|nios|cpu|the_spi_platform_designer_NIOS_cpu_nios2_oci|the_spi_platform_designer_NIOS_cpu_nios2_oci_break|break_readreg ;
+wire [4:0] \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter ;
 wire [31:0] \u1|nios|cpu|the_spi_platform_designer_NIOS_cpu_nios2_oci|the_spi_platform_designer_NIOS_cpu_nios2_ocimem|MonDReg ;
 wire [4:0] \u1|nios|cpu|E_shift_rot_cnt ;
 wire [1:0] \u1|mm_interconnect_0|cmd_mux_003|arb|top_priority_reg ;
@@ -2434,7 +2435,6 @@ wire [1:0] \u1|nios|cpu|the_spi_platform_designer_NIOS_cpu_nios2_oci|the_spi_pla
 wire [1:0] \u1|mm_interconnect_0|led_s1_agent_rsp_fifo|mem_used ;
 wire [1:0] \u1|mm_interconnect_0|led_s1_translator|wait_latency_counter ;
 wire [2:0] \u1|esc_spi|slowcount ;
-wire [3:0] \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR ;
 wire [10:0] \u1|nios|cpu|the_spi_platform_designer_NIOS_cpu_nios2_oci|the_spi_platform_designer_NIOS_cpu_nios2_ocimem|MonAReg ;
 wire [4:0] \u1|esc_spi|state ;
 wire [1:0] \u1|mm_interconnect_0|esc_spi_cs_s1_agent_rsp_fifo|mem_used ;
@@ -2442,7 +2442,7 @@ wire [1:0] \u1|mm_interconnect_0|cmd_mux_003|saved_grant ;
 wire [15:0] \u1|nios|cpu|F_pc ;
 wire [1:0] \u1|mm_interconnect_0|cmd_mux_002|saved_grant ;
 wire [1:0] \u1|mm_interconnect_0|esc_spi_cs_s1_translator|wait_latency_counter ;
-wire [4:0] \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|word_counter ;
+wire [3:0] \auto_hub|instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|instrumentation_fabric|alt_sld_fab|sldfabric|jtag_hub_gen:real_sld_jtag_hub|hub_info_reg|WORD_SR ;
 wire [7:0] \u1|esc_spi|tx_holding_reg ;
 wire [0:0] \u1|nios|cpu|the_spi_platform_designer_NIOS_cpu_nios2_oci|the_spi_platform_designer_NIOS_cpu_debug_slave_wrapper|the_spi_platform_designer_NIOS_cpu_debug_slave_tck|the_altera_std_synchronizer2|dreg ;
 wire [7:0] \u1|nios|cpu|av_ld_byte3_data ;
@@ -2882,7 +2882,7 @@ defparam \esc_mosi_pin_m3~output .open_drain_output = "false";
 
 // Location: IOOBUF_X0_Y17_N16
 cyclone10lp_io_obuf \unused_pin_p2~output (
-	.i(gnd),
+	.i(vcc),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -2895,7 +2895,7 @@ defparam \unused_pin_p2~output .open_drain_output = "false";
 
 // Location: IOOBUF_X0_Y17_N23
 cyclone10lp_io_obuf \unused_pin_p1~output (
-	.i(gnd),
+	.i(vcc),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -2908,7 +2908,7 @@ defparam \unused_pin_p1~output .open_drain_output = "false";
 
 // Location: IOOBUF_X0_Y16_N2
 cyclone10lp_io_obuf \unused_pin_r2~output (
-	.i(gnd),
+	.i(vcc),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),

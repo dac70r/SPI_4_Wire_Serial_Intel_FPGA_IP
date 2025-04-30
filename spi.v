@@ -39,5 +39,10 @@ spi_platform_designer u1 (
 		.led_export(led_nios),               								//               led.export
 		.reset_reset_n(reset_n)            									//             reset.reset_n
 	);
+	
+	
+assign unused_pin_p2 = 1'b1;						// pin_P2
+assign unused_pin_p1 = 1'b1;						// pin_P1
+assign unused_pin_r2	= 1'b1;						// pin_R2
 
 endmodule

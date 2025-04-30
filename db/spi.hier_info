@@ -11,9 +11,9 @@ esc_mosi_pin_m3 <= spi_platform_designer:u1.esc_spi_MOSI
 esc_miso_pin_n2 => esc_miso_pin_n2.IN1
 esc_eepdone_input_export_pin_n1 => esc_eepdone_input_export_pin_n1.IN1
 reserved_reset_n => ~NO_FANOUT~
-unused_pin_p2 <= <GND>
-unused_pin_p1 <= <GND>
-unused_pin_r2 <= <GND>
+unused_pin_p2 <= <VCC>
+unused_pin_p1 <= <VCC>
+unused_pin_r2 <= <VCC>
 
 
 |spi|heartbeat_ip:u0
