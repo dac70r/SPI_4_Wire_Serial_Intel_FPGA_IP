@@ -1,12 +1,14 @@
 	component spi_platform_designer is
 		port (
-			clk_clk              : in  std_logic := 'X'; -- clk
-			reset_reset_n        : in  std_logic := 'X'; -- reset_n
-			spi_pin_MISO         : in  std_logic := 'X'; -- MISO
-			spi_pin_MOSI         : out std_logic;        -- MOSI
-			spi_pin_SCLK         : out std_logic;        -- SCLK
-			spi_pin_SS_n         : out std_logic;        -- SS_n
-			spi_ss_manual_export : out std_logic         -- export
+			clk_clk                  : in  std_logic := 'X'; -- clk
+			esc_eepdone_input_export : in  std_logic := 'X'; -- export
+			esc_spi_MISO             : in  std_logic := 'X'; -- MISO
+			esc_spi_MOSI             : out std_logic;        -- MOSI
+			esc_spi_SCLK             : out std_logic;        -- SCLK
+			esc_spi_SS_n             : out std_logic;        -- SS_n
+			esc_spi_cs_export        : out std_logic;        -- export
+			led_export               : out std_logic;        -- export
+			reset_reset_n            : in  std_logic := 'X'  -- reset_n
 		);
 	end component spi_platform_designer;
 
