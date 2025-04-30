@@ -18,11 +18,7 @@
 #include "system.h"
 #include "stdint.h"
 #include "altera_avalon_pio_regs.h"
-
-
-void delay_ms(int milliseconds) {
-    usleep(milliseconds * 1000);  // Convert to microseconds
-}
+#include "peripheral/peripheral_linker.h"
 
 int main()
 {

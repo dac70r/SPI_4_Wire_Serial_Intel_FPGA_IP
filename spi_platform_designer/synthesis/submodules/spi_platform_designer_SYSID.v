@@ -49,7 +49,7 @@ module spi_platform_designer_SYSID (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1745982419 : 39011;
+  assign readdata = address ? 1745988059 : 39011;
 
 endmodule
 

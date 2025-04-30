@@ -83,3 +83,51 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
 	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
 	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 4 0 2025-04-30 11:27:54.273
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 11:27:54.300
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x21050 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project/NIOS_Project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 11:27:55.797
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x21050]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 11:28:44.315
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21050 --id=0x9863 --timestamp=1745983450 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project/NIOS_Project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 11:28:45.775
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21050 --id=0x9863 --timestamp=1745983450]
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-04-30 12:45:08.349
+!MESSAGE Indexed 'NIOS_Project_Small_bsp' (81 sources, 125 headers) in 0.943 sec: 3,619 declarations; 5,636 references; 91 unresolved inclusions; 7 syntax errors; 136 unresolved names (1.4%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-04-30 12:45:09.884
+!MESSAGE Indexed 'NIOS_Project_Small' (1 sources, 0 headers) in 0.007 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-04-30 12:47:07.069
+!MESSAGE Indexed 'NIOS_Project_Small' (14 sources, 98 headers) in 0.257 sec: 4,506 declarations; 14,332 references; 1 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 12:48:11.060
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --sidp=0x41050 --id=0x9863 --timestamp=1745988059 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small/NIOS_Project_Small.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 12:48:12.520
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x41050 --id=0x9863 --timestamp=1745988059]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 12:51:27.366
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --sidp=0x41050 --id=0x9863 --timestamp=1745988059 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small/NIOS_Project_Small.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 12:51:28.798
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x41050 --id=0x9863 --timestamp=1745988059]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 12:52:19.882
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --sidp=0x41050 --id=0x9863 --timestamp=1745988059 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small/NIOS_Project_Small.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 12:52:21.353
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x41050 --id=0x9863 --timestamp=1745988059]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 12:57:05.854
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x41050 --id=0x9863 --timestamp=1745988059]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-04-30 12:57:07.262
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x41050 --id=0x9863 --timestamp=1745988059 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small/NIOS_Project_Small.elf]

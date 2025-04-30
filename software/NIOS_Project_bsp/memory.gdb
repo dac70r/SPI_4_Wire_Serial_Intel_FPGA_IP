@@ -3,7 +3,7 @@
 # Machine generated for CPU 'NIOS' in SOPC Builder design 'spi_platform_designer'
 # SOPC Builder design path: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
 #
-# Generated: Wed Apr 30 10:42:43 SGT 2025
+# Generated: Wed Apr 30 12:43:04 SGT 2025
 
 # DO NOT MODIFY THIS FILE
 #
@@ -47,4 +47,4 @@
 # by allowing GDB to cache memory contents on the host.
 
 # RAM
-memory 0x10000 0x1a000 cache
+memory 0x20000 0x34000 cache

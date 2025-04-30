@@ -1,15 +1,15 @@
-11:05:29 **** Build of configuration Nios II for project NIOS_Project ****
+12:57:58 **** Build of configuration Nios II for project NIOS_Project_Small ****
 wsl make mem_init_generate 
-Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_bsp/
-make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_bsp/
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small_bsp/
 [BSP build complete]
 Post-processing to create mem_init/spi_platform_designer_RAM.hex...
-elf2hex.exe NIOS_Project.elf 0x00010000 0x00019fff --width=32 --little-endian-mem --create-lanes=0 mem_init/spi_platform_designer_RAM.hex
+elf2hex.exe NIOS_Project_Small.elf 0x00020000 0x00033fff --width=32 --little-endian-mem --create-lanes=0 mem_init/spi_platform_designer_RAM.hex
 Post-processing to create mem_init/hdl_sim/spi_platform_designer_RAM.dat...
-elf2dat --infile=NIOS_Project.elf --outfile=mem_init/hdl_sim/spi_platform_designer_RAM.dat \
-	--base=0x00010000 --end=0x00019fff --width=32 \
+elf2dat --infile=NIOS_Project_Small.elf --outfile=mem_init/hdl_sim/spi_platform_designer_RAM.dat \
+	--base=0x00020000 --end=0x00033fff --width=32 \
 	--little-endian-mem --create-lanes=0 
 Post-processing to create mem_init/hdl_sim/spi_platform_designer_RAM.sym...
-nios2-elf-nm.exe -n NIOS_Project.elf > mem_init/hdl_sim/spi_platform_designer_RAM.sym
+nios2-elf-nm.exe -n NIOS_Project_Small.elf > mem_init/hdl_sim/spi_platform_designer_RAM.sym
 Post-processing to create mem_init/meminit.spd...
 Post-processing to create mem_init/meminit.qip...
