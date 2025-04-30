@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 23.1 993 (Future versions may contain additional information.) -->
- <!-- 2025.04.30.12:40:59 -->
+ <!-- 2025.04.30.13:16:59 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1745988059</value>
+  <value>1745990219</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -7448,7 +7448,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="initializationFileName">
    <type>java.lang.String</type>
-   <value>C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project/mem_init/spi_platform_designer_RAM.hex</value>
+   <value>C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small/mem_init/spi_platform_designer_RAM.hex</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -7659,7 +7659,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_init_file_name">
    <type>java.lang.String</type>
-   <value>C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project/mem_init/spi_platform_designer_RAM.hex</value>
+   <value>C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small/mem_init/spi_platform_designer_RAM.hex</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -8160,7 +8160,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1745988059</value>
+   <value>1745990219</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -8180,7 +8180,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1745988059</value>
+   <value>1745990219</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -8196,7 +8196,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1745988059</value>
+   <value>1745990219</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>

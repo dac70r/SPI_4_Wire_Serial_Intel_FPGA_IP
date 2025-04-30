@@ -461,7 +461,7 @@
   <parameter name="enPRInitMode" value="false" />
   <parameter name="enableDiffWidth" value="false" />
   <parameter name="initMemContent" value="true" />
-  <parameter name="initializationFileName">C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project/mem_init/spi_platform_designer_RAM.hex</parameter>
+  <parameter name="initializationFileName">C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small/mem_init/spi_platform_designer_RAM.hex</parameter>
   <parameter name="instanceID" value="NONE" />
   <parameter name="memorySize" value="81920" />
   <parameter name="readDuringWriteMode" value="DONT_CARE" />

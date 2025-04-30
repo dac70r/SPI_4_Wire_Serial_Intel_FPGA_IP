@@ -36,7 +36,7 @@ module spi_platform_designer_RAM (
                                  )
 ;
 
-  parameter INIT_FILE = "C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project/mem_init/spi_platform_designer_RAM.hex";
+  parameter INIT_FILE = "C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small/mem_init/spi_platform_designer_RAM.hex";
 
 
   output  [ 31: 0] readdata;

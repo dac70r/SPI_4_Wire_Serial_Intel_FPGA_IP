@@ -2,7 +2,7 @@ set_global_assignment -entity "spi_platform_designer" -library "spi_platform_des
 set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_TOOL_VERSION "23.1"
 set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "spi_platform_designer" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../spi_platform_designer.sopcinfo"]
-set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name SLD_INFO "QSYS_NAME spi_platform_designer HAS_SOPCINFO 1 GENERATION_ID 1745988059"
+set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name SLD_INFO "QSYS_NAME spi_platform_designer HAS_SOPCINFO 1 GENERATION_ID 1745990219"
 set_global_assignment -library "spi_platform_designer" -name MISC_FILE [file join $::quartus(qip_path) "../spi_platform_designer.cmp"]
 set_global_assignment -library "spi_platform_designer" -name SLD_FILE [file join $::quartus(qip_path) "spi_platform_designer.regmap"]
 set_global_assignment -library "spi_platform_designer" -name SLD_FILE [file join $::quartus(qip_path) "spi_platform_designer.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "spi_platform_designer" -library "spi_platform_des
 set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc0NTk4ODA1OQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc0NTk5MDIxOQ==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSAxMCBMUA==::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBDTDA0MFlGNDg0QzhH::QXV0byBERVZJQ0U="
 set_global_assignment -entity "spi_platform_designer" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OA==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -626,7 +626,7 @@ set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform
 set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "ZHVhbFBvcnQ=::ZmFsc2U=::RHVhbC1wb3J0IGFjY2Vzcw=="
 set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9lbmFibGVEaWZmV2lkdGg=::ZmFsc2U=::ZGVyaXZlZF9lbmFibGVEaWZmV2lkdGg="
 set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "aW5pdE1lbUNvbnRlbnQ=::dHJ1ZQ==::SW5pdGlhbGl6ZSBtZW1vcnkgY29udGVudA=="
-set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "aW5pdGlhbGl6YXRpb25GaWxlTmFtZQ==::QzovVXNlcnMvZ3Vhbi1taW5nLmRlbm5pcy13b24vRG9jdW1lbnRzL0NvZGUvU1BJXzRfV2lyZV9TZXJpYWxfSW50ZWxfRlBHQV9JUC9zb2Z0d2FyZS9OSU9TX1Byb2plY3QvbWVtX2luaXQvc3BpX3BsYXRmb3JtX2Rlc2lnbmVyX1JBTS5oZXg=::VXNlciBjcmVhdGVkIGluaXRpYWxpemF0aW9uIGZpbGU="
+set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "aW5pdGlhbGl6YXRpb25GaWxlTmFtZQ==::QzovVXNlcnMvZ3Vhbi1taW5nLmRlbm5pcy13b24vRG9jdW1lbnRzL0NvZGUvU1BJXzRfV2lyZV9TZXJpYWxfSW50ZWxfRlBHQV9JUC9zb2Z0d2FyZS9OSU9TX1Byb2plY3RfU21hbGwvbWVtX2luaXQvc3BpX3BsYXRmb3JtX2Rlc2lnbmVyX1JBTS5oZXg=::VXNlciBjcmVhdGVkIGluaXRpYWxpemF0aW9uIGZpbGU="
 set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "ZW5QUkluaXRNb2Rl::ZmFsc2U=::RW5hYmxlIFBhcnRpYWwgUmVjb25maWd1cmF0aW9uIEluaXRpYWxpemF0aW9uIE1vZGU="
 set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "bWVtb3J5U2l6ZQ==::ODE5MjA=::VG90YWwgbWVtb3J5IHNpemU="
 set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "c2ltQWxsb3dNUkFNQ29udGVudHNGaWxl::ZmFsc2U=::QWxsb3cgTVJBTSBjb250ZW50cyBmaWxlIGZvciBzaW11bGF0aW9u"
@@ -647,7 +647,7 @@ set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform
 set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9zZXRfZGF0YV93aWR0aDI=::MzI=::U2xhdmUgMiBkYXRhIHdpZHRo"
 set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9ndWlfcmFtX2Jsb2NrX3R5cGU=::QXV0b21hdGlj::ZGVyaXZlZF9ndWlfcmFtX2Jsb2NrX3R5cGU="
 set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pc19oYXJkY29weQ==::ZmFsc2U=::ZGVyaXZlZF9pc19oYXJkY29weQ=="
-set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ==::QzovVXNlcnMvZ3Vhbi1taW5nLmRlbm5pcy13b24vRG9jdW1lbnRzL0NvZGUvU1BJXzRfV2lyZV9TZXJpYWxfSW50ZWxfRlBHQV9JUC9zb2Z0d2FyZS9OSU9TX1Byb2plY3QvbWVtX2luaXQvc3BpX3BsYXRmb3JtX2Rlc2lnbmVyX1JBTS5oZXg=::ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ=="
+set_global_assignment -entity "spi_platform_designer_RAM" -library "spi_platform_designer" -name IP_COMPONENT_PARAMETER "ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ==::QzovVXNlcnMvZ3Vhbi1taW5nLmRlbm5pcy13b24vRG9jdW1lbnRzL0NvZGUvU1BJXzRfV2lyZV9TZXJpYWxfSW50ZWxfRlBHQV9JUC9zb2Z0d2FyZS9OSU9TX1Byb2plY3RfU21hbGwvbWVtX2luaXQvc3BpX3BsYXRmb3JtX2Rlc2lnbmVyX1JBTS5oZXg=::ZGVyaXZlZF9pbml0X2ZpbGVfbmFtZQ=="
 set_global_assignment -entity "spi_platform_designer_NIOS" -library "spi_platform_designer" -name IP_COMPONENT_NAME "c3BpX3BsYXRmb3JtX2Rlc2lnbmVyX05JT1M="
 set_global_assignment -entity "spi_platform_designer_NIOS" -library "spi_platform_designer" -name IP_COMPONENT_DISPLAY_NAME "TmlvcyBJSSBQcm9jZXNzb3I="
 set_global_assignment -entity "spi_platform_designer_NIOS" -library "spi_platform_designer" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
