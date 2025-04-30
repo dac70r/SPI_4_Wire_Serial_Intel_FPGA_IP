@@ -1,6 +1,0 @@
-02:17:55 **** Build of configuration Nios II for project spi_debug_bsp ****
-wsl make all 
-[BSP build complete]
-
-02:17:56 Build Finished (took 971ms)
-

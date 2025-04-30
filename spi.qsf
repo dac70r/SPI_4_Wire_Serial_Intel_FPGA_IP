@@ -54,14 +54,26 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name VERILOG_FILE heartbeat_ip.v
-set_global_assignment -name VERILOG_FILE spi.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_G2 -to clk
-set_location_assignment PIN_M6 -to led
+set_location_assignment PIN_D15 -to led
 set_location_assignment PIN_L7 -to reset_n
+set_global_assignment -name QIP_FILE spi_platform_designer/synthesis/spi_platform_designer.qip
+set_global_assignment -name VERILOG_FILE heartbeat_ip.v
+set_global_assignment -name VERILOG_FILE spi.v
+set_location_assignment PIN_M4 -to esc_cs_export_pin_m4
+set_location_assignment PIN_M3 -to esc_mosi_pin_m3
+set_location_assignment PIN_M2 -to esc_sclk_pin_m2
+set_location_assignment PIN_M1 -to esc_ss_n_pin_m1
+set_location_assignment PIN_M6 -to led_nios
+set_location_assignment PIN_L6 -to unused_pin_l6
+set_location_assignment PIN_P1 -to unused_pin_p1
+set_location_assignment PIN_P2 -to unused_pin_p2
+set_location_assignment PIN_R2 -to unused_pin_r2
+set_location_assignment PIN_N1 -to esc_eepdone_input_export_pin_n1
+set_location_assignment PIN_N2 -to esc_miso_pin_n2
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
