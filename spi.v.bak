@@ -1,0 +1,10 @@
+module 
+
+spi(
+	input clk,
+	input	reset_n,
+	
+	output led
+);
+
+endmodule
