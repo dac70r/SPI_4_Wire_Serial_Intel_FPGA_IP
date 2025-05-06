@@ -18,14 +18,14 @@ module spi_platform_designer (
 	wire  [31:0] nios_data_master_readdata;                             // mm_interconnect_0:NIOS_data_master_readdata -> NIOS:d_readdata
 	wire         nios_data_master_waitrequest;                          // mm_interconnect_0:NIOS_data_master_waitrequest -> NIOS:d_waitrequest
 	wire         nios_data_master_debugaccess;                          // NIOS:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:NIOS_data_master_debugaccess
-	wire  [17:0] nios_data_master_address;                              // NIOS:d_address -> mm_interconnect_0:NIOS_data_master_address
+	wire  [18:0] nios_data_master_address;                              // NIOS:d_address -> mm_interconnect_0:NIOS_data_master_address
 	wire   [3:0] nios_data_master_byteenable;                           // NIOS:d_byteenable -> mm_interconnect_0:NIOS_data_master_byteenable
 	wire         nios_data_master_read;                                 // NIOS:d_read -> mm_interconnect_0:NIOS_data_master_read
 	wire         nios_data_master_write;                                // NIOS:d_write -> mm_interconnect_0:NIOS_data_master_write
 	wire  [31:0] nios_data_master_writedata;                            // NIOS:d_writedata -> mm_interconnect_0:NIOS_data_master_writedata
 	wire  [31:0] nios_instruction_master_readdata;                      // mm_interconnect_0:NIOS_instruction_master_readdata -> NIOS:i_readdata
 	wire         nios_instruction_master_waitrequest;                   // mm_interconnect_0:NIOS_instruction_master_waitrequest -> NIOS:i_waitrequest
-	wire  [17:0] nios_instruction_master_address;                       // NIOS:i_address -> mm_interconnect_0:NIOS_instruction_master_address
+	wire  [18:0] nios_instruction_master_address;                       // NIOS:i_address -> mm_interconnect_0:NIOS_instruction_master_address
 	wire         nios_instruction_master_read;                          // NIOS:i_read -> mm_interconnect_0:NIOS_instruction_master_read
 	wire         mm_interconnect_0_debug_avalon_jtag_slave_chipselect;  // mm_interconnect_0:DEBUG_avalon_jtag_slave_chipselect -> DEBUG:av_chipselect
 	wire  [31:0] mm_interconnect_0_debug_avalon_jtag_slave_readdata;    // DEBUG:av_readdata -> mm_interconnect_0:DEBUG_avalon_jtag_slave_readdata
@@ -46,7 +46,7 @@ module spi_platform_designer (
 	wire  [31:0] mm_interconnect_0_nios_debug_mem_slave_writedata;      // mm_interconnect_0:NIOS_debug_mem_slave_writedata -> NIOS:debug_mem_slave_writedata
 	wire         mm_interconnect_0_ram_s1_chipselect;                   // mm_interconnect_0:RAM_s1_chipselect -> RAM:chipselect
 	wire  [31:0] mm_interconnect_0_ram_s1_readdata;                     // RAM:readdata -> mm_interconnect_0:RAM_s1_readdata
-	wire  [13:0] mm_interconnect_0_ram_s1_address;                      // mm_interconnect_0:RAM_s1_address -> RAM:address
+	wire  [14:0] mm_interconnect_0_ram_s1_address;                      // mm_interconnect_0:RAM_s1_address -> RAM:address
 	wire   [3:0] mm_interconnect_0_ram_s1_byteenable;                   // mm_interconnect_0:RAM_s1_byteenable -> RAM:byteenable
 	wire         mm_interconnect_0_ram_s1_write;                        // mm_interconnect_0:RAM_s1_write -> RAM:write
 	wire  [31:0] mm_interconnect_0_ram_s1_writedata;                    // mm_interconnect_0:RAM_s1_writedata -> RAM:writedata

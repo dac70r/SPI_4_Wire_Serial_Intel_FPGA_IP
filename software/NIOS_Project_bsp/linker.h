@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOS' in SOPC Builder design 'spi_platform_designer'
  * SOPC Builder design path: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
  *
- * Generated: Wed Apr 30 10:42:43 SGT 2025
+ * Generated: Wed Apr 30 12:43:04 SGT 2025
  */
 
 /*
@@ -65,9 +65,9 @@
  *
  */
 
-#define RAM_REGION_BASE 0x10020
-#define RAM_REGION_SPAN 40928
-#define RESET_REGION_BASE 0x10000
+#define RAM_REGION_BASE 0x20020
+#define RAM_REGION_SPAN 81888
+#define RESET_REGION_BASE 0x20000
 #define RESET_REGION_SPAN 32
 
 
