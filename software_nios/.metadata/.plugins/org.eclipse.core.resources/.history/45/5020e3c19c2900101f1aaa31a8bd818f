@@ -310,8 +310,7 @@ void APPL_OutputMapping(UINT16* pData)
 void APPL_Application(void)
 {
 	static int haha = 0;
-	//IN_GENERIC0x6000.IN_GEN_INT1 = haha++;
-	IN_GENERIC0x6000.IN_GEN_INT1 = OUT_GENERIC0x7000.OUT_GEN_INT1;
+	IN_GENERIC0x6000.IN_GEN_INT1 = haha++;
 }
 
 #if EXPLICIT_DEVICE_ID

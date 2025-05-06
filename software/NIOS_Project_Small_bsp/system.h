@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'NIOS' in SOPC Builder design 'spi_platform_designer'
- * SOPC Builder design path: c:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
+ * SOPC Builder design path: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
  *
- * Generated: Wed Apr 30 12:45:06 SGT 2025
+ * Generated: Mon May 05 18:37:15 SGT 2025
  */
 
 /*
@@ -312,7 +312,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/SYSID"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1745988059
+#define SYSID_TIMESTAMP 1745990219
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

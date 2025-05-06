@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'NIOS' in SOPC Builder design 'spi_platform_designer'
- * SOPC Builder design path: c:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
+ * SOPC Builder design path: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
  *
- * Generated: Wed Apr 30 12:45:06 SGT 2025
+ * Generated: Mon May 05 18:37:15 SGT 2025
  */
 
 /*

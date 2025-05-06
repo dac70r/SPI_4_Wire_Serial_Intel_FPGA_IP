@@ -101,7 +101,7 @@ ACDS_VERSION := 23.1
 # BUILD_NUMBER: 993
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := c:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
+SOPC_FILE := C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

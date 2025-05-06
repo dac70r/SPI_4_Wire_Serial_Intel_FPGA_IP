@@ -86,7 +86,7 @@ ACDS_VERSION := 23.1
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := c:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
+SOPCINFO_FILE := C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false
@@ -158,9 +158,9 @@ SOPC_SYSID_FLAG += --sidp=0x41050
 ELF_PATCH_FLAG  += --sidp 0x41050
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1745988059
-SOPC_SYSID_FLAG += --timestamp=1745988059
-ELF_PATCH_FLAG  += --timestamp 1745988059
+# setting SOPC_TIMESTAMP is 1745990219
+SOPC_SYSID_FLAG += --timestamp=1745990219
+ELF_PATCH_FLAG  += --timestamp 1745990219
 
 # Enable JTAG UART driver to recover when host is inactive causing buffer to 
 # full without returning error. Printf will not fail with this recovery. none 
