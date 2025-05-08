@@ -9,7 +9,7 @@
 #include "../imported_source/ecat_def.h"
 #include "../imported_source/ecatappl.h"
 #include "../peripheral/peripheral_linker.h"
-
+#include "system.h"
 #define __AX58100_HW__ 1
 #include "../imported_source/ax58100_hw.h"
 #undef __AX58100_HW__
@@ -318,11 +318,6 @@ static void ISR_GetInterruptRegister(void) {
  */
 uint8_t HW_Init(void) {
     uint32_t intMask;
-    uint16_t startTimeL;
-    uint16_t startTimeH;
-    uint32_t startTime;
-    uint16_t currentTime;
-    uint16_t elapsedTime;
 
     // Initialize & Start Timer
     do {
@@ -333,6 +328,9 @@ uint8_t HW_Init(void) {
     } while (intMask != 0x93);
     intMask = 0x00;
     HW_EscWriteDWord(intMask, ESC_AL_EVENTMASK_OFFSET);
+
+    // Initialize Interrupt for SINT
+	init_exti0_it();
 
 #if AL_EVENT_ENABLED
     /* Enable ESC interrupt */
@@ -487,12 +485,23 @@ uint16_t HW_EepromReload(void) { return 0; }
  * @param  None
  * @retval None
  */
+// Pin 0 triggered a falling-edge interrupt on the PIO
+//void my_isr(void *context) {
+    // Handle the event (e.g., blink LED, read SPI, etc.)
+
+    // Tell the PIO: "I’ve handled this edge — you can watch for the next one now"
+    //IOWR_ALTERA_AVALON_PIO_EDGE_CAP(MY_PIO_BASE, 0x1);  // clear bit 0
+//}
+/*
 void HW_ALEVENT_IRQHandler(void) {
     //if (__HAL_GPIO_EXTI_GET_FLAG(HW_SPI_ESC_INT_PIN)) {
         //__HAL_GPIO_EXTI_CLEAR_FLAG(HW_SPI_ESC_INT_PIN);
         PDI_Isr();
+        IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, 0x00);
+        IOWR_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE, 0x1);  // clearing edge register by writing 1 to it
     //}
-}
+}*/
+
 
 /**
  * @brief  Interrupt service routine for SYNC0/SYNC1

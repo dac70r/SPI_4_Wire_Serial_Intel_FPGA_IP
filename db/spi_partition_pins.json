@@ -36,6 +36,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "esc_spi_sint_export",
+					"strict" : false
+				},
+				{
 					"name" : "reset_n",
 					"strict" : false
 				},

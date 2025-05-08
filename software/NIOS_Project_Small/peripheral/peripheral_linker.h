@@ -13,8 +13,6 @@
 #include "stdint.h"
 //#include "../imported_source/ax58100_hw.h"
 
-// defines
-
 
 // function declaration
 void timer_isr(void *context);

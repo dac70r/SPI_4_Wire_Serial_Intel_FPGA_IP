@@ -1,0 +1,19 @@
+/*
+ *  This file contains nios interrupt headers and function/ variable declarations
+ *
+ *  Author: Dennis Wong Guan Ming
+ *
+ * */
+#ifndef PERIPHERAL_LINKER_H
+#define PERIPHERAL_LINKER_H
+
+#include "system.h"
+#include "sys\alt_irq.h"
+
+//ISR declaration
+void exti0_isr (void * context);			// Low Level ISR
+void init_exti0_it (void);					// Initialize PDI_ISR
+
+
+//void init_readback_it (void);
+//void readback_isr (void * context);

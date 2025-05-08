@@ -7,6 +7,7 @@ module spi_platform_designer (
 	esc_spi_SCLK,
 	esc_spi_SS_n,
 	esc_spi_cs_export,
+	esc_spi_sint_export,
 	led_export,
 	reset_reset_n);	
 
@@ -17,6 +18,7 @@ module spi_platform_designer (
 	output		esc_spi_SCLK;
 	output		esc_spi_SS_n;
 	output		esc_spi_cs_export;
+	input		esc_spi_sint_export;
 	output		led_export;
 	input		reset_reset_n;
 endmodule

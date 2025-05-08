@@ -129,7 +129,7 @@ V4.00 ECAT 1: The handling of the Sync Manager Parameter was included according 
 
 /*Add Application specific Objects*/
 /*ECATCHANGE_START(V5.13) CIA402 3*/
-#include "../imported_source/ViCAT_LSC.h"
+#include "../imported_source/TENCL040_ESC.h"
 
 
 #undef _OBJD_

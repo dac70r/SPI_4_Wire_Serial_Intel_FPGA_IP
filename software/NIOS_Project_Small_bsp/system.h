@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOS' in SOPC Builder design 'spi_platform_designer'
  * SOPC Builder design path: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
  *
- * Generated: Mon May 05 18:37:15 SGT 2025
+ * Generated: Thu May 08 10:29:20 SGT 2025
  */
 
 /*
@@ -134,7 +134,7 @@
  */
 
 #define ALT_MODULE_CLASS_DEBUG altera_avalon_jtag_uart
-#define DEBUG_BASE 0x41058
+#define DEBUG_BASE 0x41068
 #define DEBUG_IRQ 1
 #define DEBUG_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define DEBUG_NAME "/dev/DEBUG"
@@ -165,7 +165,7 @@
  */
 
 #define ALT_MODULE_CLASS_ESC_EEPDONE_INPUT altera_avalon_pio
-#define ESC_EEPDONE_INPUT_BASE 0x41030
+#define ESC_EEPDONE_INPUT_BASE 0x41040
 #define ESC_EEPDONE_INPUT_BIT_CLEARING_EDGE_REGISTER 0
 #define ESC_EEPDONE_INPUT_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define ESC_EEPDONE_INPUT_CAPTURE 0
@@ -223,7 +223,7 @@
  */
 
 #define ALT_MODULE_CLASS_ESC_SPI_CS altera_avalon_pio
-#define ESC_SPI_CS_BASE 0x41040
+#define ESC_SPI_CS_BASE 0x41050
 #define ESC_SPI_CS_BIT_CLEARING_EDGE_REGISTER 0
 #define ESC_SPI_CS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define ESC_SPI_CS_CAPTURE 0
@@ -245,12 +245,39 @@
 
 
 /*
+ * ESC_SPI_SINT configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_ESC_SPI_SINT altera_avalon_pio
+#define ESC_SPI_SINT_BASE 0x41020
+#define ESC_SPI_SINT_BIT_CLEARING_EDGE_REGISTER 0
+#define ESC_SPI_SINT_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define ESC_SPI_SINT_CAPTURE 1
+#define ESC_SPI_SINT_DATA_WIDTH 1
+#define ESC_SPI_SINT_DO_TEST_BENCH_WIRING 0
+#define ESC_SPI_SINT_DRIVEN_SIM_VALUE 0
+#define ESC_SPI_SINT_EDGE_TYPE "FALLING"
+#define ESC_SPI_SINT_FREQ 50000000
+#define ESC_SPI_SINT_HAS_IN 1
+#define ESC_SPI_SINT_HAS_OUT 0
+#define ESC_SPI_SINT_HAS_TRI 0
+#define ESC_SPI_SINT_IRQ 2
+#define ESC_SPI_SINT_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define ESC_SPI_SINT_IRQ_TYPE "EDGE"
+#define ESC_SPI_SINT_NAME "/dev/ESC_SPI_SINT"
+#define ESC_SPI_SINT_RESET_VALUE 0
+#define ESC_SPI_SINT_SPAN 16
+#define ESC_SPI_SINT_TYPE "altera_avalon_pio"
+
+
+/*
  * LED configuration
  *
  */
 
 #define ALT_MODULE_CLASS_LED altera_avalon_pio
-#define LED_BASE 0x41020
+#define LED_BASE 0x41030
 #define LED_BIT_CLEARING_EDGE_REGISTER 0
 #define LED_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LED_CAPTURE 0
@@ -306,13 +333,13 @@
  */
 
 #define ALT_MODULE_CLASS_SYSID altera_avalon_sysid_qsys
-#define SYSID_BASE 0x41050
+#define SYSID_BASE 0x41060
 #define SYSID_ID 39011
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/SYSID"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1745990219
+#define SYSID_TIMESTAMP 1746671238
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 
@@ -332,19 +359,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/DEBUG"
-#define ALT_STDERR_BASE 0x41058
+#define ALT_STDERR_BASE 0x41068
 #define ALT_STDERR_DEV DEBUG
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/DEBUG"
-#define ALT_STDIN_BASE 0x41058
+#define ALT_STDIN_BASE 0x41068
 #define ALT_STDIN_DEV DEBUG
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/DEBUG"
-#define ALT_STDOUT_BASE 0x41058
+#define ALT_STDOUT_BASE 0x41068
 #define ALT_STDOUT_DEV DEBUG
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT

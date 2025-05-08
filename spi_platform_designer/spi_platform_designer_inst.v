@@ -6,6 +6,7 @@
 		.esc_spi_SCLK             (<connected-to-esc_spi_SCLK>),             //                  .SCLK
 		.esc_spi_SS_n             (<connected-to-esc_spi_SS_n>),             //                  .SS_n
 		.esc_spi_cs_export        (<connected-to-esc_spi_cs_export>),        //        esc_spi_cs.export
+		.esc_spi_sint_export      (<connected-to-esc_spi_sint_export>),      //      esc_spi_sint.export
 		.led_export               (<connected-to-led_export>),               //               led.export
 		.reset_reset_n            (<connected-to-reset_reset_n>)             //             reset.reset_n
 	);

@@ -259,3 +259,4 @@ void HAL_TIM6_Base_Start(void)
 		ALTERA_AVALON_TIMER_CONTROL_CONT_MSK );		//timer generates an interrupt when reaching timeout value
 };
 */
+

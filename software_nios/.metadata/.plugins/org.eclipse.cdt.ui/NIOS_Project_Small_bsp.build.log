@@ -1,0 +1,13 @@
+10:07:22 **** Build of configuration Nios II for project NIOS_Project_Small_bsp ****
+make all 
+'Building file: ../drivers/src/altera_avalon_jtag_uart_fd.c'
+'Invoking: Nios II GCC C Compiler'
+nios2-elf-gcc -O2 -g -Wall -c -fmessage-length=0 -MMD -MP -MF"drivers/src/altera_avalon_jtag_uart_fd.d" -MT"drivers/src/altera_avalon_jtag_uart_fd.o" -o "drivers/src/altera_avalon_jtag_uart_fd.o" "../drivers/src/altera_avalon_jtag_uart_fd.c"
+../drivers/src/altera_avalon_jtag_uart_fd.c:31:10: fatal error: alt_types.h: No such file or directory
+   31 | #include "alt_types.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [drivers/src/altera_avalon_jtag_uart_fd.o] Error 1
+
+10:07:22 Build Finished (took 659ms)
+
