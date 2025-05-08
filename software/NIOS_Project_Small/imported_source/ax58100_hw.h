@@ -8,6 +8,7 @@
 #include "../imported_source/esc.h"
 
 void HW_TIMETASK_IRQHandler(void);
+void HW_ALEVENT_IRQHandler(void);
 
 /* ESC Memory Mapping */
 #define ESC_ALIAS_ADDRESS_OFFSET 0x0012

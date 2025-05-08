@@ -11,6 +11,7 @@ module spi_platform_designer (
 		output wire  esc_spi_SCLK,             //                  .SCLK
 		output wire  esc_spi_SS_n,             //                  .SS_n
 		output wire  esc_spi_cs_export,        //        esc_spi_cs.export
+		input  wire  esc_spi_sint_export,      //      esc_spi_sint.export
 		output wire  led_export,               //               led.export
 		input  wire  reset_reset_n             //             reset.reset_n
 	);
@@ -63,6 +64,11 @@ module spi_platform_designer (
 	wire   [1:0] mm_interconnect_0_led_s1_address;                      // mm_interconnect_0:LED_s1_address -> LED:address
 	wire         mm_interconnect_0_led_s1_write;                        // mm_interconnect_0:LED_s1_write -> LED:write_n
 	wire  [31:0] mm_interconnect_0_led_s1_writedata;                    // mm_interconnect_0:LED_s1_writedata -> LED:writedata
+	wire         mm_interconnect_0_esc_spi_sint_s1_chipselect;          // mm_interconnect_0:ESC_SPI_SINT_s1_chipselect -> ESC_SPI_SINT:chipselect
+	wire  [31:0] mm_interconnect_0_esc_spi_sint_s1_readdata;            // ESC_SPI_SINT:readdata -> mm_interconnect_0:ESC_SPI_SINT_s1_readdata
+	wire   [1:0] mm_interconnect_0_esc_spi_sint_s1_address;             // mm_interconnect_0:ESC_SPI_SINT_s1_address -> ESC_SPI_SINT:address
+	wire         mm_interconnect_0_esc_spi_sint_s1_write;               // mm_interconnect_0:ESC_SPI_SINT_s1_write -> ESC_SPI_SINT:write_n
+	wire  [31:0] mm_interconnect_0_esc_spi_sint_s1_writedata;           // mm_interconnect_0:ESC_SPI_SINT_s1_writedata -> ESC_SPI_SINT:writedata
 	wire         mm_interconnect_0_esc_spi_spi_control_port_chipselect; // mm_interconnect_0:ESC_SPI_spi_control_port_chipselect -> ESC_SPI:spi_select
 	wire  [15:0] mm_interconnect_0_esc_spi_spi_control_port_readdata;   // ESC_SPI:data_to_cpu -> mm_interconnect_0:ESC_SPI_spi_control_port_readdata
 	wire   [2:0] mm_interconnect_0_esc_spi_spi_control_port_address;    // mm_interconnect_0:ESC_SPI_spi_control_port_address -> ESC_SPI:mem_addr
@@ -71,8 +77,9 @@ module spi_platform_designer (
 	wire  [15:0] mm_interconnect_0_esc_spi_spi_control_port_writedata;  // mm_interconnect_0:ESC_SPI_spi_control_port_writedata -> ESC_SPI:data_from_cpu
 	wire         irq_mapper_receiver0_irq;                              // ESC_SPI:irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                              // DEBUG:av_irq -> irq_mapper:receiver1_irq
+	wire         irq_mapper_receiver2_irq;                              // ESC_SPI_SINT:irq -> irq_mapper:receiver2_irq
 	wire  [31:0] nios_irq_irq;                                          // irq_mapper:sender_irq -> NIOS:irq
-	wire         rst_controller_reset_out_reset;                        // rst_controller:reset_out -> [DEBUG:rst_n, ESC_EEPDONE_INPUT:reset_n, ESC_SPI:reset_n, ESC_SPI_CS:reset_n, LED:reset_n, NIOS:reset_n, RAM:reset, SYSID:reset_n, irq_mapper:reset, mm_interconnect_0:NIOS_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                        // rst_controller:reset_out -> [DEBUG:rst_n, ESC_EEPDONE_INPUT:reset_n, ESC_SPI:reset_n, ESC_SPI_CS:reset_n, ESC_SPI_SINT:reset_n, LED:reset_n, NIOS:reset_n, RAM:reset, SYSID:reset_n, irq_mapper:reset, mm_interconnect_0:NIOS_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                    // rst_controller:reset_req -> [NIOS:reset_req, RAM:reset_req, rst_translator:reset_req_in]
 
 	spi_platform_designer_DEBUG debug (
@@ -121,6 +128,18 @@ module spi_platform_designer (
 		.chipselect (mm_interconnect_0_esc_spi_cs_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_0_esc_spi_cs_s1_readdata),   //                    .readdata
 		.out_port   (esc_spi_cs_export)                           // external_connection.export
+	);
+
+	spi_platform_designer_ESC_SPI_SINT esc_spi_sint (
+		.clk        (clk_clk),                                      //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),              //               reset.reset_n
+		.address    (mm_interconnect_0_esc_spi_sint_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_esc_spi_sint_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_esc_spi_sint_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_esc_spi_sint_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_esc_spi_sint_s1_readdata),   //                    .readdata
+		.in_port    (esc_spi_sint_export),                          // external_connection.export
+		.irq        (irq_mapper_receiver2_irq)                      //                 irq.irq
 	);
 
 	spi_platform_designer_LED led (
@@ -219,6 +238,11 @@ module spi_platform_designer (
 		.ESC_SPI_CS_s1_readdata                 (mm_interconnect_0_esc_spi_cs_s1_readdata),              //                                 .readdata
 		.ESC_SPI_CS_s1_writedata                (mm_interconnect_0_esc_spi_cs_s1_writedata),             //                                 .writedata
 		.ESC_SPI_CS_s1_chipselect               (mm_interconnect_0_esc_spi_cs_s1_chipselect),            //                                 .chipselect
+		.ESC_SPI_SINT_s1_address                (mm_interconnect_0_esc_spi_sint_s1_address),             //                  ESC_SPI_SINT_s1.address
+		.ESC_SPI_SINT_s1_write                  (mm_interconnect_0_esc_spi_sint_s1_write),               //                                 .write
+		.ESC_SPI_SINT_s1_readdata               (mm_interconnect_0_esc_spi_sint_s1_readdata),            //                                 .readdata
+		.ESC_SPI_SINT_s1_writedata              (mm_interconnect_0_esc_spi_sint_s1_writedata),           //                                 .writedata
+		.ESC_SPI_SINT_s1_chipselect             (mm_interconnect_0_esc_spi_sint_s1_chipselect),          //                                 .chipselect
 		.LED_s1_address                         (mm_interconnect_0_led_s1_address),                      //                           LED_s1.address
 		.LED_s1_write                           (mm_interconnect_0_led_s1_write),                        //                                 .write
 		.LED_s1_readdata                        (mm_interconnect_0_led_s1_readdata),                     //                                 .readdata
@@ -248,6 +272,7 @@ module spi_platform_designer (
 		.reset         (rst_controller_reset_out_reset), // clk_reset.reset
 		.receiver0_irq (irq_mapper_receiver0_irq),       // receiver0.irq
 		.receiver1_irq (irq_mapper_receiver1_irq),       // receiver1.irq
+		.receiver2_irq (irq_mapper_receiver2_irq),       // receiver2.irq
 		.sender_irq    (nios_irq_irq)                    //    sender.irq
 	);
 

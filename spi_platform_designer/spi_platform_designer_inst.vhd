@@ -7,6 +7,7 @@
 			esc_spi_SCLK             : out std_logic;        -- SCLK
 			esc_spi_SS_n             : out std_logic;        -- SS_n
 			esc_spi_cs_export        : out std_logic;        -- export
+			esc_spi_sint_export      : in  std_logic := 'X'; -- export
 			led_export               : out std_logic;        -- export
 			reset_reset_n            : in  std_logic := 'X'  -- reset_n
 		);
@@ -21,6 +22,7 @@
 			esc_spi_SCLK             => CONNECTED_TO_esc_spi_SCLK,             --                  .SCLK
 			esc_spi_SS_n             => CONNECTED_TO_esc_spi_SS_n,             --                  .SS_n
 			esc_spi_cs_export        => CONNECTED_TO_esc_spi_cs_export,        --        esc_spi_cs.export
+			esc_spi_sint_export      => CONNECTED_TO_esc_spi_sint_export,      --      esc_spi_sint.export
 			led_export               => CONNECTED_TO_led_export,               --               led.export
 			reset_reset_n            => CONNECTED_TO_reset_reset_n             --             reset.reset_n
 		);

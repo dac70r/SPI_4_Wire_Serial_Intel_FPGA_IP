@@ -150,7 +150,7 @@ V4.00 APPL 6: The main function was split in MainInit and MainLoop
 #undef _APPL_INTERFACE_
 
 /*ECATCHANGE_START(V5.13) CIA402 3*/
-#include "../imported_source/ViCAT_LSC.h"
+#include "../imported_source/TENCL040_ESC.h"
 
 
 
@@ -717,11 +717,6 @@ UINT16 MainInit(void)
 
 
 
-    pAPPL_FoeRead = NULL;
-    pAPPL_FoeReadData = NULL;
-    pAPPL_FoeError = NULL;
-    pAPPL_FoeWrite = NULL;
-    pAPPL_FoeWriteData = NULL;
 
     /* ECATCHANGE_START(V5.13) COE4*/
     pAPPL_CoeReadInd = NULL;

@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed Apr 30 13:18:38 2025
+Fitter Status : Successful - Thu May  8 11:10:56 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : spi
 Top-level Entity Name : spi
 Family : Cyclone 10 LP
 Device : 10CL040YF484C8G
 Timing Models : Final
-Total logic elements : 1,988 / 39,600 ( 5 % )
-    Total combinational functions : 1,838 / 39,600 ( 5 % )
-    Dedicated logic registers : 1,086 / 39,600 ( 3 % )
-Total registers : 1086
+Total logic elements : 2,028 / 39,600 ( 5 % )
+    Total combinational functions : 1,867 / 39,600 ( 5 % )
+    Dedicated logic registers : 1,101 / 39,600 ( 3 % )
+Total registers : 1101
 Total pins : 15 / 326 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 666,624 / 1,161,216 ( 57 % )

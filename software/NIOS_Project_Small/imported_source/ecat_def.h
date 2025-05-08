@@ -240,7 +240,7 @@ BOOTLOADER_SAMPLE: Select this define to enable a small footprint application wh
 USE_DEFAULT_MAIN: Set to 1 if the main function of a default application shall be used.<br>
 Otherwise the Init functions and the mainloop handler shall be called for a user specific function (see ET9300 Application Note for further details https://www.beckhoff.com/de-de/support/downloadfinder/technische-dokumentationen/?q=ET1100). */
 #ifndef USE_DEFAULT_MAIN
-#define USE_DEFAULT_MAIN                          1 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define USE_DEFAULT_MAIN                          0 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 
@@ -349,7 +349,7 @@ STATIC_ETHERNET_BUFFER: If this switch is set a static buffer is used to store e
 /** 
 FOE_SUPPORTED: If the FoE services should be supported, then this switch shall be set.  */
 #ifndef FOE_SUPPORTED
-#define FOE_SUPPORTED                             1 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define FOE_SUPPORTED                             0 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 
@@ -362,7 +362,7 @@ MAILBOX_SUPPORTED: This switch is set automatically if at least one mailbox prot
 BOOTSTRAPMODE_SUPPORTED: If the firmware update over FoE services should be supported, then this switch shall be set.<br>
 If this switch is set, then also "FOE_SUPPORTED" shall be set.  */
 #ifndef BOOTSTRAPMODE_SUPPORTED
-#define BOOTSTRAPMODE_SUPPORTED                   1 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define BOOTSTRAPMODE_SUPPORTED                   0 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 
@@ -897,19 +897,19 @@ If your company is not listed, please assign an ID for free at www.ethercat.org/
 /** 
 PRODUCT_CODE: Object 0x1018 SI2 (EtherCAT product code) */
 #ifndef PRODUCT_CODE
-#define PRODUCT_CODE                              0x98020888
+#define PRODUCT_CODE                              0x00005013
 #endif
 
 /** 
 REVISION_NUMBER: Object 0x1018 SI3 (EtherCAT product revision number) */
 #ifndef REVISION_NUMBER
-#define REVISION_NUMBER                           0x00119988
+#define REVISION_NUMBER                           0x00000000
 #endif
 
 /** 
 SERIAL_NUMBER: Object 0x1018 SI4 (EtherCAT product serial number) */
 #ifndef SERIAL_NUMBER
-#define SERIAL_NUMBER                             0x00000003
+#define SERIAL_NUMBER                             0x00000000
 #endif
 
 /** 
@@ -921,13 +921,13 @@ DEVICE_PROFILE_TYPE: Slave device type (Object 0x1000)  */
 /** 
 DEVICE_NAME: Name of the slave device (Object 0x1008) */
 #ifndef DEVICE_NAME
-#define DEVICE_NAME                               "ViCAT_LSC"
+#define DEVICE_NAME                               "TENCL040_ESC"
 #endif
 
 /** 
 DEVICE_NAME_LEN: Length of 'DEVICE_NAME' without '\0' */
 #ifndef DEVICE_NAME_LEN
-#define DEVICE_NAME_LEN                           0x9
+#define DEVICE_NAME_LEN                           0xC
 #endif
 
 /** 
@@ -1009,7 +1009,7 @@ MAX_MBX_WRITE_ADDRESS: Maximum address for the write (receive) mailbox (Sync Man
 /** 
 MAX_PD_INPUT_SIZE: Maximum size of the process input data (Sync Manager 3) for cyclic exchange. */
 #ifndef MAX_PD_INPUT_SIZE
-#define MAX_PD_INPUT_SIZE                         0x224 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define MAX_PD_INPUT_SIZE                         0x68 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 
@@ -1027,7 +1027,7 @@ MAX_MBX_READ_ADDRESS: Maximum address for the read (send) mailbox (Sync Manager 
 /** 
 MAX_PD_OUTPUT_SIZE: Maximum size of the process output data (Sync Manager 2) for cyclic exchange. */
 #ifndef MAX_PD_OUTPUT_SIZE
-#define MAX_PD_OUTPUT_SIZE                        0x10 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define MAX_PD_OUTPUT_SIZE                        0x4 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 
