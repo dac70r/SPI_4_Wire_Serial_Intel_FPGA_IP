@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOS' in SOPC Builder design 'spi_platform_designer'
  * SOPC Builder design path: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
  *
- * Generated: Thu May 08 10:29:20 SGT 2025
+ * Generated: Tue May 13 14:24:14 SGT 2025
  */
 
 /*
@@ -339,7 +339,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/SYSID"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1746671238
+#define SYSID_TIMESTAMP 1746673769
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

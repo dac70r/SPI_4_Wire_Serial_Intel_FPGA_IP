@@ -274,10 +274,101 @@ void APPL_InputMapping(UINT16* pData)
 	for (UINT8 j = 0; j < sTxPDOassign.u16SubIndex0; j++) {
 		switch (sTxPDOassign.aEntries[j]) {
 			case 0x1A00:
-				memcpy(pTmpData, &IN_GENERIC0x6000.IN_GEN_INT1,
-					   sizeof(IN_GENERIC0x6000.IN_GEN_INT1));
-				pTmpData += sizeof(IN_GENERIC0x6000.IN_GEN_INT1);
+				memcpy(pTmpData, &DeviceID0x6000.DeviceID,
+					   sizeof(DeviceID0x6000.DeviceID));
+				pTmpData += sizeof(DeviceID0x6000.DeviceID);
 				break;
+				/*
+			case 0x1A01:
+				memcpy(pTmpData, &CurrentChannel0MA0x6008.aEntries,
+					   sizeof(CurrentChannel0MA0x6008.aEntries));
+				pTmpData += sizeof(CurrentChannel0MA0x6008.aEntries);
+				break;
+			case 0x1A02:
+				memcpy(pTmpData, &CurrentChannel1MA0x6010.aEntries,
+					   sizeof(CurrentChannel1MA0x6010.aEntries));
+				pTmpData += sizeof(CurrentChannel1MA0x6010.aEntries);
+				break;
+			case 0x1A03:
+				memcpy(pTmpData, &CurrentChannel2MA0x6018.aEntries,
+					   sizeof(CurrentChannel2MA0x6018.aEntries));
+				pTmpData += sizeof(CurrentChannel2MA0x6018.aEntries);
+				break;
+
+			case 0x1A04:
+				memcpy(pTmpData, &CurrentChannel3MA0x6020.aEntries,
+					   sizeof(CurrentChannel3MA0x6020.aEntries));
+				pTmpData += sizeof(CurrentChannel3MA0x6020.aEntries);
+				break;
+			case 0x1A05:
+				memcpy(pTmpData, &CurrentChannel4MA0x6028.aEntries,
+					   sizeof(CurrentChannel4MA0x6028.aEntries));
+				pTmpData += sizeof(CurrentChannel4MA0x6028.aEntries);
+				break;
+			case 0x1A06:
+				memcpy(pTmpData, &CurrentChannel5MA0x6030.aEntries,
+					   sizeof(CurrentChannel5MA0x6030.aEntries));
+				pTmpData += sizeof(CurrentChannel5MA0x6030.aEntries);
+				break;
+			case 0x1A07:
+				memcpy(pTmpData, &CurrentChannel6MA0x6038.aEntries,
+					   sizeof(CurrentChannel6MA0x6038.aEntries));
+				pTmpData += sizeof(CurrentChannel6MA0x6038.aEntries);
+				break;
+
+			case 0x1A08:
+				memcpy(pTmpData, &CurrentChannel7MA0x6040.aEntries,
+					   sizeof(CurrentChannel7MA0x6040.aEntries));
+				pTmpData += sizeof(CurrentChannel7MA0x6040.aEntries);
+				break;
+			case 0x1A09:
+				memcpy(pTmpData, &VoltageChannel0MV0x6048.aEntries,
+					   sizeof(VoltageChannel0MV0x6048.aEntries));
+				pTmpData += sizeof(VoltageChannel0MV0x6048.aEntries);
+				break;
+			case 0x1A0A:
+				memcpy(pTmpData, &VoltageChannel1MV0x6050.aEntries,
+					   sizeof(VoltageChannel1MV0x6050.aEntries));
+				pTmpData += sizeof(VoltageChannel1MV0x6050.aEntries);
+				break;
+			case 0x1A0B:
+				memcpy(pTmpData, &VoltageChannel2MV0x6058.aEntries,
+					   sizeof(VoltageChannel2MV0x6058.aEntries));
+				pTmpData += sizeof(VoltageChannel2MV0x6058.aEntries);
+				break;
+
+			case 0x1A0C:
+				memcpy(pTmpData, &VoltageChannel3MV0x6060.aEntries,
+					   sizeof(VoltageChannel3MV0x6060.aEntries));
+				pTmpData += sizeof(VoltageChannel3MV0x6060.aEntries);
+				break;
+			case 0x1A0D:
+				memcpy(pTmpData, &VoltageChannel4MV0x6068.aEntries,
+					   sizeof(VoltageChannel4MV0x6068.aEntries));
+				pTmpData += sizeof(VoltageChannel4MV0x6068.aEntries);
+				break;
+			case 0x1A0E:
+				memcpy(pTmpData, &VoltageChannel5MV0x6070.aEntries,
+					   sizeof(VoltageChannel5MV0x6070.aEntries));
+				pTmpData += sizeof(VoltageChannel5MV0x6070.aEntries);
+				break;
+			case 0x1A0F:
+				memcpy(pTmpData, &VoltageChannel6MV0x6078.aEntries,
+					   sizeof(VoltageChannel6MV0x6078.aEntries));
+				pTmpData += sizeof(VoltageChannel6MV0x6078.aEntries);
+				break;
+
+			case 0x1A010:
+				memcpy(pTmpData, &VoltageChannel7MV0x6080.aEntries,
+					   sizeof(VoltageChannel7MV0x6080.aEntries));
+				pTmpData += sizeof(VoltageChannel7MV0x6080.aEntries);
+				break;
+
+			case 0x1A11:
+				memcpy(pTmpData, &MLInferenceChannel0x6088.aEntries,
+					   sizeof(MLInferenceChannel0x6088.aEntries));
+				pTmpData += sizeof(MLInferenceChannel0x6088.aEntries);
+				break; */
 		}
 	}
 }
@@ -291,16 +382,22 @@ void APPL_InputMapping(UINT16* pData)
 *////////////////////////////////////////////////////////////////////////////////////////
 void APPL_OutputMapping(UINT16* pData)
 {
+	/*
 	UINT8 *pTmpData = (UINT8 *)pData;
 	    for (UINT8 k = 0; k < sRxPDOassign.u16SubIndex0; k++) {
 	        switch (sRxPDOassign.aEntries[k]) {
 	            case 0x1600:
-	                memcpy(&OUT_GENERIC0x7000.OUT_GEN_UINT1, pTmpData,
-	                       sizeof(OUT_GENERIC0x7000.OUT_GEN_UINT1));
-	                pTmpData += sizeof(OUT_GENERIC0x7000.OUT_GEN_UINT1);
+	                memcpy(&MLControlChannel0x7000.aEntries, pTmpData,
+	                       sizeof(MLControlChannel0x7000.aEntries));
+	                pTmpData += sizeof(MLControlChannel0x7000.aEntries);
 	                break;
+	            case 0x1601:
+					memcpy(&OnOffContinuousModeGroup0x7008.aEntries, pTmpData,
+						   sizeof(OnOffContinuousModeGroup0x7008.aEntries));
+					pTmpData += sizeof(OnOffContinuousModeGroup0x7008.aEntries);
+					break;
 	        }
-	    }
+	    }*/
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -311,7 +408,7 @@ void APPL_OutputMapping(UINT16* pData)
 void APPL_Application(void)
 {
 	//static uint32_t haha = 0;
-	IN_GENERIC0x6000.IN_GEN_INT1 = OUT_GENERIC0x7000.OUT_GEN_UINT1; //haha++;
+	//DeviceID0x6000.DeviceID = 0x78; //haha++;
 
 }
 
