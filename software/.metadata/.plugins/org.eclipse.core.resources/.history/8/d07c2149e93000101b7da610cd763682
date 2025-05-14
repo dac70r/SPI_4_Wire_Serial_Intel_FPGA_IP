@@ -27,11 +27,11 @@ void adc_init(alt_u32 base, alt_u32 spi_manual_cs){
 	delay_ms(20);
 
 	spi_check = alt_avalon_spi_command(base,
-										0,							// number of slaves
-										4,							// number of bytes to send to SPI Slave, '0' if only reading
+										0,								// number of slaves
+										4,		// number of bytes to send to SPI Slave, '0' if only reading
 										opcode_null,				// A pointer to the data buffer that contains the data to be written, 'NULL' if N/A
 										0,							// The number of bytes to read from the SPI slave, '0' if only writing
-										0,							// A pointer to the buffer where the received (read) data will be stored, 'NULL' if N/A
+										0,		// A pointer to the buffer where the received (read) data will be stored, 'NULL' if N/A
 										0							// Special control flags for the SPI command
 										);
 
@@ -47,10 +47,10 @@ void adc_init(alt_u32 base, alt_u32 spi_manual_cs){
 
 	 spi_check = alt_avalon_spi_command(base,
 										0,							// number of slaves
-										4,							// number of bytes to send to SPI Slave, '0' if only reading
+										4,		// number of bytes to send to SPI Slave, '0' if only reading
 										opcode_ready,				// A pointer to the data buffer that contains the data to be written, 'NULL' if N/A
 										0,							// The number of bytes to read from the SPI slave, '0' if only writing
-										0,							// A pointer to the buffer where the received (read) data will be stored, 'NULL' if N/A
+										0,		// A pointer to the buffer where the received (read) data will be stored, 'NULL' if N/A
 										0							// Special control flags for the SPI command
 										);
 
@@ -66,10 +66,10 @@ void adc_init(alt_u32 base, alt_u32 spi_manual_cs){
 
 	 spi_check = alt_avalon_spi_command(base,
 										0,							// number of slaves
-										4,							// number of bytes to send to SPI Slave, '0' if only reading
+										4,		// number of bytes to send to SPI Slave, '0' if only reading
 										opcode_lock,				// A pointer to the data buffer that contains the data to be written, 'NULL' if N/A
 										0,							// The number of bytes to read from the SPI slave, '0' if only writing
-										0,							// A pointer to the buffer where the received (read) data will be stored, 'NULL' if N/A
+										0,		// A pointer to the buffer where the received (read) data will be stored, 'NULL' if N/A
 										0							// Special control flags for the SPI command
 										);
 
@@ -107,11 +107,9 @@ int spi_transmit_receive(alt_u32 base, alt_u32 slave,
     IOWR_ALTERA_AVALON_SPI_SLAVE_SEL(base, 1 << slave);
 
     // 2. Assert CS unless toggle flag is set
-    /*
     if ((flags & ALT_AVALON_SPI_COMMAND_TOGGLE_SS_N) == 0) {
         IOWR_ALTERA_AVALON_SPI_CONTROL(base, ALTERA_AVALON_SPI_CONTROL_SSO_MSK);
     }
-    */
 
     // 3. Clear stale RX
     IORD_ALTERA_AVALON_SPI_RXDATA(base);
