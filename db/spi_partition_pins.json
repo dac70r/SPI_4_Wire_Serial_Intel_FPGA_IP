@@ -32,15 +32,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "esc_eepdone_input_export_pin_n1",
-					"strict" : false
-				},
-				{
 					"name" : "esc_spi_sint_export",
 					"strict" : false
 				},
 				{
 					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "esc_eepdone_input_export_pin_n1",
 					"strict" : false
 				},
 				{

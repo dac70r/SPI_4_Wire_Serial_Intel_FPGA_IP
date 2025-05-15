@@ -176,7 +176,7 @@ If the AL Event register shall only be polled, this switch has to be defined to 
 DC_SUPPORTED: If distributed clocks should be supported by the slave, this switch shall be set.<br>
 NOTE: The DC support needs also be set in the "ESC_CONFIG_DATA" settings. */
 #ifndef DC_SUPPORTED
-#define DC_SUPPORTED                              1 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define DC_SUPPORTED                              0 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 
@@ -240,7 +240,7 @@ BOOTLOADER_SAMPLE: Select this define to enable a small footprint application wh
 USE_DEFAULT_MAIN: Set to 1 if the main function of a default application shall be used.<br>
 Otherwise the Init functions and the mainloop handler shall be called for a user specific function (see ET9300 Application Note for further details https://www.beckhoff.com/de-de/support/downloadfinder/technische-dokumentationen/?q=ET1100). */
 #ifndef USE_DEFAULT_MAIN
-#define USE_DEFAULT_MAIN                          0 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define USE_DEFAULT_MAIN                          1 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 
@@ -1027,7 +1027,7 @@ MAX_MBX_READ_ADDRESS: Maximum address for the read (send) mailbox (Sync Manager 
 /** 
 MAX_PD_OUTPUT_SIZE: Maximum size of the process output data (Sync Manager 2) for cyclic exchange. */
 #ifndef MAX_PD_OUTPUT_SIZE
-#define MAX_PD_OUTPUT_SIZE                        0x4 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define MAX_PD_OUTPUT_SIZE                        0xC //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 

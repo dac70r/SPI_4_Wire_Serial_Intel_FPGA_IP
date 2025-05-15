@@ -1,0 +1,63 @@
+/*
+ *  This file contains nios interrupt related function/ variable definition
+ *
+ *  Author: Dennis Wong Guan Ming
+ *
+ * */
+
+// includes
+#include "nios_it.h"
+#include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+
+volatile int edge_capture;
+
+//ISR routine
+void exti0_isr (void * context)
+{
+	 //IOWR_32DIRECT(USER_HANDLER_0_BASE, 0x204, 1); //DC SYNC
+	 PDI_Isr();
+	 IOWR_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE, 0);
+	 IORD_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE);
+	 ECAT_CheckTimer();
+	 appTimerRun();
+	 // for debugging
+	 //printf("Called ISR!\n");
+}
+
+void init_exti0_it (void)
+{
+	 void* edge_capture_ptr = (void*) &edge_capture;
+	 IOWR_ALTERA_AVALON_PIO_IRQ_MASK(ESC_SPI_SINT_BASE, 0x1);
+	 IOWR_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE, 0x0);
+	 alt_ic_isr_register(ESC_SPI_SINT_IRQ_INTERRUPT_CONTROLLER_ID, ESC_SPI_SINT_IRQ, exti0_isr, edge_capture_ptr, 0x0);
+	 IORD_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE);
+	 //IOWR_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE, 0x0);
+}
+
+/*
+void init_readback_it (void)
+{
+	 void* edge_capture_ptr = (void*) &edge_capture;
+	 IOWR_ALTERA_AVALON_PIO_IRQ_MASK(READBACK_CONTROLLER_IRQ_BASE, 0x1);
+	 IOWR_ALTERA_AVALON_PIO_EDGE_CAP(READBACK_CONTROLLER_IRQ_BASE, 0x0);
+	 alt_ic_isr_register(READBACK_CONTROLLER_IRQ_IRQ_INTERRUPT_CONTROLLER_ID, READBACK_CONTROLLER_IRQ_IRQ, readback_isr, edge_capture_ptr, 0x0);
+	 IOWR_ALTERA_AVALON_PIO_EDGE_CAP(READBACK_CONTROLLER_IRQ_BASE, 0x0);
+}
+*/
+
+//ISR routine
+/*
+void readback_isr (void * context)
+{
+	uint32_t offset = 0x00;
+	uint32_t data = 0x00;
+
+	offset = IORD_32DIRECT(READBACK_CONTROLLER_0_BASE, 0x00);
+	offset = offset & 0x1FF;
+	DPRAM_32READ(offset, &data);
+	IOWR_32DIRECT(READBACK_CONTROLLER_0_BASE, 0x00, data);
+
+	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(READBACK_CONTROLLER_IRQ_BASE, 0);
+	IORD_ALTERA_AVALON_PIO_EDGE_CAP(READBACK_CONTROLLER_IRQ_BASE);
+}
+*/

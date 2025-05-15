@@ -45,7 +45,7 @@ V5.01 : Start file change log
 
 #include "../imported_source/ecat_def.h"
 #include "../imported_source/esc.h"
-#include "../imported_source/ax58100_hw.h"
+#include "ax58100_hw.h"
 
 #ifndef _ECATSLV_H_
 #define _ECATSLV_H_

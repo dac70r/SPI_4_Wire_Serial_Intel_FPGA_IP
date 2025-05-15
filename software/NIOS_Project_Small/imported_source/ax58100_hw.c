@@ -541,6 +541,7 @@ void HW_SYNC1_IRQHandler(void) {
  * @param  None
  * @retval None
  */
+
 void HW_TIMETASK_IRQHandler(void) {
 	/*
 	if ((__HAL_TIM_GET_IT_SOURCE(&HW_TIMETASK_INSTANCE_H, TIM_IT_UPDATE) ==

@@ -2,12 +2,12 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 13, 2025 2:24:14 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1747117454506</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 14, 2025 12:59:11 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1747198751988</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\guan-ming.dennis-won\Documents\Code\SPI_4_Wire_Serial_Intel_FPGA_IP\software\NIOS_Project_Small_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\guan-ming.dennis-won\Documents\Code\SPI_4_Wire_Serial_Intel_FPGA_IP\spi_platform_designer.sopcinfo</SopcDesignFile>
-        <SystemFileHash>85e588c89b948da38db24892e318ca4b6172d8f0beb9cf362bb09b9e51ae532</SystemFileHash>
+        <SystemFileHash>bcec3cb3c205971594f204deb96e9e83f6f23e77608116d21ee72cfef8d282</SystemFileHash>
         <JdiFile>default</JdiFile>
         <Cpu>NIOS</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -899,6 +899,12 @@
                 <Enabled>false</Enabled>
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
+        <MemoryMap>
+                <slaveDescriptor>timer_0</slaveDescriptor>
+                <addressRange>0x00000000 - 0x0000001F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>RAM</slaveDescriptor>
                 <addressRange>0x00020000 - 0x00033FFF</addressRange>

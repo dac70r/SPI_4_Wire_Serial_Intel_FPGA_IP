@@ -50,9 +50,9 @@ module spi_platform_designer_mm_interconnect_0_router_default_decode
                DEFAULT_DESTID = 7 
    )
   (output [83 - 80 : 0] default_destination_id,
-   output [9-1 : 0] default_wr_channel,
-   output [9-1 : 0] default_rd_channel,
-   output [9-1 : 0] default_src_channel
+   output [10-1 : 0] default_wr_channel,
+   output [10-1 : 0] default_rd_channel,
+   output [10-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
@@ -63,7 +63,7 @@ module spi_platform_designer_mm_interconnect_0_router_default_decode
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 9'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 10'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module spi_platform_designer_mm_interconnect_0_router_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 9'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 9'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 10'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 10'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -103,7 +103,7 @@ module spi_platform_designer_mm_interconnect_0_router
     // -------------------
     output                          src_valid,
     output reg [97-1    : 0] src_data,
-    output reg [9-1 : 0] src_channel,
+    output reg [10-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -119,7 +119,7 @@ module spi_platform_designer_mm_interconnect_0_router
     localparam PKT_PROTECTION_H = 87;
     localparam PKT_PROTECTION_L = 85;
     localparam ST_DATA_W = 97;
-    localparam ST_CHANNEL_W = 9;
+    localparam ST_CHANNEL_W = 10;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 57;
@@ -172,7 +172,7 @@ module spi_platform_designer_mm_interconnect_0_router
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [9-1 : 0] default_src_channel;
+    wire [10-1 : 0] default_src_channel;
 
 
 
@@ -203,55 +203,55 @@ module spi_platform_designer_mm_interconnect_0_router
 
     // ( 0x20000 .. 0x40000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h20000   ) begin
-            src_channel = 9'b000001000;
+            src_channel = 10'b000001000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
     // ( 0x40800 .. 0x41000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h40800   ) begin
-            src_channel = 9'b000000100;
+            src_channel = 10'b000000100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 
     // ( 0x41000 .. 0x41020 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h41000   ) begin
-            src_channel = 9'b100000000;
+            src_channel = 10'b100000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
     end
 
     // ( 0x41020 .. 0x41030 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 19'h41020   ) begin
-            src_channel = 9'b010000000;
+            src_channel = 10'b010000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
     // ( 0x41030 .. 0x41040 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 19'h41030   ) begin
-            src_channel = 9'b001000000;
+            src_channel = 10'b001000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
     end
 
     // ( 0x41040 .. 0x41050 )
     if ( {address[RG:PAD5],{PAD5{1'b0}}} == 19'h41040  && read_transaction  ) begin
-            src_channel = 9'b000100000;
+            src_channel = 10'b000100000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x41050 .. 0x41060 )
     if ( {address[RG:PAD6],{PAD6{1'b0}}} == 19'h41050   ) begin
-            src_channel = 9'b000010000;
+            src_channel = 10'b000010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
     end
 
     // ( 0x41060 .. 0x41068 )
     if ( {address[RG:PAD7],{PAD7{1'b0}}} == 19'h41060  && read_transaction  ) begin
-            src_channel = 9'b000000010;
+            src_channel = 10'b000000010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
     end
 
     // ( 0x41068 .. 0x41070 )
     if ( {address[RG:PAD8],{PAD8{1'b0}}} == 19'h41068   ) begin
-            src_channel = 9'b000000001;
+            src_channel = 10'b000000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 

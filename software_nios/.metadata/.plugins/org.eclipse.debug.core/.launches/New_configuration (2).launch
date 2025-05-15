@@ -3,7 +3,7 @@
 <stringAttribute key="byteStreamDeviceCableName" value="USB-BlasterII on localhost [USB-1]"/>
 <stringAttribute key="byteStreamDeviceDeviceID" value="1"/>
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
-<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="52016"/>
+<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="57710"/>
 <booleanAttribute key="downloadProgram" value="true"/>
 <stringAttribute key="elfFile" value="C:\Users\guan-ming.dennis-won\Documents\Code\SPI_4_Wire_Serial_Intel_FPGA_IP\software\NIOS_Project_Small\NIOS_Project_Small.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>

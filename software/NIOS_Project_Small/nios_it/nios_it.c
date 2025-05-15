@@ -7,7 +7,7 @@
 
 // includes
 #include "nios_it.h"
-//#include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+#include "../peripheral/peripheral_linker.h"  // Include the linker header file with peripheral definitions
 
 volatile int edge_capture;
 
@@ -18,6 +18,8 @@ void exti0_isr (void * context)
 	 PDI_Isr();
 	 IOWR_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE, 0);
 	 IORD_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE);
+	 ECAT_CheckTimer();
+	 appTimerRun();
 	 // for debugging
 	 //printf("Called ISR!\n");
 }

@@ -92,7 +92,9 @@ ELF := NIOS_Project_Small.elf
 # Paths to C, C++, and assembly source files.
 C_SRCS += hello_world_small.c
 C_SRCS += peripheral/peripheral_linker.c
+C_SRCS += nios_it/nios_it.c
 C_SRCS += imported_source/TENCL040_ESC.c
+C_SRCS += imported_source/ax58100_hw.c
 C_SRCS += imported_source/coeappl.c
 C_SRCS += imported_source/ecatappl.c
 C_SRCS += imported_source/ecatcoe.c
@@ -100,8 +102,6 @@ C_SRCS += imported_source/ecatslv.c
 C_SRCS += imported_source/mailbox.c
 C_SRCS += imported_source/objdef.c
 C_SRCS += imported_source/sdoserv.c
-C_SRCS += imported_source/ax58100_hw.c
-C_SRCS += nios_it/nios_it.c
 CXX_SRCS :=
 ASM_SRCS :=
 

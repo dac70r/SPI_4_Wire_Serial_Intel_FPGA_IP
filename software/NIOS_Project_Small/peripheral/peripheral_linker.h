@@ -13,6 +13,7 @@
 #include "stdint.h"
 //#include "../imported_source/ax58100_hw.h"
 
+#define SPI_TIMEOUT_MAX 1000000UL  // Adjust depending on expected speed and system clock
 
 // function declaration
 void timer_isr(void *context);

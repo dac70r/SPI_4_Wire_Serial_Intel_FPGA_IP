@@ -206,6 +206,31 @@
 								</SubItem>
 							</DataType>
 							<DataType>
+								<Name>DT1A01</Name>
+								<BitSize>48</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>SubIndex 001</Name>
+									<Type>UDINT</Type>
+									<Comment>Reference to 0x6008.1</Comment>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<DataType>
 								<Name>DT1C00ARR</Name>
 								<BaseType>USINT</BaseType>
 								<BitSize>32</BitSize>
@@ -272,15 +297,15 @@
 							<DataType>
 								<Name>DT1C13ARR</Name>
 								<BaseType>UINT</BaseType>
-								<BitSize>16</BitSize>
+								<BitSize>32</BitSize>
 								<ArrayInfo>
 									<LBound>1</LBound>
-									<Elements>1</Elements>
+									<Elements>2</Elements>
 								</ArrayInfo>
 							</DataType>
 							<DataType>
 								<Name>DT1C13</Name>
-								<BitSize>32</BitSize>
+								<BitSize>48</BitSize>
 								<SubItem>
 									<SubIdx>0</SubIdx>
 									<Name>SubIndex 000</Name>
@@ -294,7 +319,7 @@
 								<SubItem>
 									<Name>Elements</Name>
 									<Type>DT1C13ARR</Type>
-									<BitSize>16</BitSize>
+									<BitSize>32</BitSize>
 									<BitOffs>16</BitOffs>
 									<Flags>
 										<Access>ro</Access>
@@ -594,6 +619,31 @@
 								</SubItem>
 							</DataType>
 							<DataType>
+								<Name>DT6008</Name>
+								<BitSize>32</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>USINT</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Device ID</Name>
+									<Type>UINT</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<PdoMapping>t</PdoMapping>
+									</Flags>
+								</SubItem>
+							</DataType>
+							<DataType>
 								<Name>DT7000</Name>
 								<BitSize>32</BitSize>
 								<SubItem>
@@ -794,6 +844,26 @@
 								</Info>
 							</Object>
 							<Object>
+								<Index>#x1A01</Index>
+								<Name>Device ID process data mapping</Name>
+								<Type>DT1A01</Type>
+								<BitSize>48</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 001</Name>
+										<Info>
+											<DefaultData>10010860</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+							</Object>
+							<Object>
 								<Index>#x1C00</Index>
 								<Name>Sync manager type</Name>
 								<Type>DT1C00</Type>
@@ -855,18 +925,24 @@
 								<Index>#x1C13</Index>
 								<Name>SyncManager 3 assignment</Name>
 								<Type>DT1C13</Type>
-								<BitSize>32</BitSize>
+								<BitSize>48</BitSize>
 								<Info>
 									<SubItem>
 										<Name>SubIndex 000</Name>
 										<Info>
-											<DefaultData>01</DefaultData>
+											<DefaultData>02</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
 										<Name>SubIndex 001</Name>
 										<Info>
 											<DefaultData>001A</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 002</Name>
+										<Info>
+											<DefaultData>011A</DefaultData>
 										</Info>
 									</SubItem>
 								</Info>
@@ -956,6 +1032,26 @@
 								</Info>
 							</Object>
 							<Object>
+								<Index>#x6008</Index>
+								<Name>Device ID</Name>
+								<Type>DT6008</Type>
+								<BitSize>32</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+											<DefaultData>01</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Device ID</Name>
+										<Info>
+											<DefaultData>0000</DefaultData>
+										</Info>
+									</SubItem>
+								</Info>
+							</Object>
+							<Object>
 								<Index>#x7000</Index>
 								<Name>OUT_GENERIC</Name>
 								<Type>DT7000</Type>
@@ -984,7 +1080,7 @@
 				<Sm MinSize="#x24" MaxSize="#x80" DefaultSize="#x80" StartAddress="#x1000" ControlByte="#x26" Enable="1">MBoxOut</Sm>
 				<Sm MinSize="#x24" MaxSize="#x80" DefaultSize="#x80" StartAddress="#x1080" ControlByte="#x22" Enable="1">MBoxIn</Sm>
 				<Sm DefaultSize="2" StartAddress="#x1100" ControlByte="#x64" Enable="1">Outputs</Sm>
-				<Sm DefaultSize="2" StartAddress="#x1400" ControlByte="#x20" Enable="1">Inputs</Sm>
+				<Sm DefaultSize="4" StartAddress="#x1400" ControlByte="#x20" Enable="1">Inputs</Sm>
 				<RxPdo Fixed="true" Mandatory="true" Sm="2">
 					<Index>#x1600</Index>
 					<Name>OUT_GENERIC process data mapping</Name>
@@ -1004,6 +1100,17 @@
 						<SubIndex>1</SubIndex>
 						<BitLen>16</BitLen>
 						<Name>IN_GEN_INT1</Name>
+						<DataType>UINT</DataType>
+					</Entry>
+				</TxPdo>
+				<TxPdo Fixed="true" Mandatory="true" Sm="3">
+					<Index>#x1A01</Index>
+					<Name>Device ID process data mapping</Name>
+					<Entry>
+						<Index>#x6008</Index>
+						<SubIndex>1</SubIndex>
+						<BitLen>16</BitLen>
+						<Name>Device ID</Name>
 						<DataType>UINT</DataType>
 					</Entry>
 				</TxPdo>

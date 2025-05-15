@@ -50,9 +50,9 @@ module spi_platform_designer_mm_interconnect_0_router_001_default_decode
                DEFAULT_DESTID = 7 
    )
   (output [83 - 80 : 0] default_destination_id,
-   output [9-1 : 0] default_wr_channel,
-   output [9-1 : 0] default_rd_channel,
-   output [9-1 : 0] default_src_channel
+   output [10-1 : 0] default_wr_channel,
+   output [10-1 : 0] default_rd_channel,
+   output [10-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
@@ -63,7 +63,7 @@ module spi_platform_designer_mm_interconnect_0_router_001_default_decode
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 9'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 10'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module spi_platform_designer_mm_interconnect_0_router_001_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 9'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 9'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 10'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 10'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -103,7 +103,7 @@ module spi_platform_designer_mm_interconnect_0_router_001
     // -------------------
     output                          src_valid,
     output reg [97-1    : 0] src_data,
-    output reg [9-1 : 0] src_channel,
+    output reg [10-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -119,7 +119,7 @@ module spi_platform_designer_mm_interconnect_0_router_001
     localparam PKT_PROTECTION_H = 87;
     localparam PKT_PROTECTION_L = 85;
     localparam ST_DATA_W = 97;
-    localparam ST_CHANNEL_W = 9;
+    localparam ST_CHANNEL_W = 10;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 57;
@@ -134,8 +134,9 @@ module spi_platform_designer_mm_interconnect_0_router_001
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h40000 - 64'h20000); 
-    localparam PAD1 = log2ceil(64'h41000 - 64'h40800); 
+    localparam PAD0 = log2ceil(64'h20 - 64'h0); 
+    localparam PAD1 = log2ceil(64'h40000 - 64'h20000); 
+    localparam PAD2 = log2ceil(64'h41000 - 64'h40800); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
@@ -165,7 +166,7 @@ module spi_platform_designer_mm_interconnect_0_router_001
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [9-1 : 0] default_src_channel;
+    wire [10-1 : 0] default_src_channel;
 
 
 
@@ -189,15 +190,21 @@ module spi_platform_designer_mm_interconnect_0_router_001
         // Sets the channel and destination ID based on the address
         // --------------------------------------------------
 
+    // ( 0x0 .. 0x20 )
+    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h0   ) begin
+            src_channel = 10'b100;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
+    end
+
     // ( 0x20000 .. 0x40000 )
-    if ( {address[RG:PAD0],{PAD0{1'b0}}} == 19'h20000   ) begin
-            src_channel = 9'b10;
+    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h20000   ) begin
+            src_channel = 10'b010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
     // ( 0x40800 .. 0x41000 )
-    if ( {address[RG:PAD1],{PAD1{1'b0}}} == 19'h40800   ) begin
-            src_channel = 9'b01;
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 19'h40800   ) begin
+            src_channel = 10'b001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
     end
 

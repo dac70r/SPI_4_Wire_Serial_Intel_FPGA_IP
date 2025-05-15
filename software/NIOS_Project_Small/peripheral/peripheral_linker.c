@@ -92,10 +92,13 @@ void adc_init(alt_u32 base, alt_u32 spi_manual_cs){
 // Parameter 4: receive buffer
 // Parameter 5: Number of bytes to send and receive
 // Parameter 6: Flags
+/*
 int spi_transmit_receive(alt_u32 base, alt_u32 slave,
                                     const alt_u8 *tx_buf, alt_u8 *rx_buf,
                                     alt_u32 length, alt_u32 flags)
 {
+	alt_u32 result = IORD_ALTERA_AVALON_SPI_STATUS(base);
+
     alt_u32 status;
     alt_32 credits = 1;
     const alt_u8 *tx_ptr = tx_buf;
@@ -105,8 +108,10 @@ int spi_transmit_receive(alt_u32 base, alt_u32 slave,
 
     // 1. Select slave
     IOWR_ALTERA_AVALON_SPI_SLAVE_SEL(base, 1 << slave);
+    //IOWR_ALTERA_AVALON_SPI_SLAVE_SEL(SPI_0_BASE, (1 << 3)); example: 0x08
 
     // 2. Assert CS unless toggle flag is set
+    // Not required as we are manually toggling the CS line
     if ((flags & ALT_AVALON_SPI_COMMAND_TOGGLE_SS_N) == 0) {
         IOWR_ALTERA_AVALON_SPI_CONTROL(base, ALTERA_AVALON_SPI_CONTROL_SSO_MSK);
     }
@@ -148,6 +153,7 @@ int spi_transmit_receive(alt_u32 base, alt_u32 slave,
 
     return length;
 }
+*/
 
 // ADC Initialization Using Full-Duplex SPI
 void adc_init_spi_transmit_receive(alt_u32 base, alt_u32 spi_manual_cs){
@@ -259,4 +265,135 @@ void HAL_TIM6_Base_Start(void)
 		ALTERA_AVALON_TIMER_CONTROL_CONT_MSK );		//timer generates an interrupt when reaching timeout value
 };
 */
+
+volatile uint32_t timerCounter = 0;
+
+// runs every 1ms //run timer timely task
+void appTimerRun(void) {
+    timerCounter++;
+
+    // prevent overflow
+    if (timerCounter == 4294967294) {
+        timerCounter = 0;
+    }
+
+    // TODO do ethercat averaging for ad4111 with dc sync
+    if ((timerCounter % 1000) == 0) {
+    	//HAL_GPIO_TogglePin(LED_BLINK_GPIO_Port, LED_BLINK_Pin);
+    }
+}
+
+
+// Self-defined SPI Transmit/ Receive Function - based on the original alt_avalon_spi_command
+int spi_transmit_receive(		alt_u32 base,
+								alt_u32 slave,
+								const alt_u8 *tx_buf,
+								alt_u8 *rx_buf,
+								alt_u32 length,
+								alt_u32 flags
+								)
+/*
+int alt_avalon_spi_command(alt_u32 base, alt_u32 slave,
+                           alt_u32 write_length, const alt_u8 * write_data,
+                           alt_u32 read_length, alt_u8 * read_data,
+                           alt_u32 flags)
+                           */
+{
+  const alt_u8 * write_end = tx_buf + length;	// calculate the end of the pointer for tx_buf
+  alt_u8 * read_end = rx_buf + length;			// calculate the end of the pointer for rx_buf
+
+  alt_u32 write_zeros = 0;						// read_length;
+  alt_u32 read_ignore = 0;						// write_length;
+  volatile alt_u32 status = 0;
+
+  const alt_u8 *tx_ptr = tx_buf;
+  alt_u8 *rx_ptr = rx_buf;
+
+  alt_32 credits = 1;							// credits for managing the tx and rx
+
+  // 1. Slave selection
+  IOWR_ALTERA_AVALON_SPI_SLAVE_SEL(base, 1 << slave);
+
+  // 2. CS Line
+  /* Set the SSO bit (force chipselect) only if the toggle flag is not set */
+  /*
+  if ((flags & ALT_AVALON_SPI_COMMAND_TOGGLE_SS_N) == 0) {
+    IOWR_ALTERA_AVALON_SPI_CONTROL(base, ALTERA_AVALON_SPI_CONTROL_SSO_MSK);
+  }
+  */
+
+  /*
+   * Discard any stale data present in the RXDATA register, in case
+   * previous communication was interrupted and stale data was left
+   * behind.
+   */
+  // 3. Clears the data in RXDATA register
+  IORD_ALTERA_AVALON_SPI_RXDATA(base);
+
+  /* Keep clocking until all the data has been processed. */
+  // 4. Begin transmission
+  for ( ; ; )
+  {
+	  alt_u32 timeout = SPI_TIMEOUT_MAX;
+	  // Wait until either TX ready or RX ready (or timeout)
+
+    do
+    {
+      status = IORD_ALTERA_AVALON_SPI_STATUS(base);
+      if (--timeout == 0)
+	  {
+		  // Timeout occurred, release CS and return error code
+		  IOWR_ALTERA_AVALON_SPI_CONTROL(base, 0);
+		  return -1;
+	  }
+    }
+    while (((status & ALTERA_AVALON_SPI_STATUS_TRDY_MSK) == 0 || credits == 0) &&
+            (status & ALTERA_AVALON_SPI_STATUS_RRDY_MSK) == 0);
+
+    if ((status & ALTERA_AVALON_SPI_STATUS_TRDY_MSK) != 0 && credits > 0)
+    {
+      credits--;
+
+      if (tx_ptr < write_end)
+        IOWR_ALTERA_AVALON_SPI_TXDATA(base, *tx_ptr++);
+      else if (write_zeros > 0)
+      {
+        write_zeros--;
+        IOWR_ALTERA_AVALON_SPI_TXDATA(base, 0);
+      }
+      else
+        credits = -1024;
+    };
+
+    if ((status & ALTERA_AVALON_SPI_STATUS_RRDY_MSK) != 0)
+    {
+      alt_u32 rxdata = IORD_ALTERA_AVALON_SPI_RXDATA(base);
+
+      if (read_ignore > 0)
+        read_ignore--;
+      else
+        *rx_ptr++ = (alt_u8)rxdata;
+      credits++;
+
+      if (read_ignore == 0 && rx_ptr == read_end)
+        break;
+    }
+
+  }
+
+  /* Wait until the interface has finished transmitting */
+  do
+  {
+    status = IORD_ALTERA_AVALON_SPI_STATUS(base);
+  }
+  while ((status & ALTERA_AVALON_SPI_STATUS_TMT_MSK) == 0);
+
+  /* Clear SSO (release chipselect) unless the caller is going to
+   * keep using this chip
+   */
+  if ((flags & ALT_AVALON_SPI_COMMAND_MERGE) == 0)
+    IOWR_ALTERA_AVALON_SPI_CONTROL(base, 0);
+
+  return length;	//read_length;
+}
 

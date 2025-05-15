@@ -161,6 +161,14 @@
          type = "int";
       }
    }
+   element timer_0
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -361,16 +369,16 @@
   <parameter name="icache_ramBlockType" value="Automatic" />
   <parameter name="icache_size" value="4096" />
   <parameter name="icache_tagramBlockType" value="Automatic" />
-  <parameter name="impl" value="Tiny" />
+  <parameter name="impl" value="Fast" />
   <parameter name="instAddrWidth" value="19" />
-  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='RAM.s1' start='0x20000' end='0x34000' type='altera_avalon_onchip_memory2.s1' /><slave name='NIOS.debug_mem_slave' start='0x40800' end='0x41000' type='altera_nios2_gen2.debug_mem_slave' /></address-map>]]></parameter>
+  <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='timer_0.s1' start='0x0' end='0x20' type='altera_avalon_timer.s1' /><slave name='RAM.s1' start='0x20000' end='0x34000' type='altera_avalon_onchip_memory2.s1' /><slave name='NIOS.debug_mem_slave' start='0x40800' end='0x41000' type='altera_nios2_gen2.debug_mem_slave' /></address-map>]]></parameter>
   <parameter name="instructionMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="instructionMasterHighPerformanceMapParam" value="" />
   <parameter name="instruction_master_high_performance_paddr_base" value="0" />
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="7" />
+  <parameter name="internalIrqMaskSystemInfo" value="15" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -527,6 +535,18 @@
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
+ <module name="timer_0" kind="altera_avalon_timer" version="23.1" enabled="1">
+  <parameter name="alwaysRun" value="false" />
+  <parameter name="counterSize" value="32" />
+  <parameter name="fixedPeriod" value="false" />
+  <parameter name="period" value="4294967295" />
+  <parameter name="periodUnits" value="CLOCKS" />
+  <parameter name="resetOutput" value="false" />
+  <parameter name="snapshot" value="true" />
+  <parameter name="systemFrequency" value="50000000" />
+  <parameter name="timeoutPulseOutput" value="false" />
+  <parameter name="watchdogPulse" value="2" />
+ </module>
  <connection
    kind="avalon"
    version="23.1"
@@ -618,6 +638,15 @@
   <parameter name="baseAddress" value="0x00020000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
+ <connection
+   kind="avalon"
+   version="23.1"
+   start="NIOS.instruction_master"
+   end="timer_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection kind="clock" version="23.1" start="clk_0.clk" end="ESC_SPI.clk" />
  <connection kind="clock" version="23.1" start="clk_0.clk" end="NIOS.clk" />
  <connection kind="clock" version="23.1" start="clk_0.clk" end="DEBUG.clk" />
@@ -630,6 +659,7 @@
    end="ESC_EEPDONE_INPUT.clk" />
  <connection kind="clock" version="23.1" start="clk_0.clk" end="LED.clk" />
  <connection kind="clock" version="23.1" start="clk_0.clk" end="ESC_SPI_SINT.clk" />
+ <connection kind="clock" version="23.1" start="clk_0.clk" end="timer_0.clk" />
  <connection kind="clock" version="23.1" start="clk_0.clk" end="RAM.clk1" />
  <connection kind="interrupt" version="23.1" start="NIOS.irq" end="ESC_SPI.irq">
   <parameter name="irqNumber" value="0" />
@@ -643,6 +673,9 @@
    start="NIOS.irq"
    end="ESC_SPI_SINT.irq">
   <parameter name="irqNumber" value="2" />
+ </connection>
+ <connection kind="interrupt" version="23.1" start="NIOS.irq" end="timer_0.irq">
+  <parameter name="irqNumber" value="3" />
  </connection>
  <connection
    kind="reset"
@@ -668,6 +701,11 @@
    version="23.1"
    start="clk_0.clk_reset"
    end="ESC_SPI_SINT.reset" />
+ <connection
+   kind="reset"
+   version="23.1"
+   start="clk_0.clk_reset"
+   end="timer_0.reset" />
  <connection kind="reset" version="23.1" start="clk_0.clk_reset" end="RAM.reset1" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
