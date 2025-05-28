@@ -2,12 +2,12 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 14, 2025 12:59:11 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1747198751988</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 28, 2025 5:26:12 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1748424372878</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\guan-ming.dennis-won\Documents\Code\SPI_4_Wire_Serial_Intel_FPGA_IP\software\NIOS_Project_Small_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\guan-ming.dennis-won\Documents\Code\SPI_4_Wire_Serial_Intel_FPGA_IP\spi_platform_designer.sopcinfo</SopcDesignFile>
-        <SystemFileHash>bcec3cb3c205971594f204deb96e9e83f6f23e77608116d21ee72cfef8d282</SystemFileHash>
+        <SystemFileHash>c6a1db8b01fa2db8c292569fcdec492b757deefd98d30137ce4f1d59b8e</SystemFileHash>
         <JdiFile>default</JdiFile>
         <Cpu>NIOS</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
