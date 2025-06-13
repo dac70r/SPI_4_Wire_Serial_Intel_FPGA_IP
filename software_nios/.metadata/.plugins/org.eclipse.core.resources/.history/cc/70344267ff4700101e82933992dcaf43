@@ -1,0 +1,574 @@
+/*
+* This source file is part of the EtherCAT Slave Stack Code licensed by Beckhoff Automation GmbH & Co KG, 33415 Verl, Germany.
+* The corresponding license agreement applies. This hint shall not be removed.
+*/
+
+/**
+* \addtogroup TENCL040_ESC TENCL040_ESC
+* @{
+*/
+
+/**
+\file TENCL040_ESCObjects
+\author ET9300Utilities.ApplicationHandler (Version 1.6.4.0) | EthercatSSC@beckhoff.com
+
+\brief TENCL040_ESC specific objects<br>
+\brief NOTE : This file will be overwritten if a new object dictionary is generated!<br>
+*/
+
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+#define PROTO
+#else
+#define PROTO extern
+#endif
+/******************************************************************************
+*                    Object 0x1600 : OUT_GENERIC process data mapping
+******************************************************************************/
+/**
+* \addtogroup 0x1600 0x1600 | OUT_GENERIC process data mapping
+* @{
+* \brief Object 0x1600 (OUT_GENERIC process data mapping) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Object entry descriptions<br>
+* <br>
+* SubIndex 0<br>
+* SubIndex 1 - Reference to 0x7000.1<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x1600[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }}; /* Subindex1 - Reference to 0x7000.1 */
+
+/**
+* \brief Object/Entry names
+*/
+OBJCONST UCHAR OBJMEM aName0x1600[] = "OUT_GENERIC process data mapping\000"
+"SubIndex 001\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16 u16SubIndex0;
+UINT32 SI1; /* Subindex1 - Reference to 0x7000.1 */
+} OBJ_STRUCT_PACKED_END
+TOBJ1600;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ1600 OUT_GENERICProcessDataMapping0x1600
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={1,0x70000110}
+#endif
+;
+/** @}*/
+
+
+
+/******************************************************************************
+*                    Object 0x1A00 : IN_GENERIC process data mapping
+******************************************************************************/
+/**
+* \addtogroup 0x1A00 0x1A00 | IN_GENERIC process data mapping
+* @{
+* \brief Object 0x1A00 (IN_GENERIC process data mapping) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Object entry descriptions<br>
+* <br>
+* SubIndex 0<br>
+* SubIndex 1 - Reference to 0x6000.1<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x1A00[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }}; /* Subindex1 - Reference to 0x6000.1 */
+
+/**
+* \brief Object/Entry names
+*/
+OBJCONST UCHAR OBJMEM aName0x1A00[] = "IN_GENERIC process data mapping\000"
+"SubIndex 001\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16 u16SubIndex0;
+UINT32 SI1; /* Subindex1 - Reference to 0x6000.1 */
+} OBJ_STRUCT_PACKED_END
+TOBJ1A00;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ1A00 IN_GENERICProcessDataMapping0x1A00
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={1,0x60000110}
+#endif
+;
+/** @}*/
+
+
+
+/******************************************************************************
+*                    Object 0x1A01 : Device ID process data mapping
+******************************************************************************/
+/**
+* \addtogroup 0x1A01 0x1A01 | Device ID process data mapping
+* @{
+* \brief Object 0x1A01 (Device ID process data mapping) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Object entry descriptions<br>
+* <br>
+* SubIndex 0<br>
+* SubIndex 1 - Reference to 0x6008.1<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x1A01[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }}; /* Subindex1 - Reference to 0x6008.1 */
+
+/**
+* \brief Object/Entry names
+*/
+OBJCONST UCHAR OBJMEM aName0x1A01[] = "Device ID process data mapping\000"
+"SubIndex 001\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16 u16SubIndex0;
+UINT32 SI1; /* Subindex1 - Reference to 0x6008.1 */
+} OBJ_STRUCT_PACKED_END
+TOBJ1A01;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ1A01 DeviceIDProcessDataMapping0x1A01
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={1,0x60080110}
+#endif
+;
+/** @}*/
+
+
+
+/******************************************************************************
+*                    Object 0x1A02 : Current Channel 1 (mA) process data mapping
+******************************************************************************/
+/**
+* \addtogroup 0x1A02 0x1A02 | Current Channel 1 (mA) process data mapping
+* @{
+* \brief Object 0x1A02 (Current Channel 1 (mA) process data mapping) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Object entry descriptions<br>
+* <br>
+* SubIndex 0<br>
+* SubIndex 1 - Reference to 0x6010.1<br>
+* SubIndex 2 - Reference to 0x6010.2<br>
+* SubIndex 3 - Reference to 0x6010.3<br>
+* SubIndex 4 - Reference to 0x6010.4<br>
+* SubIndex 5 - Reference to 0x6010.5<br>
+* SubIndex 6 - Reference to 0x6010.6<br>
+* SubIndex 7 - Reference to 0x6010.7<br>
+* SubIndex 8 - Reference to 0x6010.8<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x1A02[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }, /* Subindex1 - Reference to 0x6010.1 */
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }, /* Subindex2 - Reference to 0x6010.2 */
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }, /* Subindex3 - Reference to 0x6010.3 */
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }, /* Subindex4 - Reference to 0x6010.4 */
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }, /* Subindex5 - Reference to 0x6010.5 */
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }, /* Subindex6 - Reference to 0x6010.6 */
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }, /* Subindex7 - Reference to 0x6010.7 */
+{ DEFTYPE_UNSIGNED32 , 0x20 , ACCESS_READ }}; /* Subindex8 - Reference to 0x6010.8 */
+
+/**
+* \brief Object/Entry names
+*/
+OBJCONST UCHAR OBJMEM aName0x1A02[] = "Current Channel 1 (mA) process data mapping\000"
+"SubIndex 001\000"
+"SubIndex 002\000"
+"SubIndex 003\000"
+"SubIndex 004\000"
+"SubIndex 005\000"
+"SubIndex 006\000"
+"SubIndex 007\000"
+"SubIndex 008\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16 u16SubIndex0;
+UINT32 SI1; /* Subindex1 - Reference to 0x6010.1 */
+UINT32 SI2; /* Subindex2 - Reference to 0x6010.2 */
+UINT32 SI3; /* Subindex3 - Reference to 0x6010.3 */
+UINT32 SI4; /* Subindex4 - Reference to 0x6010.4 */
+UINT32 SI5; /* Subindex5 - Reference to 0x6010.5 */
+UINT32 SI6; /* Subindex6 - Reference to 0x6010.6 */
+UINT32 SI7; /* Subindex7 - Reference to 0x6010.7 */
+UINT32 SI8; /* Subindex8 - Reference to 0x6010.8 */
+} OBJ_STRUCT_PACKED_END
+TOBJ1A02;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ1A02 CurrentChannel1MAProcessDataMapping0x1A02
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={8,0x60100120,0x60100220,0x60100320,0x60100420,0x60100520,0x60100620,0x60100720,0x60100820}
+#endif
+;
+/** @}*/
+
+
+
+/******************************************************************************
+*                    Object 0x1C12 : SyncManager 2 assignment
+******************************************************************************/
+/**
+* \addtogroup 0x1C12 0x1C12 | SyncManager 2 assignment
+* @{
+* \brief Object 0x1C12 (SyncManager 2 assignment) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Entry descriptions<br>
+* 
+* Subindex 0<br>
+* Subindex 1 - n (the same entry description is used)<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x1C12[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_UNSIGNED16 , 0x10 , ACCESS_READ }};
+
+/**
+* \brief Object name definition<br>
+* For Subindex 1 to n the syntax 'Subindex XXX' is used
+*/
+OBJCONST UCHAR OBJMEM aName0x1C12[] = "SyncManager 2 assignment\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16   u16SubIndex0;  /**< \brief Subindex 0 */
+UINT16 aEntries[1];  /**< \brief Subindex 1 - 1 */
+} OBJ_STRUCT_PACKED_END
+TOBJ1C12;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ1C12 sRxPDOassign
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={1,{0x1600}}
+#endif
+;
+/** @}*/
+
+
+
+/******************************************************************************
+*                    Object 0x1C13 : SyncManager 3 assignment
+******************************************************************************/
+/**
+* \addtogroup 0x1C13 0x1C13 | SyncManager 3 assignment
+* @{
+* \brief Object 0x1C13 (SyncManager 3 assignment) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Entry descriptions<br>
+* 
+* Subindex 0<br>
+* Subindex 1 - n (the same entry description is used)<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x1C13[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_UNSIGNED16 , 0x10 , ACCESS_READ }};
+
+/**
+* \brief Object name definition<br>
+* For Subindex 1 to n the syntax 'Subindex XXX' is used
+*/
+OBJCONST UCHAR OBJMEM aName0x1C13[] = "SyncManager 3 assignment\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16   u16SubIndex0;  /**< \brief Subindex 0 */
+UINT16 aEntries[3];  /**< \brief Subindex 1 - 3 */
+} OBJ_STRUCT_PACKED_END
+TOBJ1C13;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ1C13 sTxPDOassign
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={3,{0x1A00,0x1A01,0x1A02}}
+#endif
+;
+/** @}*/
+
+
+
+/******************************************************************************
+*                    Object 0x6000 : IN_GENERIC
+******************************************************************************/
+/**
+* \addtogroup 0x6000 0x6000 | IN_GENERIC
+* @{
+* \brief Object 0x6000 (IN_GENERIC) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Object entry descriptions<br>
+* <br>
+* SubIndex 0<br>
+* SubIndex 1 - IN_GEN_INT1<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x6000[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_UNSIGNED16 , 0x10 , ACCESS_READ }}; /* Subindex1 - IN_GEN_INT1 */
+
+/**
+* \brief Object/Entry names
+*/
+OBJCONST UCHAR OBJMEM aName0x6000[] = "IN_GENERIC\000"
+"IN_GEN_INT1\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16 u16SubIndex0;
+UINT16 IN_GEN_INT1; /* Subindex1 - IN_GEN_INT1 */
+} OBJ_STRUCT_PACKED_END
+TOBJ6000;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ6000 IN_GENERIC0x6000
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={1,0x0000}
+#endif
+;
+/** @}*/
+
+
+
+/******************************************************************************
+*                    Object 0x6008 : Device ID
+******************************************************************************/
+/**
+* \addtogroup 0x6008 0x6008 | Device ID
+* @{
+* \brief Object 0x6008 (Device ID) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Object entry descriptions<br>
+* <br>
+* SubIndex 0<br>
+* SubIndex 1 - Device ID<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x6008[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_UNSIGNED16 , 0x10 , ACCESS_READ | OBJACCESS_TXPDOMAPPING }}; /* Subindex1 - Device ID */
+
+/**
+* \brief Object/Entry names
+*/
+OBJCONST UCHAR OBJMEM aName0x6008[] = "Device ID\000"
+"Device ID\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16 u16SubIndex0;
+UINT16 DeviceID; /* Subindex1 - Device ID */
+} OBJ_STRUCT_PACKED_END
+TOBJ6008;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ6008 DeviceID0x6008
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={1,0x0000}
+#endif
+;
+/** @}*/
+
+
+
+/******************************************************************************
+*                    Object 0x6010 : Current Channel 1 (mA)
+******************************************************************************/
+/**
+* \addtogroup 0x6010 0x6010 | Current Channel 1 (mA)
+* @{
+* \brief Object 0x6010 (Current Channel 1 (mA)) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Entry descriptions<br>
+* 
+* Subindex 0<br>
+* Subindex 1 - n (the same entry description is used)<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x6010[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_REAL32 , 0x20 , ACCESS_READ | OBJACCESS_TXPDOMAPPING }};
+
+/**
+* \brief Object name definition<br>
+* For Subindex 1 to n the syntax 'Subindex XXX' is used
+*/
+OBJCONST UCHAR OBJMEM aName0x6010[] = "Current Channel 1 (mA)\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16   u16SubIndex0;  /**< \brief Subindex 0 */
+REAL32 aEntries[8];  /**< \brief Subindex 1 - 8 */
+} OBJ_STRUCT_PACKED_END
+TOBJ6010;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ6010 CurrentChannel1MA0x6010
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={8,{0,0,0,0,0,0,0,0}}
+#endif
+;
+/** @}*/
+
+
+
+/******************************************************************************
+*                    Object 0x7000 : OUT_GENERIC
+******************************************************************************/
+/**
+* \addtogroup 0x7000 0x7000 | OUT_GENERIC
+* @{
+* \brief Object 0x7000 (OUT_GENERIC) definition
+*/
+#ifdef _OBJD_
+/**
+* \brief Object entry descriptions<br>
+* <br>
+* SubIndex 0<br>
+* SubIndex 1 - OUT_GEN_UINT1<br>
+*/
+OBJCONST TSDOINFOENTRYDESC    OBJMEM asEntryDesc0x7000[] = {
+{ DEFTYPE_UNSIGNED8 , 0x8 , ACCESS_READ },
+{ DEFTYPE_UNSIGNED16 , 0x10 , ACCESS_READWRITE }}; /* Subindex1 - OUT_GEN_UINT1 */
+
+/**
+* \brief Object/Entry names
+*/
+OBJCONST UCHAR OBJMEM aName0x7000[] = "OUT_GENERIC\000"
+"OUT_GEN_UINT1\000\377";
+#endif //#ifdef _OBJD_
+
+#ifndef _TENCL040__ESC_OBJECTS_H_
+/**
+* \brief Object structure
+*/
+typedef struct OBJ_STRUCT_PACKED_START {
+UINT16 u16SubIndex0;
+UINT16 OUT_GEN_UINT1; /* Subindex1 - OUT_GEN_UINT1 */
+} OBJ_STRUCT_PACKED_END
+TOBJ7000;
+#endif //#ifndef _TENCL040__ESC_OBJECTS_H_
+
+/**
+* \brief Object variable
+*/
+PROTO TOBJ7000 OUT_GENERIC0x7000
+#if defined(_TENCL040__ESC_) && (_TENCL040__ESC_ == 1)
+={1,0x0000}
+#endif
+;
+/** @}*/
+
+
+
+
+
+
+
+#ifdef _OBJD_
+TOBJECT    OBJMEM ApplicationObjDic[] = {
+/* Object 0x1600 */
+{NULL , NULL ,  0x1600 , {DEFTYPE_PDOMAPPING , 1 | (OBJCODE_REC << 8)} , asEntryDesc0x1600 , aName0x1600 , &OUT_GENERICProcessDataMapping0x1600 , NULL , NULL , 0x0000 },
+/* Object 0x1A00 */
+{NULL , NULL ,  0x1A00 , {DEFTYPE_PDOMAPPING , 1 | (OBJCODE_REC << 8)} , asEntryDesc0x1A00 , aName0x1A00 , &IN_GENERICProcessDataMapping0x1A00 , NULL , NULL , 0x0000 },
+/* Object 0x1A01 */
+{NULL , NULL ,  0x1A01 , {DEFTYPE_PDOMAPPING , 1 | (OBJCODE_REC << 8)} , asEntryDesc0x1A01 , aName0x1A01 , &DeviceIDProcessDataMapping0x1A01 , NULL , NULL , 0x0000 },
+/* Object 0x1A02 */
+{NULL , NULL ,  0x1A02 , {DEFTYPE_PDOMAPPING , 8 | (OBJCODE_REC << 8)} , asEntryDesc0x1A02 , aName0x1A02 , &CurrentChannel1MAProcessDataMapping0x1A02 , NULL , NULL , 0x0000 },
+/* Object 0x1C12 */
+{NULL , NULL ,  0x1C12 , {DEFTYPE_UNSIGNED16 , 1 | (OBJCODE_ARR << 8)} , asEntryDesc0x1C12 , aName0x1C12 , &sRxPDOassign , NULL , NULL , 0x0000 },
+/* Object 0x1C13 */
+{NULL , NULL ,  0x1C13 , {DEFTYPE_UNSIGNED16 , 3 | (OBJCODE_ARR << 8)} , asEntryDesc0x1C13 , aName0x1C13 , &sTxPDOassign , NULL , NULL , 0x0000 },
+/* Object 0x6000 */
+{NULL , NULL ,  0x6000 , {DEFTYPE_RECORD , 1 | (OBJCODE_REC << 8)} , asEntryDesc0x6000 , aName0x6000 , &IN_GENERIC0x6000 , NULL , NULL , 0x0000 },
+/* Object 0x6008 */
+{NULL , NULL ,  0x6008 , {DEFTYPE_RECORD , 1 | (OBJCODE_REC << 8)} , asEntryDesc0x6008 , aName0x6008 , &DeviceID0x6008 , NULL , NULL , 0x0000 },
+/* Object 0x6010 */
+{NULL , NULL ,  0x6010 , {DEFTYPE_REAL32 , 8 | (OBJCODE_ARR << 8)} , asEntryDesc0x6010 , aName0x6010 , &CurrentChannel1MA0x6010 , NULL , NULL , 0x0000 },
+/* Object 0x7000 */
+{NULL , NULL ,  0x7000 , {DEFTYPE_RECORD , 1 | (OBJCODE_REC << 8)} , asEntryDesc0x7000 , aName0x7000 , &OUT_GENERIC0x7000 , NULL , NULL , 0x0000 },
+{NULL,NULL, 0xFFFF, {0, 0}, NULL, NULL, NULL, NULL}};
+#endif    //#ifdef _OBJD_
+
+#undef PROTO
+
+/** @}*/
+#define _TENCL040__ESC_OBJECTS_H_

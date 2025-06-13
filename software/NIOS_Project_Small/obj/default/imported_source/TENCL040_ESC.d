@@ -1,5 +1,6 @@
 obj/default/imported_source/TENCL040_ESC.o: \
- imported_source/TENCL040_ESC.c imported_source/applInterface.h \
+ imported_source/TENCL040_ESC.c imported_source/ecat_def.h \
+ imported_source/applInterface.h \
  imported_source/../imported_source/ecat_def.h \
  imported_source/../imported_source/esc.h \
  imported_source/../imported_source/../imported_source/ecat_def.h \
@@ -20,9 +21,9 @@ obj/default/imported_source/TENCL040_ESC.o: \
  imported_source/../imported_source/../imported_source/../imported_source/../imported_source/../imported_source/mailbox.h \
  c:\users\guan-ming.dennis-won\documents\code\spi_4_wire_serial_intel_fpga_ip\software\nios_project_small\imported_source\ecat_def.h \
  imported_source/../imported_source/ecatappl.h \
- imported_source/../imported_source/applInterface.h \
- imported_source/../imported_source/TENCL040_ESC.h \
- imported_source/../imported_source/../imported_source/TENCL040_ESCObjects.h
+ imported_source/TENCL040_ESC.h imported_source/ecatappl.h \
+ imported_source/TENCL040_ESCObjects.h
+imported_source/ecat_def.h:
 imported_source/applInterface.h:
 imported_source/../imported_source/ecat_def.h:
 imported_source/../imported_source/esc.h:
@@ -44,6 +45,6 @@ imported_source/../imported_source/../imported_source/../imported_source/../impo
 imported_source/../imported_source/../imported_source/../imported_source/../imported_source/../imported_source/mailbox.h:
 c:\users\guan-ming.dennis-won\documents\code\spi_4_wire_serial_intel_fpga_ip\software\nios_project_small\imported_source\ecat_def.h:
 imported_source/../imported_source/ecatappl.h:
-imported_source/../imported_source/applInterface.h:
-imported_source/../imported_source/TENCL040_ESC.h:
-imported_source/../imported_source/../imported_source/TENCL040_ESCObjects.h:
+imported_source/TENCL040_ESC.h:
+imported_source/ecatappl.h:
+imported_source/TENCL040_ESCObjects.h:

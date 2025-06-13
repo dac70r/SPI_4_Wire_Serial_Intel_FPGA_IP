@@ -2,12 +2,12 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 28, 2025 5:26:12 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1748424372878</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Jun 13, 2025 4:54:10 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1749804850873</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\guan-ming.dennis-won\Documents\Code\SPI_4_Wire_Serial_Intel_FPGA_IP\software\NIOS_Project_Small_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\guan-ming.dennis-won\Documents\Code\SPI_4_Wire_Serial_Intel_FPGA_IP\spi_platform_designer.sopcinfo</SopcDesignFile>
-        <SystemFileHash>c6a1db8b01fa2db8c292569fcdec492b757deefd98d30137ce4f1d59b8e</SystemFileHash>
+        <SystemFileHash>6d33539a2e0d6cdded146c8ef584abc2b3603f86191bc6e1a6d82db05285f1</SystemFileHash>
         <JdiFile>default</JdiFile>
         <Cpu>NIOS</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -900,56 +900,62 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>timer_0</slaveDescriptor>
-                <addressRange>0x00000000 - 0x0000001F</addressRange>
-                <addressSpan>32</addressSpan>
-                <attributes>timer</attributes>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>RAM</slaveDescriptor>
                 <addressRange>0x00020000 - 0x00033FFF</addressRange>
                 <addressSpan>81920</addressSpan>
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>TIM16_1ms</slaveDescriptor>
+                <addressRange>0x00041040 - 0x0004105F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>TIM6_2ms</slaveDescriptor>
+                <addressRange>0x00041060 - 0x0004107F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>ESC_SPI</slaveDescriptor>
-                <addressRange>0x00041000 - 0x0004101F</addressRange>
+                <addressRange>0x00041080 - 0x0004109F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ESC_SPI_SINT</slaveDescriptor>
-                <addressRange>0x00041020 - 0x0004102F</addressRange>
+                <addressRange>0x000410A0 - 0x000410AF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>LED</slaveDescriptor>
-                <addressRange>0x00041030 - 0x0004103F</addressRange>
+                <addressRange>0x000410B0 - 0x000410BF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ESC_EEPDONE_INPUT</slaveDescriptor>
-                <addressRange>0x00041040 - 0x0004104F</addressRange>
+                <addressRange>0x000410C0 - 0x000410CF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ESC_SPI_CS</slaveDescriptor>
-                <addressRange>0x00041050 - 0x0004105F</addressRange>
+                <addressRange>0x000410D0 - 0x000410DF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>SYSID</slaveDescriptor>
-                <addressRange>0x00041060 - 0x00041067</addressRange>
+                <addressRange>0x000410E0 - 0x000410E7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>DEBUG</slaveDescriptor>
-                <addressRange>0x00041068 - 0x0004106F</addressRange>
+                <addressRange>0x000410E8 - 0x000410EF</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

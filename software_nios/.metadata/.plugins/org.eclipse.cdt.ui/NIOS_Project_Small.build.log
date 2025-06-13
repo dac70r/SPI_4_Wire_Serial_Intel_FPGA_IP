@@ -1,9 +1,9 @@
-17:27:14 **** Incremental Build of configuration Nios II for project NIOS_Project_Small ****
+16:59:40 **** Build of configuration Nios II for project NIOS_Project_Small ****
 wsl make all 
 Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small_bsp/
 make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/software/NIOS_Project_Small_bsp/
 [BSP build complete]
 [NIOS_Project_Small build complete]
 
-17:27:15 Build Finished (took 1s.273ms)
+16:59:45 Build Finished (took 5s.72ms)
 

@@ -1,6 +1,7 @@
 #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
 #include "system.h"
 #include "stdint.h"
+#include "timer.h"
 
 // Delay function
 // No Parameters
@@ -344,6 +345,7 @@ int alt_avalon_spi_command(alt_u32 base, alt_u32 slave,
 	  {
 		  // Timeout occurred, release CS and return error code
 		  IOWR_ALTERA_AVALON_SPI_CONTROL(base, 0);
+		  printf("error!");
 		  return -1;
 	  }
     }

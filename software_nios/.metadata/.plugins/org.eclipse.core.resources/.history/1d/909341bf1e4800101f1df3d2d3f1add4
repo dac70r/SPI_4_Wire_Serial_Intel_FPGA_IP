@@ -1,0 +1,11 @@
+#include "timer.h"
+#include "../imported_source/ecatappl.h"	// need to import this to call ECAT Functions
+
+void timer6_isr(void* context) {
+    // Acknowledge the interrupt (clear TO bit)
+    IOWR(TIM6_2MS_BASE, TIMER_STATUS_OFFSET, 0);
+
+    // Call timer-based tasks
+    ECAT_CheckTimer();
+    appTimerRun();
+}

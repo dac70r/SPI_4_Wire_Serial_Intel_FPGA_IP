@@ -1,0 +1,16 @@
+#include "timer.h"
+#include "stdint.h"
+#include "../imported_source/ecatappl.h"	// need to import this to call ECAT Functions
+
+uint8_t led_blink_register = 0;
+
+
+void timer6_isr(void* context) {
+    // Acknowledge the interrupt (clear TO bit)
+    IOWR(TIM16_1MS_BASE_ADDR, TIMER_STATUS_OFFSET, 0);
+
+    // Call timer-based tasks
+    // led_toggle();				// toggles led
+    //ECAT_CheckTimer();
+    //appTimerRun();
+}

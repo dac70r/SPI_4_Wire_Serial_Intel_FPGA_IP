@@ -1,0 +1,7 @@
+#include "timer.h"
+
+// Delay function
+// No Parameters
+void delay_ms(int milliseconds) {
+    usleep(milliseconds * 1000);  // Convert to microseconds
+}

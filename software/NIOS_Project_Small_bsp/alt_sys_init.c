@@ -4,7 +4,7 @@
  * Machine generated for CPU 'NIOS' in SOPC Builder design 'spi_platform_designer'
  * SOPC Builder design path: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
  *
- * Generated: Wed May 28 17:26:13 SGT 2025
+ * Generated: Fri Jun 13 16:54:11 SGT 2025
  */
 
 /*
@@ -72,7 +72,8 @@ ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( NIOS, NIOS);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( DEBUG, DEBUG);
 ALTERA_AVALON_SPI_INSTANCE ( ESC_SPI, ESC_SPI);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, SYSID);
-ALTERA_AVALON_TIMER_INSTANCE ( TIMER_0, timer_0);
+ALTERA_AVALON_TIMER_INSTANCE ( TIM16_1MS, TIM16_1ms);
+ALTERA_AVALON_TIMER_INSTANCE ( TIM6_2MS, TIM6_2ms);
 
 /*
  * Initialize the interrupt controller devices
@@ -95,7 +96,8 @@ void alt_irq_init ( const void* base )
 
 void alt_sys_init( void )
 {
-    ALTERA_AVALON_TIMER_INIT ( TIMER_0, timer_0);
+    ALTERA_AVALON_TIMER_INIT ( TIM16_1MS, TIM16_1ms);
+    ALTERA_AVALON_TIMER_INIT ( TIM6_2MS, TIM6_2ms);
     ALTERA_AVALON_JTAG_UART_INIT ( DEBUG, DEBUG);
     ALTERA_AVALON_SPI_INIT ( ESC_SPI, ESC_SPI);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, SYSID);

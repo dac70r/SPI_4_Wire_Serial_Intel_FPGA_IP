@@ -1009,7 +1009,7 @@ MAX_MBX_WRITE_ADDRESS: Maximum address for the write (receive) mailbox (Sync Man
 /** 
 MAX_PD_INPUT_SIZE: Maximum size of the process input data (Sync Manager 3) for cyclic exchange. */
 #ifndef MAX_PD_INPUT_SIZE
-#define MAX_PD_INPUT_SIZE                         0x68 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define MAX_PD_INPUT_SIZE                         0x224 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 

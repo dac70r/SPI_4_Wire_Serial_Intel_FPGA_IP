@@ -19,23 +19,26 @@ int main()
 #include "peripheral/peripheral_linker.h"
 #include "sys/alt_irq.h"
 #include "imported_source/ax58100_hw.h"
+#include "peripheral/timer.h"
 
 int main()
 {
 
   printf("Hello from Nios II!\n");
-  uint8_t out = 0;
-  static volatile uint8_t invert_me = 1;
+  //uint8_t out = 0;
+  //static volatile uint8_t invert_me = 1;
+  //timer16_init();
+  timer16_init();
 
-/*
   while(1){
-  	  out = IORD_ALTERA_AVALON_PIO_DATA(ESC_EEPDONE_INPUT_BASE);
-  	  IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, invert_me);
-  	  delay_ms(1000);
-  	  invert_me = ~invert_me;
-  }*/
+  	  //out = IORD_ALTERA_AVALON_PIO_DATA(ESC_EEPDONE_INPUT_BASE);
+	  //invert_me = ~invert_me;
+  	  //IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, invert_me);
+  	  //delay_ms(1000);
 
-  main_initial();
+  }
+
+  //main_initial();
 
   return 0;
 }

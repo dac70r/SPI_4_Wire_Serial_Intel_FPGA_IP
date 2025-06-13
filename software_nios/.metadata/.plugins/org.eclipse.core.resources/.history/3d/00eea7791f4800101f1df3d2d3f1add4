@@ -1,0 +1,33 @@
+#ifndef TIMER_H
+#define TIMER_H
+
+#include "system.h"     // Contains TIM6_2MS_BASE, TIM6_2MS_IRQ, etc.
+#include "io.h"         // For IOWR, IORD macros
+#include "alt_types.h"  // For alt_u32, etc.
+#include "sys/alt_irq.h"// For alt_ic_isr_register
+
+// Timer Register Offsets
+#define TIMER_STATUS_OFFSET   0x00
+#define TIMER_CONTROL_OFFSET  0x04
+#define TIMER_PERIODL_OFFSET  0x08
+#define TIMER_PERIODH_OFFSET  0x0C
+
+// Control Bits
+#define TIMER_CONTROL_ITO     (1 << 0)   // Enable interrupt
+#define TIMER_CONTROL_CONT    (1 << 1)   // Continuous mode
+#define TIMER_CONTROL_START   (1 << 2)   // Start timer
+
+// Timer base address
+#define TIM16_1MS_BASE_ADDR    TIM16_1MS_BASE
+
+// Initialize the timer
+void timer16_init(void);
+
+// Timer ISR prototype - executes contents once timeout occurs
+void timer16_isr(void* context);
+
+// Application-level timer handlers (defined elsewhere)
+//void ECAT_CheckTimer(void);
+//void appTimerRun(void);
+
+#endif

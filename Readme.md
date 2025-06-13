@@ -13,3 +13,6 @@
 # Update 28/5/2025
 - Errors: EtherCAT SM may abruptly change from 'OP' to 'SAFEOP'.
 - How to download the working project: Flash .sof -> Run the lastest project configutaion within Eclipse.
+
+# Links 
+Learn NIOS Interrupts: https://www.youtube.com/watch?v=HpiEGok8vGU&t=540s

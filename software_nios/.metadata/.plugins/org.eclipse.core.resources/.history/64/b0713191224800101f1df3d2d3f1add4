@@ -1,0 +1,50 @@
+#include "timer.h"
+
+
+static uint8_t led_blink_register = 0;
+
+// Led Toggle Function - used in timer16_isr
+void led_blink(void){
+
+	// Read from LED BASE
+	alt_u32 value = IORD(LED_BASE, 0);
+
+	// Toggle the relevant bit(s)
+	value ^= (1 << 0);  // Toggle bit 0 (for example)
+
+	// Write to the LED BASE
+  	IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, value);
+
+  	//debug message
+	#if DEBUG == 1
+		printf("led_blink - timer.c")
+	#endif
+
+}
+
+void timer16_isr(void* context) {
+
+    // Acknowledge the interrupt (clear TO bit)
+    IOWR(TIM16_1MS_BASE_ADDR, TIMER_STATUS_OFFSET, 0);
+
+    // Call timer-based tasks
+    led_blink();
+}
+
+void timer16_init(void) {
+    // Disable timer before configuring
+    IOWR(TIM16_1MS_BASE_ADDR, TIMER_CONTROL_OFFSET, 0);
+
+    // Set period registers
+    //IOWR(TIM16_1MS_BASE_ADDR, TIMER_PERIODL_OFFSET, TIMER_PERIOD_CYCLES & 0xFFFF);
+    //IOWR(TIM16_1MS_BASE_ADDR, TIMER_PERIODH_OFFSET, (TIMER_PERIOD_CYCLES >> 16) & 0xFFFF);
+
+    // Register ISR
+    alt_ic_isr_register(
+    		TIM16_1MS_BASE,
+			TIM16_1MS_IRQ_INTERRUPT_CONTROLLER_ID,
+			timer16_isr,
+        NULL,
+        NULL
+    );
+}

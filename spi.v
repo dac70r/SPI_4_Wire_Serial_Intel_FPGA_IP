@@ -1,7 +1,6 @@
-module 
+module spi(
 
-spi(
-	input clk,
+ 	input clk,
 	input	reset_n,									// pin_L7
 	output led,										// pin_D15
 	output unused_pin_l6,						// pin_L6

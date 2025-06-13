@@ -18,10 +18,10 @@ void exti0_isr (void * context)
 	 PDI_Isr();
 	 IOWR_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE, 0);
 	 IORD_ALTERA_AVALON_PIO_EDGE_CAP(ESC_SPI_SINT_BASE);
-	 ECAT_CheckTimer();
-	 appTimerRun();
+	 //ECAT_CheckTimer();
+	 //appTimerRun();
 	 // for debugging
-	 //printf("Called ISR!\n");
+	 printf("Called ISR!\n");
 }
 
 void init_exti0_it (void)

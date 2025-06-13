@@ -1,0 +1,27 @@
+#include "timer.h"
+
+
+uint8_t led_blink_register = 0;
+
+// Led Toggle Function - used in timer16_isr
+void led_blink(void){
+
+	IORD_ALTERA_AVALON_PIO_DATA(ESC_EEPDONE_INPUT_BASE);
+  	IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, invert_me);
+
+  	//debug message
+#if DEBUG == 1
+  	printf("led_blink - timer.c")
+#endif
+
+}
+
+void timer6_isr(void* context) {
+    // Acknowledge the interrupt (clear TO bit)
+    IOWR(TIM16_1MS_BASE_ADDR, TIMER_STATUS_OFFSET, 0);
+
+    // Call timer-based tasks
+    // led_toggle();				// toggles led
+    //ECAT_CheckTimer();
+    //appTimerRun();
+}
