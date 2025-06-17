@@ -3,7 +3,7 @@
 # Machine generated for CPU 'NIOS' in SOPC Builder design 'spi_platform_designer'
 # SOPC Builder design path: C:/Users/guan-ming.dennis-won/Documents/Code/SPI_4_Wire_Serial_Intel_FPGA_IP/spi_platform_designer.sopcinfo
 #
-# Generated: Fri Jun 13 16:54:11 SGT 2025
+# Generated: Tue Jun 17 16:09:56 SGT 2025
 
 # DO NOT MODIFY THIS FILE
 #

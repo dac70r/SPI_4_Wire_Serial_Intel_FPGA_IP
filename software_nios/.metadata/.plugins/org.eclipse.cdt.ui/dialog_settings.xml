@@ -6,6 +6,12 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="bEscIntEnabled"/>
+			<item value="bInitFinished"/>
+			<item value="DC"/>
+			<item value="error"/>
+			<item value="PDI"/>
+			<item value="001e"/>
 			<item value="printf"/>
 			<item value="ECAT_TIMER_INT"/>
 			<item value="sync"/>

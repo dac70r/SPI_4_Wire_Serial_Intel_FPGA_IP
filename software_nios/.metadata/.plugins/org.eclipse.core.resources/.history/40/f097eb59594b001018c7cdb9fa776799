@@ -176,7 +176,7 @@ If the AL Event register shall only be polled, this switch has to be defined to 
 DC_SUPPORTED: If distributed clocks should be supported by the slave, this switch shall be set.<br>
 NOTE: The DC support needs also be set in the "ESC_CONFIG_DATA" settings. */
 #ifndef DC_SUPPORTED
-#define DC_SUPPORTED                              1 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
+#define DC_SUPPORTED                              0 //This define was already evaluated by ET9300 Project Handler(V. 1.5.3.0)!
 #endif
 
 /** 

@@ -13,7 +13,7 @@ Program Header:
     LOAD off    0x0000a4f0 vaddr 0x000294f0 paddr 0x0002a2ec align 2**12
          filesz 0x00000dfc memsz 0x00000dfc flags rw-
     LOAD off    0x000000e8 vaddr 0x0002b0e8 paddr 0x0002b0e8 align 2**12
-         filesz 0x00000000 memsz 0x000003b0 flags rw-
+         filesz 0x00000000 memsz 0x00001348 flags rw-
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -27,61 +27,61 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   4 .rwdata       00000dfc  000294f0  0002a2ec  0000a4f0  2**2
                   CONTENTS, ALLOC, LOAD, DATA, SMALL_DATA
-  5 .bss          000003b0  0002b0e8  0002b0e8  0000c0e8  2**2
+  5 .bss          00001348  0002b0e8  0002b0e8  0000c0e8  2**2
                   ALLOC, SMALL_DATA
-  6 .RAM          00000000  0002b498  0002b498  0000b2ec  2**0
+  6 .RAM          00000000  0002c430  0002c430  0000b2ec  2**0
                   CONTENTS
   7 .comment      0000002d  00000000  00000000  0000b2ec  2**0
                   CONTENTS, READONLY
   8 .debug_aranges 000006c0  00000000  00000000  0000b320  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  9 .debug_info   00011aab  00000000  00000000  0000b9e0  2**0
+  9 .debug_info   00011b00  00000000  00000000  0000b9e0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_abbrev 00004c54  00000000  00000000  0001d48b  2**0
+ 10 .debug_abbrev 00004c56  00000000  00000000  0001d4e0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_line   000089d4  00000000  00000000  000220df  2**0
+ 11 .debug_line   000089e9  00000000  00000000  00022136  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 12 .debug_frame  000016b4  00000000  00000000  0002aab4  2**2
+ 12 .debug_frame  000016b4  00000000  00000000  0002ab20  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_str    000039bd  00000000  00000000  0002c168  2**0
+ 13 .debug_str    000039bd  00000000  00000000  0002c1d4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_alt_sim_info 00000040  00000000  00000000  0002fb28  2**2
+ 14 .debug_alt_sim_info 00000040  00000000  00000000  0002fb94  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000070  00000000  00000000  0002fb68  2**3
+ 15 .debug_ranges 00000070  00000000  00000000  0002fbd8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 000007c2  00000000  00000000  0002fbd8  2**0
+ 16 .debug_rnglists 000007c2  00000000  00000000  0002fc48  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line_str 0000114d  00000000  00000000  0003039a  2**0
+ 17 .debug_line_str 00001145  00000000  00000000  0003040a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_loclists 00006225  00000000  00000000  000314e7  2**0
+ 18 .debug_loclists 00006225  00000000  00000000  0003154f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .thread_model 00000003  00000000  00000000  0003c126  2**0
+ 19 .thread_model 00000003  00000000  00000000  0003c18e  2**0
                   CONTENTS, READONLY
- 20 .cpu          00000004  00000000  00000000  0003c129  2**0
+ 20 .cpu          00000004  00000000  00000000  0003c191  2**0
                   CONTENTS, READONLY
- 21 .qsys         00000001  00000000  00000000  0003c12d  2**0
+ 21 .qsys         00000001  00000000  00000000  0003c195  2**0
                   CONTENTS, READONLY
- 22 .simulation_enabled 00000001  00000000  00000000  0003c12e  2**0
+ 22 .simulation_enabled 00000001  00000000  00000000  0003c196  2**0
                   CONTENTS, READONLY
- 23 .sysid_hash   00000004  00000000  00000000  0003c12f  2**0
+ 23 .sysid_hash   00000004  00000000  00000000  0003c197  2**0
                   CONTENTS, READONLY
- 24 .sysid_base   00000004  00000000  00000000  0003c133  2**0
+ 24 .sysid_base   00000004  00000000  00000000  0003c19b  2**0
                   CONTENTS, READONLY
- 25 .sysid_time   00000004  00000000  00000000  0003c137  2**0
+ 25 .sysid_time   00000004  00000000  00000000  0003c19f  2**0
                   CONTENTS, READONLY
- 26 .stderr_dev   00000005  00000000  00000000  0003c13b  2**0
+ 26 .stderr_dev   00000005  00000000  00000000  0003c1a3  2**0
                   CONTENTS, READONLY
- 27 .stdin_dev    00000005  00000000  00000000  0003c140  2**0
+ 27 .stdin_dev    00000005  00000000  00000000  0003c1a8  2**0
                   CONTENTS, READONLY
- 28 .stdout_dev   00000005  00000000  00000000  0003c145  2**0
+ 28 .stdout_dev   00000005  00000000  00000000  0003c1ad  2**0
                   CONTENTS, READONLY
- 29 .sopc_system_name 00000015  00000000  00000000  0003c14a  2**0
+ 29 .sopc_system_name 00000015  00000000  00000000  0003c1b2  2**0
                   CONTENTS, READONLY
- 30 .quartus_project_dir 0000004c  00000000  00000000  0003c15f  2**0
+ 30 .quartus_project_dir 0000004c  00000000  00000000  0003c1c7  2**0
                   CONTENTS, READONLY
- 31 .jdi          0000527d  00000000  00000000  0003c1ab  2**0
+ 31 .jdi          0000527d  00000000  00000000  0003c213  2**0
                   CONTENTS, READONLY
- 32 .sopcinfo     0005c99a  00000000  00000000  00041428  2**0
+ 32 .sopcinfo     0005fcf4  00000000  00000000  00041490  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00020000 l    d  .entry	00000000 .entry
@@ -90,7 +90,7 @@ SYMBOL TABLE:
 00027f18 l    d  .rodata	00000000 .rodata
 000294f0 l    d  .rwdata	00000000 .rwdata
 0002b0e8 l    d  .bss	00000000 .bss
-0002b498 l    d  .RAM	00000000 .RAM
+0002c430 l    d  .RAM	00000000 .RAM
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .debug_aranges	00000000 .debug_aranges
 00000000 l    d  .debug_info	00000000 .debug_info
@@ -171,12 +171,12 @@ SYMBOL TABLE:
 00029950 g     O .rwdata	00000024 CurrentChannel2MAProcessDataMapping0x1A03
 00028556 g     O .rodata	0000000c asEntryDesc0x6030
 000271c4 g     F .text	00000080 _puts_r
-0002b398 g     O .bss	00000100 alt_irq
+0002c330 g     O .bss	00000100 alt_irq
 0002980c g     O .rwdata	00000024 VoltageChannel3MVProcessDataMapping0x1A0C
 0002a2ce g     O .rwdata	00000006 sEntryDesc0x1000
 0002a2ec g       *ABS*	00000000 __flash_rwdata_start
 00020998 g     F .text	0000000c HW_EscReadIsr
-0002b498 g       *ABS*	00000000 __alt_heap_start
+0002c430 g       *ABS*	00000000 __alt_heap_start
 00029998 g     O .rwdata	000001e0 GenObjDic
 0002a2c2 g     O .rwdata	00000006 sEntryDesc0x1008
 0002828c g     O .rodata	00000047 aName0x1018
@@ -230,7 +230,7 @@ SYMBOL TABLE:
 0002b154 g     O .bss	00000001 u8LocalErrorState
 00029b8c g     O .rwdata	0000000d acDevicename
 00028378 g     O .rodata	0000000c asEntryDesc0x7000
-0002b2cc g     O .bss	00000034 sMbxSendQueue
+0002c264 g     O .bss	00000034 sMbxSendQueue
 0002b146 g     O .bss	00000001 bExplicitDevIdRequested
 0002a214 g     O .rwdata	0000000c sErrorSettings
 0002b200 g     O .bss	00000004 alt_argv
@@ -239,7 +239,7 @@ SYMBOL TABLE:
 00027cc8 g     F .text	00000004 usleep
 0002a2a8 g     O .rwdata	00000006 sEntryDesc0x100A
 00022758 g     F .text	000000a0 StopInputHandler
-0002b298 g     O .bss	00000034 sMbxReceiveQueue
+0002c230 g     O .bss	00000034 sMbxReceiveQueue
 0002b17c g     O .bss	00000001 bNoMbxMemoryAvailable
 00023e58 g     F .text	000000a0 MBX_MailboxReadInd
 00029b78 g     O .rwdata	00000014 sIdentity
@@ -289,7 +289,7 @@ SYMBOL TABLE:
 00028678 g     O .rodata	0000001b aName0x1C12
 00029730 g     O .rwdata	00000026 sTxPDOassign
 00023b10 g     F .text	000000d4 MBX_StartMailboxHandler
-0002b498 g       *ABS*	00000000 __bss_end
+0002c430 g       *ABS*	00000000 __bss_end
 00027b24 g     F .text	00000068 alt_iic_isr_register
 0002b130 g     O .bss	00000001 EepromLoaded
 000295c8 g     O .rwdata	00000024 VoltageChannel2MV0x6058
@@ -344,7 +344,7 @@ SYMBOL TABLE:
 000282d4 g     O .rodata	0000001e asEntryDesc0x1018
 0002938e g     O .rodata	0000000c asEntryDesc0x1A01
 000283fc g     O .rodata	00000019 aName0x6070
-0002b498 g       *ABS*	00000000 end
+0002c430 g       *ABS*	00000000 end
 000201ec g     F .text	00000008 APPL_StartInputHandler
 0002b19a g     O .bss	00000002 u16SendMbxSize
 00028dcc g     O .rodata	00000096 aName0x1A08
@@ -359,7 +359,7 @@ SYMBOL TABLE:
 00028314 g     O .rodata	0000001e aName0x1009
 0002b12b g     O .bss	00000001 bEcatWaitForInputUpdate
 00021540 g     F .text	000001c0 PDI_Isr
-0002b300 g     O .bss	00000044 sSyncManInPar
+0002c298 g     O .bss	00000044 sSyncManInPar
 00034000 g       *ABS*	00000000 __alt_stack_pointer
 0002a2bc g     O .rwdata	00000006 acHardwareversion
 00028a9c g     O .rodata	00000096 aName0x1A0C
@@ -393,7 +393,7 @@ SYMBOL TABLE:
 00024654 g     F .text	000000b8 OBJ_GetNoOfObjects
 00029294 g     O .rodata	00000096 aName0x1A02
 000298c0 g     O .rwdata	00000024 CurrentChannel6MAProcessDataMapping0x1A07
-0002b28c g     O .bss	0000000c aPdOutputData
+0002c224 g     O .bss	0000000c aPdOutputData
 0002b1ac g     O .bss	00000001 bSdoSegLastToggle
 00023d0c g     F .text	0000014c MBX_CopyToSendMailbox
 00028cca g     O .rodata	00000036 asEntryDesc0x1A0A
@@ -419,7 +419,7 @@ SYMBOL TABLE:
 000201dc g     F .text	00000008 APPL_StartMailboxHandler
 0002b192 g     O .bss	00000001 u8MbxWriteCounter
 000209dc g     F .text	00000090 HW_Init
-0002b498 g       *ABS*	00000000 __alt_stack_base
+0002c430 g       *ABS*	00000000 __alt_stack_base
 000285f6 g     O .rodata	0000000c asEntryDesc0x6010
 00029414 g     O .rodata	00000020 cBitMask
 0002b13a g     O .bss	00000001 SMActivate
@@ -497,7 +497,7 @@ SYMBOL TABLE:
 00028466 g     O .rodata	0000000c asEntryDesc0x6060
 00020bec g     F .text	0000008c COE_AddObjectToDic
 00027a48 g     F .text	00000050 _write_r
-0002b344 g     O .bss	00000044 sSyncManOutPar
+0002c2dc g     O .bss	00000044 sSyncManOutPar
 0002b162 g     O .bss	00000002 Sync1WdCounter
 0002a2d8 g     O .rwdata	00000004 _impure_ptr
 0002b204 g     O .bss	00000004 alt_argc
@@ -535,7 +535,7 @@ SYMBOL TABLE:
 000285ce g     O .rodata	0000000c asEntryDesc0x6018
 00028802 g     O .rodata	00000036 asEntryDesc0x1A10
 0002b1a2 g     O .bss	00000001 bSyncSetByUser
-0002b498 g       *ABS*	00000000 _end
+0002c430 g       *ABS*	00000000 _end
 0002b19c g     O .bss	00000001 bMbxRepeatToggle
 000282f4 g     O .rodata	0000001e aName0x100A
 0002b179 g     O .bss	00000001 bEcatInputUpdateRunning
@@ -550,7 +550,7 @@ SYMBOL TABLE:
 0002813c g     O .rodata	000000c6 asEntryDesc0x1C3x
 00024318 g     F .text	0000003c OBJ_GetObjectHandle
 0002b1b6 g     O .bss	00000002 nSdoSegIndex
-0002b388 g     O .bss	00000010 aSdoInfoHeader
+0002c320 g     O .bss	00000010 aSdoInfoHeader
 00027ad4 g     F .text	00000038 alt_ic_irq_disable
 0002939c g     O .rodata	0000002f aName0x1A00
 000201fc g     F .text	00000008 APPL_StartOutputHandler
@@ -564,7 +564,7 @@ SYMBOL TABLE:
 00024120 g     F .text	00000134 MBX_CheckAndCopyMailbox
 0002849c g     O .rodata	00000019 aName0x6050
 00020d98 g     F .text	00000130 COE_ObjInit
-0002b224 g     O .bss	00000068 aPdInputData
+0002b224 g     O .bss	00001000 aPdInputData
 00020ccc g     F .text	0000003c COE_ClearObjDictionary
 0002b177 g     O .bss	00000001 bWdTrigger
 00026d6c g     F .text	00000074 .hidden __modsi3
@@ -837,7 +837,7 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_irq_pending (void)
 #ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
         alt_irq[i].handler(alt_irq[i].context); 
    2010c:	040000f4 	movhi	r16,3
-   20110:	842ce604 	addi	r16,r16,-19560
+   20110:	8430cc04 	addi	r16,r16,-15568
     i = 0;
    20114:	0005883a 	mov	r2,zero
     mask = 1;
@@ -942,7 +942,7 @@ Disassembly of section .text:
     movhi r3, %hi(__bss_end)
    20198:	00c000b4 	movhi	r3,2
     ori r3, r3, %lo(__bss_end)
-   2019c:	18ed2614 	ori	r3,r3,46232
+   2019c:	18f10c14 	ori	r3,r3,50224
 
     beq r2, r3, 1f
    201a0:	10c00326 	beq	r2,r3,201b0 <_start+0x30>
@@ -992,14 +992,15 @@ int main()
    201c8:	dfc00015 	stw	ra,0(sp)
   printf("Hello from Nios II!\n");
    201cc:	00272440 	call	27244 <puts>
-  //uint8_t out = 0;
-  //static volatile uint8_t invert_me = 1;
-  //timer16_init();
-  timer16_init();
-   201d0:	0026cac0 	call	26cac <timer16_init>
-
   while(1){
-   201d4:	003fff06 	br	201d4 <main+0x18>
+  	  //out = IORD_ALTERA_AVALON_PIO_DATA(ESC_EEPDONE_INPUT_BASE);
+	  //invert_me = ~invert_me;
+  	  //IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, invert_me);
+  	  //delay_ms(1000);
+	  main_initial();
+   201d0:	00206640 	call	20664 <main_initial>
+  while(1){
+   201d4:	003ffe06 	br	201d0 <main+0x14>
 
 000201d8 <APPL_AckErrorInd>:
 *////////////////////////////////////////////////////////////////////////////////////////
@@ -1981,22 +1982,22 @@ void HW_EscWriteIsr(MEM_ADDR* pData, uint16_t Address, uint16_t Len) {
    20a74:	00207dc1 	jmpi	207dc <HW_SPI_Write>
 
 00020a78 <HW_SYNC0_IRQHandler>:
-/**
- * @brief  Interrupt service routine for SYNC0/SYNC1
- * @param  None
- * @retval None
  */
 void HW_SYNC0_IRQHandler(void) {
-   20a78:	f800283a 	ret
+#if DC_SUPPORTED
+    //if (__HAL_GPIO_EXTI_GET_FLAG(HW_SYNC0_PIN)) {
+        //__HAL_GPIO_EXTI_CLEAR_FLAG(HW_SYNC0_PIN);
+        Sync0_Isr();
+   20a78:	00213e01 	jmpi	213e0 <Sync0_Isr>
 
 00020a7c <HW_SYNC1_IRQHandler>:
- * @brief  Interrupt service routine for SYNC0/SYNC1
- * @param  None
- * @retval None
- */
 
 void HW_SYNC1_IRQHandler(void) {
-   20a7c:	f800283a 	ret
+#if DC_SUPPORTED
+    //if (__HAL_GPIO_EXTI_GET_FLAG(HW_SYNC1_PIN)) {
+        //__HAL_GPIO_EXTI_CLEAR_FLAG(HW_SYNC1_PIN);
+        Sync1_Isr();
+   20a7c:	00212681 	jmpi	21268 <Sync1_Isr>
 
 00020a80 <HW_TIMETASK_IRQHandler>:
 	if ((__HAL_TIM_GET_IT_SOURCE(&HW_TIMETASK_INSTANCE_H, TIM_IT_UPDATE) ==
@@ -2147,7 +2148,7 @@ void COE_UpdateSyncErrorStatus(void)
 {
     if (sSyncManOutPar.u16CycleExceededCounter > 0 || sSyncManOutPar.u16SmEventMissedCounter > sErrorSettings.u16SyncErrorCounterLimit)
    20b90:	00c000f4 	movhi	r3,3
-   20b94:	18ecd104 	addi	r3,r3,-19644
+   20b94:	18f0b704 	addi	r3,r3,-15652
    20b98:	18800a8b 	ldhu	r2,42(r3)
    20b9c:	10000f1e 	bne	r2,zero,20bdc <COE_UpdateSyncErrorStatus+0x4c>
    20ba0:	008000f4 	movhi	r2,3
@@ -2164,7 +2165,7 @@ void COE_UpdateSyncErrorStatus(void)
 
     if (sSyncManInPar.u16CycleExceededCounter > 0 || sSyncManInPar.u16SmEventMissedCounter > sErrorSettings.u16SyncErrorCounterLimit)
    20bb4:	00c000f4 	movhi	r3,3
-   20bb8:	18ecc004 	addi	r3,r3,-19712
+   20bb8:	18f0a604 	addi	r3,r3,-15720
    20bbc:	18800a8b 	ldhu	r2,42(r3)
    20bc0:	1000081e 	bne	r2,zero,20be4 <COE_UpdateSyncErrorStatus+0x54>
    20bc4:	008000f4 	movhi	r2,3
@@ -2461,13 +2462,13 @@ UINT16 AddObjectsToObjDictionary(TOBJECT OBJMEM * pObjEntry)
     sSyncManOutPar.subindex0         = 32;
    20d98:	01400804 	movi	r5,32
    20d9c:	00c000f4 	movhi	r3,3
-   20da0:	196cd115 	stw	r5,-19644(r3)
+   20da0:	1970b715 	stw	r5,-15652(r3)
     sSyncManOutPar.u32CycleTime     = 0;
    20da4:	00c000f4 	movhi	r3,3
 {
    20da8:	defffe04 	addi	sp,sp,-8
     sSyncManOutPar.u32CycleTime     = 0;
-   20dac:	182cd215 	stw	zero,-19640(r3)
+   20dac:	1830b815 	stw	zero,-15648(r3)
     sSyncManOutPar.subindex0         = 32;
    20db0:	008000f4 	movhi	r2,3
     sSyncManOutPar.u32MinCycleTime = MIN_PD_CYCLE_TIME;
@@ -2475,7 +2476,7 @@ UINT16 AddObjectsToObjDictionary(TOBJECT OBJMEM * pObjEntry)
 {
    20db8:	dfc00115 	stw	ra,4(sp)
     sSyncManOutPar.subindex0         = 32;
-   20dbc:	10acd104 	addi	r2,r2,-19644
+   20dbc:	10b0b704 	addi	r2,r2,-15652
     sSyncManOutPar.u16SyncTypesSupported    = SYNCTYPE_FREERUNSUPP            /* ECAT FreeRun Mode is supported */
    20dc0:	011007c4 	movi	r4,16415
     sSyncManOutPar.u32MinCycleTime = MIN_PD_CYCLE_TIME;
@@ -2486,52 +2487,52 @@ UINT16 AddObjectsToObjDictionary(TOBJECT OBJMEM * pObjEntry)
    20dcc:	10c00415 	stw	r3,16(r2)
     sSyncManOutPar.u32CalcAndCopyTime = (PD_OUTPUT_CALC_AND_COPY_TIME);
    20dd0:	008000f4 	movhi	r2,3
-   20dd4:	102cd615 	stw	zero,-19624(r2)
+   20dd4:	1030bc15 	stw	zero,-15632(r2)
     sSyncManOutPar.u16GetCycleTime = 0;
    20dd8:	008000f4 	movhi	r2,3
-   20ddc:	102cd80d 	sth	zero,-19616(r2)
+   20ddc:	1030be0d 	sth	zero,-15624(r2)
     sSyncManOutPar.u32DelayTime = (PD_OUTPUT_DELAY_TIME);
    20de0:	008000f4 	movhi	r2,3
-   20de4:	102cd915 	stw	zero,-19612(r2)
+   20de4:	1030bf15 	stw	zero,-15620(r2)
     sSyncManOutPar.u16SmEventMissedCounter = 0;
    20de8:	008000f4 	movhi	r2,3
-   20dec:	102cdb15 	stw	zero,-19604(r2)
+   20dec:	1030c115 	stw	zero,-15612(r2)
     sSyncManOutPar.u8SyncError = 0;
    20df0:	008000f4 	movhi	r2,3
-   20df4:	102ce105 	stb	zero,-19580(r2)
+   20df4:	1030c705 	stb	zero,-15588(r2)
     sSyncManInPar.subindex0         = 32;
    20df8:	008000f4 	movhi	r2,3
-   20dfc:	10acc004 	addi	r2,r2,-19712
+   20dfc:	10b0a604 	addi	r2,r2,-15720
     sSyncManInPar.u16SyncTypesSupported    = sSyncManOutPar.u16SyncTypesSupported;
    20e00:	1100030d 	sth	r4,12(r2)
     sSyncManInPar.u32MinCycleTime = MIN_PD_CYCLE_TIME;
    20e04:	10c00415 	stw	r3,16(r2)
     sSyncManInPar.u32CalcAndCopyTime = (PD_INPUT_CALC_AND_COPY_TIME);
    20e08:	008000f4 	movhi	r2,3
-   20e0c:	102cc515 	stw	zero,-19692(r2)
+   20e0c:	1030ab15 	stw	zero,-15700(r2)
     sSyncManInPar.u16GetCycleTime = 0;
    20e10:	008000f4 	movhi	r2,3
-   20e14:	102cc70d 	sth	zero,-19684(r2)
+   20e14:	1030ad0d 	sth	zero,-15692(r2)
     sSyncManInPar.u32DelayTime = (PD_INPUT_DELAY_TIME);
    20e18:	008000f4 	movhi	r2,3
     sSyncManInPar.subindex0         = 32;
    20e1c:	018000f4 	movhi	r6,3
     sSyncManInPar.u32DelayTime = (PD_INPUT_DELAY_TIME);
-   20e20:	102cc815 	stw	zero,-19680(r2)
+   20e20:	1030ae15 	stw	zero,-15688(r2)
     sSyncManInPar.u16SmEventMissedCounter = 0;
    20e24:	008000f4 	movhi	r2,3
     sSyncManInPar.subindex0         = 32;
-   20e28:	316cc015 	stw	r5,-19712(r6)
+   20e28:	3170a615 	stw	r5,-15720(r6)
     sSyncManInPar.u16SmEventMissedCounter = 0;
-   20e2c:	102cca15 	stw	zero,-19672(r2)
+   20e2c:	1030b015 	stw	zero,-15680(r2)
     sSyncManInPar.u32CycleTime     = sSyncManOutPar.u32CycleTime;
    20e30:	014000f4 	movhi	r5,3
     sSyncManInPar.u8SyncError = 0;
    20e34:	008000f4 	movhi	r2,3
     sSyncManInPar.u32CycleTime     = sSyncManOutPar.u32CycleTime;
-   20e38:	282cc115 	stw	zero,-19708(r5)
+   20e38:	2830a715 	stw	zero,-15716(r5)
     sSyncManInPar.u8SyncError = 0;
-   20e3c:	102cd005 	stb	zero,-19648(r2)
+   20e3c:	1030b605 	stb	zero,-15656(r2)
     bSyncSetByUser = FALSE;
    20e40:	d023cb85 	stb	zero,-28882(gp)
     UINT16 result = COE_ObjDictionaryInit();
@@ -2838,11 +2839,11 @@ UINT32 GetSystemTimeDelay(UINT32 u32StartTime)
    210a0:	dfc00315 	stw	ra,12(sp)
    210a4:	dc400115 	stw	r17,4(sp)
     if (MEASUREMENT_ACTIVE)
-   210a8:	94acd104 	addi	r18,r18,-19644
+   210a8:	94b0b704 	addi	r18,r18,-15652
     UINT16 ALEvent = HW_GetALEventRegister_Isr();
    210ac:	00208f80 	call	208f8 <HW_GetALEventRegister_Isr>
     if (MEASUREMENT_ACTIVE)
-   210b0:	842cc004 	addi	r16,r16,-19712
+   210b0:	8430a604 	addi	r16,r16,-15720
    210b4:	9080070b 	ldhu	r2,28(r18)
    210b8:	80c0070b 	ldhu	r3,28(r16)
    210bc:	10c4b03a 	or	r2,r2,r3
@@ -2902,7 +2903,7 @@ UINT32 GetSystemTimeDelay(UINT32 u32StartTime)
    21154:	00210240 	call	21024 <GetSystemTimeDelay>
             if ((sSyncManOutPar.u32CycleTime == 0) || (sSyncManOutPar.u32CycleTime > u32CycleTimeStartValue))
    21158:	00c000f4 	movhi	r3,3
-   2115c:	18ecd104 	addi	r3,r3,-19644
+   2115c:	18f0b704 	addi	r3,r3,-15652
    21160:	19000117 	ldw	r4,4(r3)
             u32CycleTimeStartValue = GetSystemTimeDelay(u32CycleTimeStartValue);
    21164:	d0a3a915 	stw	r2,-29020(gp)
@@ -2913,7 +2914,7 @@ UINT32 GetSystemTimeDelay(UINT32 u32StartTime)
    21170:	18800115 	stw	r2,4(r3)
             if ((sSyncManInPar.u32CycleTime == 0) || (sSyncManInPar.u32CycleTime > u32CycleTimeStartValue))
    21174:	00c000f4 	movhi	r3,3
-   21178:	18ecc004 	addi	r3,r3,-19712
+   21178:	18f0a604 	addi	r3,r3,-15720
    2117c:	19000117 	ldw	r4,4(r3)
    21180:	20000126 	beq	r4,zero,21188 <HandleCycleTimeMeasurement+0x4c>
    21184:	1100012e 	bgeu	r2,r4,2118c <HandleCycleTimeMeasurement+0x50>
@@ -2937,8 +2938,8 @@ UINT32 GetSystemTimeDelay(UINT32 u32StartTime)
    if (MEASUREMENT_ACTIVE)
    211b4:	048000f4 	movhi	r18,3
    211b8:	040000f4 	movhi	r16,3
-   211bc:	842cd104 	addi	r16,r16,-19644
-   211c0:	94acc004 	addi	r18,r18,-19712
+   211bc:	8430b704 	addi	r16,r16,-15652
+   211c0:	94b0a604 	addi	r18,r18,-15720
    211c4:	8080070b 	ldhu	r2,28(r16)
    211c8:	90c0070b 	ldhu	r3,28(r18)
 {
@@ -2965,11 +2966,11 @@ UINT32 GetSystemTimeDelay(UINT32 u32StartTime)
    21200:	d1a3b60b 	ldhu	r6,-28968(gp)
    21204:	d163b38b 	ldhu	r5,-28978(gp)
    21208:	010000f4 	movhi	r4,3
-   2120c:	212ca304 	addi	r4,r4,-19828
+   2120c:	21308904 	addi	r4,r4,-15836
    21210:	00209980 	call	20998 <HW_EscReadIsr>
     APPL_OutputMapping((UINT16*) aPdOutputData);
    21214:	010000f4 	movhi	r4,3
-   21218:	212ca304 	addi	r4,r4,-19828
+   21218:	21308904 	addi	r4,r4,-15836
    2121c:	002059c0 	call	2059c <APPL_OutputMapping>
     if (MEASUREMENT_ACTIVE)
    21220:	8080070b 	ldhu	r2,28(r16)
@@ -3014,7 +3015,7 @@ void Sync1_Isr(void)
 /*ECATCHANGE_END(V5.13) ECAT 5*/
             && (sSyncManInPar.u16SyncType == SYNCTYPE_DCSYNC1)
    21280:	008000f4 	movhi	r2,3
-   21284:	10acc08b 	ldhu	r2,-19710(r2)
+   21284:	10b0a68b 	ldhu	r2,-15718(r2)
    21288:	108000d8 	cmpnei	r2,r2,3
    2128c:	1000091e 	bne	r2,zero,212b4 <Sync1_Isr+0x4c>
             && (LatchInputSync0Value == 0)) /* Inputs are latched on Sync1 (LatchInputSync0Value == 0), if LatchInputSync0Value > 0 inputs are latched with Sync0 */
@@ -3200,8 +3201,8 @@ UINT16 MainInit(void)
     if (MEASUREMENT_ACTIVE)
    213a4:	008000f4 	movhi	r2,3
    213a8:	00c000f4 	movhi	r3,3
-   213ac:	10acd80b 	ldhu	r2,-19616(r2)
-   213b0:	18ecc70b 	ldhu	r3,-19684(r3)
+   213ac:	10b0be0b 	ldhu	r2,-15624(r2)
+   213b0:	18f0ad0b 	ldhu	r3,-15692(r3)
    213b4:	10c4b03a 	or	r2,r2,r3
    213b8:	1080004c 	andi	r2,r2,1
    213bc:	10000726 	beq	r2,zero,213dc <ECAT_Application+0x38>
@@ -3305,7 +3306,7 @@ UINT16 MainInit(void)
                  u16SmSync0Counter = 0;
    214a0:	d023bf0d 	sth	zero,-28932(gp)
                  sSyncManInPar.u16SmEventMissedCounter = 0;
-   214a4:	102cca0d 	sth	zero,-19672(r2)
+   214a4:	1030b00d 	sth	zero,-15680(r2)
    214a8:	00001606 	br	21504 <Sync0_Isr+0x124>
               if ((nPdOutputSize > 0) && (sSyncManOutPar.u16SmEventMissedCounter <= sErrorSettings.u16SyncErrorCounterLimit))
    214ac:	20000c1e 	bne	r4,zero,214e0 <Sync0_Isr+0x100>
@@ -3313,7 +3314,7 @@ UINT16 MainInit(void)
    214b0:	d0a3b68b 	ldhu	r2,-28966(gp)
    214b4:	10001326 	beq	r2,zero,21504 <Sync0_Isr+0x124>
    214b8:	008000f4 	movhi	r2,3
-   214bc:	10acc004 	addi	r2,r2,-19712
+   214bc:	10b0a604 	addi	r2,r2,-15720
    214c0:	10c00a0b 	ldhu	r3,40(r2)
    214c4:	014000f4 	movhi	r5,3
    214c8:	2968870b 	ldhu	r5,-24036(r5)
@@ -3326,7 +3327,7 @@ UINT16 MainInit(void)
    214dc:	003fec06 	br	21490 <Sync0_Isr+0xb0>
               if ((nPdOutputSize > 0) && (sSyncManOutPar.u16SmEventMissedCounter <= sErrorSettings.u16SyncErrorCounterLimit))
    214e0:	008000f4 	movhi	r2,3
-   214e4:	10acd104 	addi	r2,r2,-19644
+   214e4:	10b0b704 	addi	r2,r2,-15652
    214e8:	010000f4 	movhi	r4,3
    214ec:	10c00a0b 	ldhu	r3,40(r2)
    214f0:	2168870b 	ldhu	r5,-24036(r4)
@@ -3401,7 +3402,7 @@ UINT16 MainInit(void)
         if ( ALEvent & PROCESS_OUTPUT_EVENT )
    215ac:	044000f4 	movhi	r17,3
    215b0:	8401000c 	andi	r16,r16,1024
-   215b4:	8c6cd104 	addi	r17,r17,-19644
+   215b4:	8c70b704 	addi	r17,r17,-15652
    215b8:	80001226 	beq	r16,zero,21604 <PDI_Isr+0xc4>
             if(bDcRunning && bDcSyncActive)
    215bc:	d0a3bf83 	ldbu	r2,-28930(gp)
@@ -3420,7 +3421,7 @@ UINT16 MainInit(void)
             sSyncManInPar.u16SmEventMissedCounter = sSyncManOutPar.u16SmEventMissedCounter;
    215e4:	88c00a0b 	ldhu	r3,40(r17)
    215e8:	008000f4 	movhi	r2,3
-   215ec:	10ecca0d 	sth	r3,-19672(r2)
+   215ec:	10f0b00d 	sth	r3,-15680(r2)
         bEcatFirstOutputsReceived = TRUE;
    215f0:	00800044 	movi	r2,1
    215f4:	d0a3c105 	stb	r2,-28924(gp)
@@ -3443,7 +3444,7 @@ UINT16 MainInit(void)
    21624:	10000726 	beq	r2,zero,21644 <PDI_Isr+0x104>
        && ((sSyncManInPar.u16SyncType == SYNCTYPE_SM_SYNCHRON) || (sSyncManInPar.u16SyncType == SYNCTYPE_SM2_SYNCHRON))
    21628:	008000f4 	movhi	r2,3
-   2162c:	10acc08b 	ldhu	r2,-19710(r2)
+   2162c:	10b0a68b 	ldhu	r2,-15718(r2)
    21630:	10c00060 	cmpeqi	r3,r2,1
    21634:	1800021e 	bne	r3,zero,21640 <PDI_Isr+0x100>
    21638:	10800898 	cmpnei	r2,r2,34
@@ -3470,7 +3471,7 @@ UINT16 MainInit(void)
         sSyncManOutPar.u16CycleExceededCounter++;
    2166c:	88800a8d 	sth	r2,42(r17)
         sSyncManInPar.u16CycleExceededCounter = sSyncManOutPar.u16CycleExceededCounter;
-   21670:	18acca8d 	sth	r2,-19670(r3)
+   21670:	18b0b08d 	sth	r2,-15678(r3)
             HW_EscReadByteIsr(u8dummy,nEscAddrOutputData);
    21674:	00209980 	call	20998 <HW_EscReadIsr>
             HW_EscReadByteIsr(u8dummy,(nEscAddrOutputData+nPdOutputSize-1));
@@ -4019,7 +4020,7 @@ UINT8 COE_ContinueInd(TMBX MBXMEM * pMbx)
             MBXMEMCPY(pMbx, aSdoInfoHeader, SDO_INFO_HEADER_BYTE_SIZE);
    21b34:	014000f4 	movhi	r5,3
    21b38:	01800384 	movi	r6,14
-   21b3c:	296ce204 	addi	r5,r5,-19576
+   21b3c:	2970c804 	addi	r5,r5,-15584
    21b40:	00272540 	call	27254 <memcpy>
    21b44:	1009883a 	mov	r4,r2
             SDOS_SdoInfoInd( (TSDOINFORMATION MBXMEM *) pMbx );
@@ -4421,7 +4422,7 @@ void EnableSyncManChannel(UINT8 channel)
    21e30:	28003426 	beq	r5,zero,21f04 <CheckSmSettings+0x1f0>
    21e34:	217fffc4 	addi	r5,r4,-1
    21e38:	297fffcc 	andi	r5,r5,65535
-   21e3c:	29401a28 	cmpgeui	r5,r5,104
+   21e3c:	29440028 	cmpgeui	r5,r5,4096
    21e40:	28000d1e 	bne	r5,zero,21e78 <CheckSmSettings+0x164>
                 if (SMLength != nPdInputSize || nPdInputSize == 0 || SMLength > MAX_PD_INPUT_SIZE)
    21e44:	d163b68b 	ldhu	r5,-28966(gp)
@@ -4556,9 +4557,9 @@ UINT16 StartInputHandler(void)
    21f90:	048000f4 	movhi	r18,3
     u16MinSuppSyncType &= sSyncManOutPar.u16SyncTypesSupported;
    21f94:	040000f4 	movhi	r16,3
-   21f98:	842cd104 	addi	r16,r16,-19644
+   21f98:	8430b704 	addi	r16,r16,-15652
     u16MinSuppSyncType &= sSyncManInPar.u16SyncTypesSupported;
-   21f9c:	94acc004 	addi	r18,r18,-19712
+   21f9c:	94b0a604 	addi	r18,r18,-15720
         --- Check if SyncManager areas overlapping --- 
     */
     bEcatFirstOutputsReceived = FALSE;
@@ -5210,16 +5211,16 @@ UINT16 StartInputHandler(void)
     if ( (dcControl & ESC_DC_SYNC0_ACTIVE_MASK) != 0 )
    22570:	dc400183 	ldbu	r17,6(sp)
     sSyncManInPar.u16SmEventMissedCounter = 0;
-   22574:	102cca15 	stw	zero,-19672(r2)
+   22574:	1030b015 	stw	zero,-15680(r2)
     sSyncManInPar.u8SyncError = 0;
    22578:	008000f4 	movhi	r2,3
-   2257c:	102cd005 	stb	zero,-19648(r2)
+   2257c:	1030b605 	stb	zero,-15656(r2)
     sSyncManOutPar.u16SmEventMissedCounter = 0;
    22580:	008000f4 	movhi	r2,3
-   22584:	102cdb15 	stw	zero,-19604(r2)
+   22584:	1030c115 	stw	zero,-15612(r2)
     sSyncManOutPar.u8SyncError = 0;
    22588:	008000f4 	movhi	r2,3
-   2258c:	102ce105 	stb	zero,-19580(r2)
+   2258c:	1030c705 	stb	zero,-15588(r2)
     if ( (dcControl & ESC_DC_SYNC0_ACTIVE_MASK) != 0 )
    22590:	8880008c 	andi	r2,r17,2
    22594:	10004126 	beq	r2,zero,2269c <StartInputHandler+0x718>
@@ -5388,18 +5389,18 @@ UINT16 StartInputHandler(void)
 
     sSyncManOutPar.u16SmEventMissedCounter = 0;
    22724:	008000f4 	movhi	r2,3
-   22728:	102cdb0d 	sth	zero,-19604(r2)
+   22728:	1030c10d 	sth	zero,-15612(r2)
     sSyncManOutPar.u8SyncError = 0;
    2272c:	008000f4 	movhi	r2,3
-   22730:	102ce105 	stb	zero,-19580(r2)
+   22730:	1030c705 	stb	zero,-15588(r2)
 
 
     sSyncManInPar.u16SmEventMissedCounter = 0;
    22734:	008000f4 	movhi	r2,3
-   22738:	102cca0d 	sth	zero,-19672(r2)
+   22738:	1030b00d 	sth	zero,-15680(r2)
     sSyncManInPar.u8SyncError = 0;
    2273c:	008000f4 	movhi	r2,3
-   22740:	102cd005 	stb	zero,-19648(r2)
+   22740:	1030b605 	stb	zero,-15656(r2)
    22744:	00803fc4 	movi	r2,255
 
 
@@ -5463,16 +5464,16 @@ void StopInputHandler(void)
 
     sSyncManOutPar.u16SmEventMissedCounter = 0;
    22788:	008000f4 	movhi	r2,3
-   2278c:	102cdb15 	stw	zero,-19604(r2)
+   2278c:	1030c115 	stw	zero,-15612(r2)
     sSyncManOutPar.u16CycleExceededCounter = 0;
     sSyncManOutPar.u8SyncError = 0;
    22790:	008000f4 	movhi	r2,3
-   22794:	102ce105 	stb	zero,-19580(r2)
+   22794:	1030c705 	stb	zero,-15588(r2)
 
 
     sSyncManInPar.u16SmEventMissedCounter = 0;
    22798:	008000f4 	movhi	r2,3
-   2279c:	102cca15 	stw	zero,-19672(r2)
+   2279c:	1030b015 	stw	zero,-15680(r2)
     sSyncManInPar.u16CycleExceededCounter = 0;
     sSyncManInPar.u8SyncError = 0;
    227a0:	008000f4 	movhi	r2,3
@@ -5503,7 +5504,7 @@ void StopInputHandler(void)
     LatchInputSync0Counter = 0;
    227d4:	d023ba0d 	sth	zero,-28952(gp)
     sSyncManInPar.u8SyncError = 0;
-   227d8:	102cd005 	stb	zero,-19648(r2)
+   227d8:	1030b605 	stb	zero,-15656(r2)
 
     i16WaitForPllRunningTimeout = 0;
    227dc:	d023bd8d 	sth	zero,-28938(gp)
@@ -6757,7 +6758,7 @@ void DC_CheckWatchdog(void)
    2342c:	10a8870b 	ldhu	r2,-24036(r2)
    23430:	10000326 	beq	r2,zero,23440 <DC_CheckWatchdog+0x78>
    23434:	00c000f4 	movhi	r3,3
-   23438:	18ecdb0b 	ldhu	r3,-19604(r3)
+   23438:	18f0c10b 	ldhu	r3,-15612(r3)
    2343c:	1880082e 	bgeu	r3,r2,23460 <DC_CheckWatchdog+0x98>
                 bSmSyncSequenceValid = TRUE;
    23440:	00800044 	movi	r2,1
@@ -7605,7 +7606,7 @@ void MBX_Init(void)
 
     sMbxReceiveQueue.firstInQueue    = 0;
    23a7c:	008000f4 	movhi	r2,3
-   23a80:	102ca615 	stw	zero,-19816(r2)
+   23a80:	10308c15 	stw	zero,-15824(r2)
     sMbxReceiveQueue.lastInQueue     = 0;
     sMbxReceiveQueue.maxQueueSize = MAX_MBX_QUEUE_SIZE;
    23a84:	00c000f4 	movhi	r3,3
@@ -7613,7 +7614,7 @@ void MBX_Init(void)
 {
    23a8c:	defffe04 	addi	sp,sp,-8
     sMbxReceiveQueue.maxQueueSize = MAX_MBX_QUEUE_SIZE;
-   23a90:	18aca70d 	sth	r2,-19812(r3)
+   23a90:	18b08d0d 	sth	r2,-15820(r3)
     sMbxSendQueue.firstInQueue        = 0;
    23a94:	00c000f4 	movhi	r3,3
 
@@ -7624,7 +7625,7 @@ void MBX_Init(void)
         HW_EscReadByte(sm1Activate,(ESC_SM_PDICONTROL_OFFSET + SIZEOF_SM_REGISTER));
    23a98:	d90000c4 	addi	r4,sp,3
     sMbxSendQueue.firstInQueue        = 0;
-   23a9c:	182cb315 	stw	zero,-19764(r3)
+   23a9c:	18309915 	stw	zero,-15772(r3)
         HW_EscReadByte(sm1Activate,(ESC_SM_PDICONTROL_OFFSET + SIZEOF_SM_REGISTER));
    23aa0:	01800044 	movi	r6,1
     sMbxSendQueue.maxQueueSize     = MAX_MBX_QUEUE_SIZE;
@@ -7634,7 +7635,7 @@ void MBX_Init(void)
 {
    23aac:	dfc00115 	stw	ra,4(sp)
     sMbxSendQueue.maxQueueSize     = MAX_MBX_QUEUE_SIZE;
-   23ab0:	18acb40d 	sth	r2,-19760(r3)
+   23ab0:	18b09a0d 	sth	r2,-15768(r3)
         UINT8 sm1Activate = 0;
    23ab4:	d80000c5 	stb	zero,3(sp)
     psWriteMbx  = NULL;
@@ -7912,7 +7913,7 @@ void MBX_StopMailboxHandler(void)
         sm1Activate &= ~0x02;
    23c84:	d88000c5 	stb	r2,3(sp)
         pMbx = GetOutOfMbxQueue(&sMbxReceiveQueue);
-   23c88:	842ca604 	addi	r16,r16,-19816
+   23c88:	84308c04 	addi	r16,r16,-15824
         HW_EscWriteByte(sm1Activate,(ESC_SM_PDICONTROL_OFFSET + SIZEOF_SM_REGISTER));
    23c8c:	00209a40 	call	209a4 <HW_EscWrite>
     bSendMbxIsFull         = FALSE;
@@ -7938,7 +7939,7 @@ void MBX_StopMailboxHandler(void)
     {
         pMbx = GetOutOfMbxQueue(&sMbxSendQueue);
    23cb4:	040000f4 	movhi	r16,3
-   23cb8:	842cb304 	addi	r16,r16,-19764
+   23cb8:	84309904 	addi	r16,r16,-15772
    23cbc:	8009883a 	mov	r4,r16
    23cc0:	0023a1c0 	call	23a1c <GetOutOfMbxQueue>
    23cc4:	1009883a 	mov	r4,r2
@@ -8220,7 +8221,7 @@ UINT8 MBX_CopyToSendMailbox( TMBX MBXMEM *pMbx )
    23ed8:	f800283a 	ret
         TMBX MBXMEM* pMbx = GetOutOfMbxQueue(&sMbxSendQueue);
    23edc:	010000f4 	movhi	r4,3
-   23ee0:	212cb304 	addi	r4,r4,-19764
+   23ee0:	21309904 	addi	r4,r4,-15772
    23ee4:	0023a1c0 	call	23a1c <GetOutOfMbxQueue>
    23ee8:	1009883a 	mov	r4,r2
         if (pMbx)
@@ -8314,7 +8315,7 @@ UINT8 MBX_CopyToSendMailbox( TMBX MBXMEM *pMbx )
    23fc8:	10000d26 	beq	r2,zero,24000 <MBX_MailboxSendReq+0xa0>
         result = PutInMbxQueue(pMbx, &sMbxSendQueue);
    23fcc:	014000f4 	movhi	r5,3
-   23fd0:	296cb304 	addi	r5,r5,-19764
+   23fd0:	29709904 	addi	r5,r5,-15772
    23fd4:	9009883a 	mov	r4,r18
    23fd8:	00239cc0 	call	239cc <PutInMbxQueue>
         if (result != 0)
@@ -8402,7 +8403,7 @@ UINT8 MBX_CopyToSendMailbox( TMBX MBXMEM *pMbx )
    240ac:	10c01226 	beq	r2,r3,240f8 <MBX_MailboxWriteInd+0xb8>
             result = PutInMbxQueue(pMbx, &sMbxReceiveQueue);
    240b0:	014000f4 	movhi	r5,3
-   240b4:	296ca604 	addi	r5,r5,-19816
+   240b4:	29708c04 	addi	r5,r5,-15824
    240b8:	8009883a 	mov	r4,r16
         u8MbxWriteCounter = mbxCounter;
    240bc:	d0e3c785 	stb	r3,-28898(gp)
@@ -8583,7 +8584,7 @@ void MBX_Main(void)
    2426c:	dfc00515 	stw	ra,20(sp)
    24270:	dc000015 	stw	r16,0(sp)
         pMbx = GetOutOfMbxQueue(&sMbxReceiveQueue);
-   24274:	8c6ca604 	addi	r17,r17,-19816
+   24274:	8c708c04 	addi	r17,r17,-15824
         }
 
         if ( result != 0 )
@@ -9512,7 +9513,7 @@ UINT8 CheckSyncTypeValue(UINT16 index, UINT16 NewSyncType)
    24a60:	103ff926 	beq	r2,zero,24a48 <CheckSyncTypeValue+0x30>
             && ((sSyncManOutPar.u16SyncTypesSupported & SYNCTYPE_SYNCHRONSUPP) > 0))
    24a64:	008000f4 	movhi	r2,3
-   24a68:	10acd40b 	ldhu	r2,-19632(r2)
+   24a68:	10b0ba0b 	ldhu	r2,-15640(r2)
    24a6c:	1080008c 	andi	r2,r2,2
         if ((index == 0x1C33) && ((sSyncManInPar.u16SyncTypesSupported & SYNCTYPE_DCSYNC1SUPP) > 0))
    24a70:	103ff526 	beq	r2,zero,24a48 <CheckSyncTypeValue+0x30>
@@ -9522,7 +9523,7 @@ UINT8 CheckSyncTypeValue(UINT16 index, UINT16 NewSyncType)
    24a7c:	203ff21e 	bne	r4,zero,24a48 <CheckSyncTypeValue+0x30>
             && ((sSyncManInPar.u16SyncTypesSupported & SYNCTYPE_SYNCHRONSUPP) > 0)
    24a80:	008000f4 	movhi	r2,3
-   24a84:	10acc30b 	ldhu	r2,-19700(r2)
+   24a84:	10b0a90b 	ldhu	r2,-15708(r2)
    24a88:	1080008c 	andi	r2,r2,2
    24a8c:	103fee26 	beq	r2,zero,24a48 <CheckSyncTypeValue+0x30>
             && (nPdOutputSize == 0) 
@@ -9537,7 +9538,7 @@ UINT8 CheckSyncTypeValue(UINT16 index, UINT16 NewSyncType)
    24aa8:	203fe71e 	bne	r4,zero,24a48 <CheckSyncTypeValue+0x30>
             && ((sSyncManInPar.u16SyncTypesSupported & SYNCTYPE_SYNCHRONSUPP) > 0)
    24aac:	008000f4 	movhi	r2,3
-   24ab0:	10acc30b 	ldhu	r2,-19700(r2)
+   24ab0:	10b0a90b 	ldhu	r2,-15708(r2)
    24ab4:	1080008c 	andi	r2,r2,2
    24ab8:	103fe326 	beq	r2,zero,24a48 <CheckSyncTypeValue+0x30>
             && (nPdOutputSize > 0))
@@ -9548,28 +9549,28 @@ UINT8 CheckSyncTypeValue(UINT16 index, UINT16 NewSyncType)
    24ac8:	20870c98 	cmpnei	r2,r4,7218
    24acc:	1000041e 	bne	r2,zero,24ae0 <CheckSyncTypeValue+0xc8>
    24ad0:	008000f4 	movhi	r2,3
-   24ad4:	10acd40b 	ldhu	r2,-19632(r2)
+   24ad4:	10b0ba0b 	ldhu	r2,-15640(r2)
         if ((index == 0x1C33) && ((sSyncManInPar.u16SyncTypesSupported & SYNCTYPE_DCSYNC0SUPP) > 0))
    24ad8:	1080010c 	andi	r2,r2,4
    24adc:	003fe406 	br	24a70 <CheckSyncTypeValue+0x58>
    24ae0:	21070cd8 	cmpnei	r4,r4,7219
    24ae4:	203fd81e 	bne	r4,zero,24a48 <CheckSyncTypeValue+0x30>
    24ae8:	008000f4 	movhi	r2,3
-   24aec:	10acc30b 	ldhu	r2,-19700(r2)
+   24aec:	10b0a90b 	ldhu	r2,-15708(r2)
    24af0:	003ff906 	br	24ad8 <CheckSyncTypeValue+0xc0>
         if ((index == 0x1C32) && ((sSyncManOutPar.u16SyncTypesSupported & SYNCTYPE_DCSYNC1SUPP) > 0))
    24af4:	213fffcc 	andi	r4,r4,65535
    24af8:	20870c98 	cmpnei	r2,r4,7218
    24afc:	1000041e 	bne	r2,zero,24b10 <CheckSyncTypeValue+0xf8>
    24b00:	008000f4 	movhi	r2,3
-   24b04:	10acd40b 	ldhu	r2,-19632(r2)
+   24b04:	10b0ba0b 	ldhu	r2,-15640(r2)
         if ((index == 0x1C33) && ((sSyncManInPar.u16SyncTypesSupported & SYNCTYPE_DCSYNC1SUPP) > 0))
    24b08:	1080020c 	andi	r2,r2,8
    24b0c:	003fd806 	br	24a70 <CheckSyncTypeValue+0x58>
    24b10:	21070cd8 	cmpnei	r4,r4,7219
    24b14:	203fcc1e 	bne	r4,zero,24a48 <CheckSyncTypeValue+0x30>
    24b18:	008000f4 	movhi	r2,3
-   24b1c:	10acc30b 	ldhu	r2,-19700(r2)
+   24b1c:	10b0a90b 	ldhu	r2,-15708(r2)
    24b20:	003ff906 	br	24b08 <CheckSyncTypeValue+0xf0>
 
 00024b24 <OBJ_Read>:
@@ -10739,39 +10740,39 @@ UINT8 OBJ_Write( UINT16 index, UINT8 subindex, UINT32 dataSize, OBJCONST TOBJECT
    25764:	603ffc1e 	bne	r12,zero,25758 <OBJ_Write+0x624>
                                    sSyncManOutPar.u32CalcAndCopyTime = (PD_OUTPUT_CALC_AND_COPY_TIME);
    25768:	008000f4 	movhi	r2,3
-   2576c:	102cd615 	stw	zero,-19624(r2)
+   2576c:	1030bc15 	stw	zero,-15632(r2)
                                    sSyncManOutPar.u32MinCycleTime = (MIN_PD_CYCLE_TIME);
    25770:	008000b4 	movhi	r2,2
    25774:	10a1a804 	addi	r2,r2,-31072
    25778:	010000f4 	movhi	r4,3
-   2577c:	20acd515 	stw	r2,-19628(r4)
+   2577c:	20b0bb15 	stw	r2,-15636(r4)
                                    sSyncManOutPar.u32CycleTime = 0;
    25780:	010000f4 	movhi	r4,3
-   25784:	202cd215 	stw	zero,-19640(r4)
+   25784:	2030b815 	stw	zero,-15648(r4)
                                    sSyncManInPar.u32CalcAndCopyTime = (PD_INPUT_CALC_AND_COPY_TIME);
    25788:	010000f4 	movhi	r4,3
-   2578c:	202cc515 	stw	zero,-19692(r4)
+   2578c:	2030ab15 	stw	zero,-15700(r4)
                                    sSyncManInPar.u32MinCycleTime = (MIN_PD_CYCLE_TIME);
    25790:	010000f4 	movhi	r4,3
-   25794:	20acc415 	stw	r2,-19696(r4)
+   25794:	20b0aa15 	stw	r2,-15704(r4)
                                    sSyncManInPar.u32CycleTime = 0;
    25798:	008000f4 	movhi	r2,3
-   2579c:	102cc115 	stw	zero,-19708(r2)
+   2579c:	1030a715 	stw	zero,-15716(r2)
                                   if ((u16NewData & 0x2) == 0x2)
    257a0:	8880008c 	andi	r2,r17,2
    257a4:	103fec26 	beq	r2,zero,25758 <OBJ_Write+0x624>
                                      sSyncManOutPar.u16SmEventMissedCounter = 0;
    257a8:	008000f4 	movhi	r2,3
-   257ac:	102cdb15 	stw	zero,-19604(r2)
+   257ac:	1030c115 	stw	zero,-15612(r2)
                                      sSyncManOutPar.u8SyncError = 0;
    257b0:	008000f4 	movhi	r2,3
-   257b4:	102ce105 	stb	zero,-19580(r2)
+   257b4:	1030c705 	stb	zero,-15588(r2)
                                      sSyncManInPar.u16SmEventMissedCounter = 0;
    257b8:	008000f4 	movhi	r2,3
-   257bc:	102cca15 	stw	zero,-19672(r2)
+   257bc:	1030b015 	stw	zero,-15680(r2)
                                      sSyncManInPar.u8SyncError = 0;
    257c0:	008000f4 	movhi	r2,3
-   257c4:	102cd005 	stb	zero,-19648(r2)
+   257c4:	1030b605 	stb	zero,-15656(r2)
    257c8:	003fe306 	br	25758 <OBJ_Write+0x624>
                             if(bitOffset & 0xF)
    257cc:	108003cc 	andi	r2,r2,15
@@ -12185,7 +12186,7 @@ UINT8 SDOS_SdoInfoInd(TSDOINFORMATION MBXMEM *pSdoInfoInd)
    264e8:	200b883a 	mov	r5,r4
    264ec:	010000f4 	movhi	r4,3
    264f0:	01800384 	movi	r6,14
-   264f4:	212ce204 	addi	r4,r4,-19576
+   264f4:	2130c804 	addi	r4,r4,-15584
    264f8:	00272540 	call	27254 <memcpy>
 			if (listType-- == 0)
    264fc:	90003a1e 	bne	r18,zero,265e8 <SDOS_SdoInfoInd+0x198>
@@ -14111,7 +14112,7 @@ alt_u32 alt_ic_irq_enabled(alt_u32 ic_id, alt_u32 irq)
     alt_irq[id].handler = isr;
    27b48:	280690fa 	slli	r3,r5,3
    27b4c:	008000f4 	movhi	r2,3
-   27b50:	10ace604 	addi	r2,r2,-19560
+   27b50:	10b0cc04 	addi	r2,r2,-15568
    27b54:	10c5883a 	add	r2,r2,r3
    27b58:	11800015 	stw	r6,0(r2)
     alt_irq[id].context = isr_context;
